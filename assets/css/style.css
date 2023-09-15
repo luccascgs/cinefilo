@@ -1,0 +1,51 @@
+:root {
+    --black: #475569;
+    --white: #F8FAFC;
+    --gray: #94A3B8;
+    --blueBg: #0583F2;
+    --darkBlueBg: #0540F2;
+    --red: #DC2626;
+    --lightRed: #FEE2E2;
+    --green: #059669;
+    --lightGreen: #D1FAE5;
+    --blue: #0284C7;
+    --lightBlue: #E0F2FE;
+}
+
+.container {
+    position: absolute;
+    width: 650px;
+    height: 60%;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: solid 1px red;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container ul{
+    width: 100%;
+    margin-top: 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+.container li{
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.container li+li{
+    margin-top: 1rem;
+}
+
+li.toAns{
+
+    background-color: red;
+}
