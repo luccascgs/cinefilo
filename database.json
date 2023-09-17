@@ -1,0 +1,17 @@
+[
+    {
+        "name": "The Matrix",
+        "acceptableNames": ["the matrix", "matrix", "o matrix"],
+        "emoji": ["💊","💻","🧠","🕶️","🐇"]
+    },
+    {
+        "name": "Homens de Preto",
+        "acceptableNames": ["homens de preto", "os homens de preto", "mib"],
+        "emoji": ["👽","🕶️","👥","🔫","🌌"]
+    },
+    {
+        "name": "Lobo de Wall Street",
+        "acceptableNames": ["o lobo de wall street", "lobo de wall street", "lobo de wallstreet", "o lobo de wallstreet"],
+        "emoji": ["🐺","💼","💰","📈","🥂"]
+    }   
+]

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --black: #475569;
     --white: #F8FAFC;
@@ -12,40 +14,222 @@
     --lightBlue: #E0F2FE;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    pointer-events: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png"), linear-gradient(to top, var(--darkBlueBg), var(--blueBg));
+}
+
+
+/* NAV */
+header {
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    padding: 0.3rem 0;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--white);
+}
+
+nav div *+* {
+    margin-left: 1rem;
+}
+
+
+/* INPUT */
+input {
+    all: unset;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* CONTAINER DE INPUTS */
 .container {
+    width: 500px;
     position: absolute;
-    width: 650px;
-    height: 60%;
-    top:0;
+    max-height: max-content;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    border: solid 1px red;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.container ul{
+.container ul {
     width: 100%;
-    margin-top: 2rem;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.container li{
-    height: 55px;
+.container li {
+    height: 45px;
     display: flex;
     align-items: center;
+    border-radius: 10px;
 }
 
-.container li+li{
+.container li+li {
     margin-top: 1rem;
 }
 
-li.toAns{
+.container li * {
+    margin-left: 0.7rem;
+}
 
-    background-color: red;
+div.emojis {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+    overflow: hidden;
+
+    width: 100%;
+    height: 110px;
+    font-size: 3.7rem;
+    background-color: var(--white);
+    border: solid 2px var(--black);
+    border-radius: 10px;
+}
+
+/* ESTILO DAS RESPOSTAS */
+.toAns {
+    background-color: var(--lightBlue);
+    border: solid 2px var(--blue);
+    color: var(--blue);
+}
+
+.toAns .chat {
+    display: inline-block;
+}
+
+.toAns img:not(.chat) {
+    display: none;
+}
+
+.toAns input::placeholder {
+    color: var(--blue);
+}
+
+
+.input {
+    background-color: var(--white);
+    border: solid 2px var(--black);
+    color: var(--black);
+}
+
+.input .write {
+    display: inline-block;
+}
+
+.input img:not(.write) {
+    display: none;
+}
+
+.correct {
+    background-color: var(--lightGreen);
+    border: solid 2px var(--green);
+    color: var(--green);
+}
+
+.correct .check {
+    display: inline-block;
+}
+
+.correct img:not(.check) {
+    display: none;
+}
+
+.wrong {
+    background-color: var(--lightRed);
+    border: solid 2px var(--red);
+    color: var(--red);
+}
+
+.wrong .x {
+    display: inline-block;
+}
+
+.wrong img:not(.x) {
+    display: none;
+}
+
+/* HIDE EMOJIS */
+#emoji2,
+#emoji3,
+#emoji4,
+#emoji5 {
+    visibility: hidden;
+    transform: translateY(100%);
+    object-fit: cover;
+}
+
+.visible {
+    transition: 0.5s;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+/* MODAL */
+
+.say {
+    position: absolute;
+    z-index: 999;
+    height: 35px;
+    padding: 0 1rem;
+    max-width: max-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    transition: transform 0.5s;
+    
+    border-radius: 10px;
+    border: currentColor 2px solid;
+    font-weight: 700;
+
+}
+
+.sayC{
+    transform: translateY(100%);
+    background-color: var(--lightGreen);
+    color: var(--green);
+}
+
+.sayW{
+    transform: translateY(100%);
+    transition: transform 0.5s;
+    background-color: var(--lightRed);
+    color: var(--red);
+}
+
+.closeSay{
+    transform: translateY(-100%);
 }
