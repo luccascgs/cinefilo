@@ -26,11 +26,11 @@ let dailyMovie = "";
 guess1Input.removeAttribute('readonly');
 guess1Input.focus();
 guess1Input.setAttribute('placeholder', 'Digite o nome do filme')
-
+guess1.querySelector(".icon").src = "assets/images/write.svg"; //Muda o icon para outro SVG;
 
 //CONFIRMAR O INPUT
 for (let i = 1; i <= 5; i++) {
-    const currentInput = document.getElementById('guess' + i).getElementsByTagName('input')[0];;
+    const currentInput = document.getElementById('guess' + i).getElementsByTagName('input')[0];
 
     currentInput.addEventListener('keydown', function (event) {
         if (event.code === "Enter" && currentInput.value) {
@@ -38,42 +38,6 @@ for (let i = 1; i <= 5; i++) {
         }
     });
 }
-
-// guess1Input.addEventListener('keydown',function(event){
-//     if(event.code==="Enter"&&guess1Input.value){
-//         checkMovie(guess1Input.value);
-//         selectNext(1);
-//     }
-// });
-
-// guess2Input.addEventListener('keydown',function(event){
-//     if(event.code==="Enter"&&guess2Input.value){
-//         checkMovie(guess2Input.value);
-//         selectNext(2);
-//     }
-// });
-
-// guess3Input.addEventListener('keydown',function(event){
-//     if(event.code==="Enter"&&guess3Input.value){
-//         checkMovie(guess3Input.value);
-//         selectNext(3);
-//     }
-// });
-
-// guess4Input.addEventListener('keydown',function(event){
-//     if(event.code==="Enter"&&guess4Input.value){
-//         checkMovie(guess4Input.value);
-//         selectNext(4);
-//     }
-// });
-
-// guess5Input.addEventListener('keydown',function(event){
-//     if(event.code==="Enter"&&guess5Input.value){
-//         checkMovie(guess5Input.value);
-//         selectNext(5);
-//     }
-// });
-
 
 //FUNÇÃO PARA SELECIONAR O PRÓXIMO INTPUT E VALIDAR A RESPOSTA VISUALMENTE
 function selectNext(order) {
@@ -99,6 +63,9 @@ function selectNext(order) {
         delayEmoji();
 
         ////MUDAR A COR
+        console.log(currentLi)
+
+        currentLi.querySelector(".icon").src = "assets/images/check.svg"; //Muda o icon para outro SVG;
         currentLi.classList.remove('input');
         currentLi.classList.add('correct');
 
@@ -107,6 +74,7 @@ function selectNext(order) {
 
     }///SE ERRAR
     else {
+        currentLi.querySelector(".icon").src = "assets/images/x.svg"; //Muda o icon para outro SVG;
         currentLi.classList.add('wrong');
         currentLi.classList.remove('input');
 
@@ -121,6 +89,8 @@ function selectNext(order) {
 
         nextLi.classList.add('input');
         nextLi.classList.remove('toAns');
+        nextLi.querySelector(".icon").src = "assets/images/write.svg"; //Muda o icon para outro SVG;
+
 
         nextInput.removeAttribute('readonly');
         nextInput.setAttribute('placeholder', 'Digite o nome do filme')

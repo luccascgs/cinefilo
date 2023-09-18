@@ -124,10 +124,6 @@ div.emojis {
     display: inline-block;
 }
 
-.toAns img:not(.chat) {
-    display: none;
-}
-
 .toAns input::placeholder {
     color: var(--blue);
 }
@@ -139,40 +135,16 @@ div.emojis {
     color: var(--black);
 }
 
-.input .write {
-    display: inline-block;
-}
-
-.input img:not(.write) {
-    display: none;
-}
-
 .correct {
     background-color: var(--lightGreen);
     border: solid 2px var(--green);
     color: var(--green);
 }
 
-.correct .check {
-    display: inline-block;
-}
-
-.correct img:not(.check) {
-    display: none;
-}
-
 .wrong {
     background-color: var(--lightRed);
     border: solid 2px var(--red);
     color: var(--red);
-}
-
-.wrong .x {
-    display: inline-block;
-}
-
-.wrong img:not(.x) {
-    display: none;
 }
 
 /* HIDE EMOJIS */
