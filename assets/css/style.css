@@ -36,25 +36,28 @@ body {
 
 
 /* NAV */
-header {
-    display: flex;
-    justify-content: center;
-}
 
 nav {
-    padding: 0.3rem 0;
     width: 500px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: 2rem;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    flex: 2;
+    text-align: center;
+}
+
+nav h1{
+    flex: 2;
+    text-align: center;
     font-weight: 900;
     color: var(--white);
 }
-
-nav div *+* {
-    margin-left: 1rem;
-}
-
 
 /* INPUT */
 input {
@@ -67,31 +70,16 @@ input {
 /* CONTAINER DE INPUTS */
 .container {
     width: 500px;
-    position: absolute;
-    max-height: max-content;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     margin: auto;
-}
-
-.container ul {
-    width: 100%;
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .container li {
     height: 45px;
     display: flex;
     align-items: center;
-    border-radius: 10px;
-}
-
-.container li+li {
     margin-top: 1rem;
+
+    border-radius: 10px;
 }
 
 .container li * {
@@ -104,7 +92,6 @@ div.emojis {
     justify-content: space-evenly;
     margin-bottom: 2rem;
     overflow: hidden;
-
     width: 100%;
     height: 110px;
     font-size: 3.7rem;
@@ -124,10 +111,6 @@ div.emojis {
     display: inline-block;
 }
 
-.toAns img:not(.chat) {
-    display: none;
-}
-
 .toAns input::placeholder {
     color: var(--blue);
 }
@@ -139,40 +122,16 @@ div.emojis {
     color: var(--black);
 }
 
-.input .write {
-    display: inline-block;
-}
-
-.input img:not(.write) {
-    display: none;
-}
-
 .correct {
     background-color: var(--lightGreen);
     border: solid 2px var(--green);
     color: var(--green);
 }
 
-.correct .check {
-    display: inline-block;
-}
-
-.correct img:not(.check) {
-    display: none;
-}
-
 .wrong {
     background-color: var(--lightRed);
     border: solid 2px var(--red);
     color: var(--red);
-}
-
-.wrong .x {
-    display: inline-block;
-}
-
-.wrong img:not(.x) {
-    display: none;
 }
 
 /* HIDE EMOJIS */
@@ -216,20 +175,6 @@ div.emojis {
     font-weight: 700;
 
 }
-
-.sayC{
-    transform: translateY(100%);
-    background-color: var(--lightGreen);
-    color: var(--green);
-}
-
-.sayW{
-    transform: translateY(100%);
-    transition: transform 0.5s;
-    background-color: var(--lightRed);
-    color: var(--red);
-}
-
 .closeSay{
     transform: translateY(-100%);
 }
