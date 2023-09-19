@@ -62,8 +62,6 @@ nav h1{
 /* INPUT */
 input {
     all: unset;
-    width: 100%;
-    height: 100%;
 }
 
 
@@ -75,25 +73,23 @@ input {
 
 .container li {
     height: 45px;
-    display: flex;
+    display: flex; /*display flex já remove o style type da LI*/
     align-items: center;
     margin-top: 1rem;
-
     border-radius: 10px;
 }
 
-.container li * {
-    margin-left: 0.7rem;
+.icon {
+    margin: 0 .7em;
 }
 
 div.emojis {
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 2rem;
     overflow: hidden;
-    width: 100%;
-    height: 110px;
     font-size: 3.7rem;
     background-color: var(--white);
     border: solid 2px var(--black);
@@ -152,12 +148,11 @@ div.emojis {
 
 /* MODAL */
 
-.say {
+.card {
     position: absolute;
     z-index: 999;
-    height: 35px;
-    padding: 0 1rem;
-    max-width: max-content;
+    padding: .3em .5em;
+    width: fit-content;
 
     display: flex;
     justify-content: center;
@@ -166,15 +161,28 @@ div.emojis {
     top: 0;
     left: 0;
     right: 0;
-    margin: auto;
+    margin: 0 auto;
 
     transition: transform 0.5s;
     
     border-radius: 10px;
     border: currentColor 2px solid;
     font-weight: 700;
-
 }
+
+.cardCorreto{
+    transform: translateY(110%);
+    background-color: var(--lightGreen);
+    color: var(--green);
+}
+
+.cardErrado{
+    transform: translateY(110%);
+    transition: transform 0.5s;
+    background-color: var(--lightRed);
+    color: var(--red);
+}
+
 .closeSay{
-    transform: translateY(-100%);
+    transform: translateY(-110%);
 }
