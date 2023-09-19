@@ -183,6 +183,6 @@ div.emojis {
     color: var(--red);
 }
 
-.closeSay{
+.closeCard{
     transform: translateY(-110%);
 }
