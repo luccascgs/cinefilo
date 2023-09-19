@@ -30,7 +30,6 @@ img {
 
 body {
     font-family: 'Poppins', sans-serif;
-    height: 100vh;
     background: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png"), linear-gradient(to top, var(--darkBlueBg), var(--blueBg));
 }
 
@@ -38,23 +37,26 @@ body {
 /* NAV */
 
 nav {
+    padding-top: 1rem;
     width: 500px;
-    margin: 0 auto;
+    height: 50px;
+    margin: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    text-align: center;
     font-size: 2rem;
 }
 
-nav a{
+nav a {
     color: white;
     text-decoration: none;
-    flex: 2;
-    text-align: center;
 }
 
-nav h1{
-    flex: 2;
-    text-align: center;
+nav a+a {
+    margin-left: 1.5rem;
+}
+
+nav h1 {
     font-weight: 900;
     color: var(--white);
 }
@@ -71,6 +73,12 @@ input {
 .container {
     width: 500px;
     margin: auto;
+    
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
 .container li {
@@ -78,7 +86,7 @@ input {
     display: flex;
     align-items: center;
     margin-top: 1rem;
-
+    
     border-radius: 10px;
 }
 
@@ -100,15 +108,25 @@ div.emojis {
     border-radius: 10px;
 }
 
+/* RESPONSIVIDADE */
+@media screen and (max-width: 600px) {
+    nav,
+    .container {
+        width: 90%;
+    }
+    nav a+a{
+        margin-left: 0.5rem;
+    }
+    div.emojis{
+        font-size: 2.8rem;
+    }
+}
+
 /* ESTILO DAS RESPOSTAS */
 .toAns {
     background-color: var(--lightBlue);
     border: solid 2px var(--blue);
     color: var(--blue);
-}
-
-.toAns .chat {
-    display: inline-block;
 }
 
 .toAns input::placeholder {
@@ -120,6 +138,10 @@ div.emojis {
     background-color: var(--white);
     border: solid 2px var(--black);
     color: var(--black);
+}
+
+.input input::placeholder {
+    color: var(--gray);
 }
 
 .correct {
@@ -169,12 +191,26 @@ div.emojis {
     margin: auto;
 
     transition: transform 0.5s;
-    
+    transform: translateY(100%);
+
     border-radius: 10px;
     border: currentColor 2px solid;
     font-weight: 700;
 
 }
-.closeSay{
+
+.sayC {
+    transform: translateY(100%);
+    background-color: var(--lightGreen);
+    color: var(--green);
+}
+
+.sayW {
+    transform: translateY(100%);
+    background-color: var(--lightRed);
+    color: var(--red);
+}
+
+.closeSay {
     transform: translateY(-100%);
 }

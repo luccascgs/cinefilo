@@ -23,10 +23,7 @@ const emoji5 = document.getElementById('emoji5');
 let dailyMovie = "";
 
 //INICIA
-guess1Input.removeAttribute('readonly');
 guess1Input.focus();
-guess1Input.setAttribute('placeholder', 'Digite o nome do filme')
-guess1.querySelector(".icon").src = "assets/images/write.svg"; //Muda o icon para outro SVG;
 
 //CONFIRMAR O INPUT
 for (let i = 1; i <= 5; i++) {
@@ -63,8 +60,6 @@ function selectNext(order) {
         delayEmoji();
 
         ////MUDAR A COR
-        console.log(currentLi)
-
         currentLi.querySelector(".icon").src = "assets/images/check.svg"; //Muda o icon para outro SVG;
         currentLi.classList.remove('input');
         currentLi.classList.add('correct');
@@ -160,7 +155,6 @@ function sortNumber(max) {
     return Math.floor(Math.random() * max)
 }
 
-//NÃO FUNFO
 function getDatabase() {
     fetch("database.json")
         .then(response => response.json())
@@ -168,7 +162,6 @@ function getDatabase() {
             outDatabase(database);
         });
 }
-
 getDatabase();
 
 
@@ -184,6 +177,4 @@ function outDatabase(val) {
     emoji3.innerText = movie.emoji[2];
     emoji4.innerText = movie.emoji[3];
     emoji5.innerText = movie.emoji[4];
-
-    console.log(movie.emoji);
 }
