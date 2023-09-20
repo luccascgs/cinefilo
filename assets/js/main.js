@@ -125,8 +125,8 @@ function checkMovie(input) {
 }
 
 function validModal(order, isValid) {
-    const modal = document.getElementById('sayValid');
-    modal.classList.remove('closeSay');
+    const modal = document.getElementById('toastValid');
+    modal.classList.remove('closeToast');
 
     if (isValid) {
 
@@ -140,20 +140,20 @@ function validModal(order, isValid) {
             modal.innerText = "MANDOU BEM!"
         else if (order === 5)
             modal.innerText = "POR POUCO!"
-        modal.classList.add('sayC');
+        modal.classList.add('toastC');
     }
     else {
         modal.innerText = "FILME INVÁLIDO"
-        modal.classList.add('sayW');
+        modal.classList.add('toastW');
     }
 
     setTimeout(function () {
-        modal.classList.add('closeSay');
+        modal.classList.add('closeToast');
     }, 3000);
 
     setTimeout(function () {
-        modal.classList.remove('sayW');
-        modal.classList.remove('sayC');
+        modal.classList.remove('toastW');
+        modal.classList.remove('toastC');
     }, 3500);
 
 }
