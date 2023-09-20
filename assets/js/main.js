@@ -29,7 +29,6 @@ guess1Input.focus();
 function setWindowHeight(){
     const height = `${window.innerHeight-50}px`;
     document.getElementById('container').style.height = height;
-    console.log(height);
 }
 window.addEventListener("resize",setWindowHeight,false);
 setWindowHeight();

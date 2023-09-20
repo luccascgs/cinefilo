@@ -76,7 +76,7 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
 }
 
 .container li {
@@ -84,7 +84,7 @@ input {
     display: flex;
     align-items: center;
     margin-top: 1rem;
-    
+
     border-radius: 10px;
 }
 
@@ -109,14 +109,21 @@ div.emojis {
 
 /* RESPONSIVIDADE */
 @media screen and (max-width: 600px) {
+
     nav,
     .container {
         width: 90%;
     }
-    nav a+a{
+
+    nav a+a {
         margin-left: 0.5rem;
     }
-    div.emojis{
+
+    div.emojis {
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -o-sticky;
+        position: -ms-sticky;
         position: sticky;
         top: 60px;
         font-size: 2.3rem;
