@@ -25,6 +25,15 @@ let dailyMovie = "";
 //INICIA
 guess1Input.focus();
 
+//RESIZE
+function setWindowHeight(){
+    const height = `${window.innerHeight-50}px`;
+    document.getElementById('container').style.height = height;
+    console.log(height);
+}
+window.addEventListener("resize",setWindowHeight,false);
+setWindowHeight();
+
 //CONFIRMAR O INPUT
 for (let i = 1; i <= 5; i++) {
     const currentInput = document.getElementById('guess' + i).getElementsByTagName('input')[0];
@@ -32,8 +41,7 @@ for (let i = 1; i <= 5; i++) {
 
 
     currentInput.addEventListener('keydown', function (event) {
-        teste.innerHTML = sortNumber(1000) + " " + event.code + "<br>" + "" + sortNumber(1000) + " " + event.keyCode;
-        if (event.code === "Enter" && currentInput.value) {
+        if ((event.code === "Enter" || event.keyCode === 13) && currentInput.value) {
             selectNext(i);
         }
     });
