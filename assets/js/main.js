@@ -28,8 +28,11 @@ guess1Input.focus();
 //CONFIRMAR O INPUT
 for (let i = 1; i <= 5; i++) {
     const currentInput = document.getElementById('guess' + i).getElementsByTagName('input')[0];
+    const teste = document.getElementsByClassName('howtoplay')[0];
+
 
     currentInput.addEventListener('keydown', function (event) {
+        teste.innerText = (event.code);
         if (event.code === "Enter" && currentInput.value) {
             selectNext(i);
         }
@@ -110,7 +113,7 @@ function checkMovie(input) {
     ///REMOVENDO ACENTOS
     const inputToCheck = input.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
 
-    const movieFound = dailyMovie.acceptableNames.find(acceptableName=>inputToCheck.toLowerCase() === acceptableName.toLowerCase())
+    const movieFound = dailyMovie.acceptableNames.find(acceptableName => inputToCheck.toLowerCase() === acceptableName.toLowerCase())
     return !!movieFound;
 }
 
@@ -166,7 +169,7 @@ getDatabase();
 
 
 function outDatabase(val) {
-    
+
     const i = sortNumber(val.length);
     const movie = val[i];
 

@@ -122,6 +122,11 @@ div.emojis {
     }
 }
 
+.howtoplay {
+    position: absolute;
+    margin: auto;
+}
+
 /* ESTILO DAS RESPOSTAS */
 .toAns {
     background-color: var(--lightBlue);
