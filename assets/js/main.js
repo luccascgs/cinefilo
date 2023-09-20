@@ -32,7 +32,7 @@ for (let i = 1; i <= 5; i++) {
 
 
     currentInput.addEventListener('keydown', function (event) {
-        teste.innerText = (event.code);
+        teste.innerHTML = sortNumber(1000) + " " + event.code + "<br>" + "" + sortNumber(1000) + " " + event.keyCode;
         if (event.code === "Enter" && currentInput.value) {
             selectNext(i);
         }
