@@ -30,7 +30,6 @@ img {
 
 body {
     font-family: 'Poppins', sans-serif;
-    height: 100vh;
     background: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png"), linear-gradient(to top, var(--darkBlueBg), var(--blueBg));
 }
 
@@ -38,23 +37,26 @@ body {
 /* NAV */
 
 nav {
+    padding-top: 1rem;
     width: 500px;
-    margin: 0 auto;
+    height: 50px;
+    margin: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    text-align: center;
     font-size: 2rem;
 }
 
-nav a{
+nav a {
     color: white;
     text-decoration: none;
-    flex: 2;
-    text-align: center;
 }
 
-nav h1{
-    flex: 2;
-    text-align: center;
+nav a+a {
+    margin-left: 1.5rem;
+}
+
+nav h1 {
     font-weight: 900;
     color: var(--white);
 }
@@ -71,6 +73,10 @@ input {
 .container {
     width: 500px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 .container li {
@@ -94,10 +100,41 @@ div.emojis {
     overflow: hidden;
     width: 100%;
     height: 110px;
+    min-height: 110px;
     font-size: 3.7rem;
     background-color: var(--white);
     border: solid 2px var(--black);
     border-radius: 10px;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 600px) {
+
+    nav,
+    .container {
+        width: 90%;
+    }
+
+    nav a+a {
+        margin-left: 0.5rem;
+    }
+
+    div.emojis {
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -o-sticky;
+        position: -ms-sticky;
+        position: sticky;
+        top: 60px;
+        font-size: 2.3rem;
+        height: 70px;
+        min-height: 70px;
+    }
+}
+
+.howtoplay {
+    position: absolute;
+    margin: auto;
 }
 
 /* ESTILO DAS RESPOSTAS */
@@ -105,10 +142,6 @@ div.emojis {
     background-color: var(--lightBlue);
     border: solid 2px var(--blue);
     color: var(--blue);
-}
-
-.toAns .chat {
-    display: inline-block;
 }
 
 .toAns input::placeholder {
@@ -120,6 +153,10 @@ div.emojis {
     background-color: var(--white);
     border: solid 2px var(--black);
     color: var(--black);
+}
+
+.input input::placeholder {
+    color: var(--gray);
 }
 
 .correct {
@@ -152,8 +189,8 @@ div.emojis {
 
 /* MODAL */
 
-.say {
-    position: absolute;
+.toast {
+    position: fixed;
     z-index: 999;
     height: 35px;
     padding: 0 1rem;
@@ -163,18 +200,32 @@ div.emojis {
     justify-content: center;
     align-items: center;
 
-    top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     margin: auto;
 
     transition: transform 0.5s;
-    
+    transform: translateY(-100%);
+
     border-radius: 10px;
     border: currentColor 2px solid;
     font-weight: 700;
 
 }
-.closeSay{
+
+.toastC {
     transform: translateY(-100%);
+    background-color: var(--lightGreen);
+    color: var(--green);
+}
+
+.toastW {
+    transform: translateY(-100%);
+    background-color: var(--lightRed);
+    color: var(--red);
+}
+
+.closeToast {
+    transform: translateY(100%);
 }

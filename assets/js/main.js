@@ -23,17 +23,24 @@ const emoji5 = document.getElementById('emoji5');
 let dailyMovie = "";
 
 //INICIA
-guess1Input.removeAttribute('readonly');
 guess1Input.focus();
-guess1Input.setAttribute('placeholder', 'Digite o nome do filme')
-guess1.querySelector(".icon").src = "assets/images/write.svg"; //Muda o icon para outro SVG;
+
+//RESIZE
+function setWindowHeight(){
+    const height = `${window.innerHeight-50}px`;
+    document.getElementById('container').style.height = height;
+}
+window.addEventListener("resize",setWindowHeight,false);
+setWindowHeight();
 
 //CONFIRMAR O INPUT
 for (let i = 1; i <= 5; i++) {
     const currentInput = document.getElementById('guess' + i).getElementsByTagName('input')[0];
+    const teste = document.getElementsByClassName('howtoplay')[0];
+
 
     currentInput.addEventListener('keydown', function (event) {
-        if (event.code === "Enter" && currentInput.value) {
+        if ((event.code === "Enter" || event.keyCode === 13) && currentInput.value) {
             selectNext(i);
         }
     });
@@ -63,8 +70,6 @@ function selectNext(order) {
         delayEmoji();
 
         ////MUDAR A COR
-        console.log(currentLi)
-
         currentLi.querySelector(".icon").src = "assets/images/check.svg"; //Muda o icon para outro SVG;
         currentLi.classList.remove('input');
         currentLi.classList.add('correct');
@@ -113,15 +118,15 @@ function showEmoji(order) {
 function checkMovie(input) {
 
     ///REMOVENDO ACENTOS
-    const inputToCheck = input.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+    const inputToCheck = input.trim().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
 
-    const movieFound = dailyMovie.acceptableNames.find(acceptableName=>inputToCheck.toLowerCase() === acceptableName.toLowerCase())
+    const movieFound = dailyMovie.acceptableNames.find(acceptableName => inputToCheck.toLowerCase() === acceptableName.toLowerCase())
     return !!movieFound;
 }
 
 function validModal(order, isValid) {
-    const modal = document.getElementById('sayValid');
-    modal.classList.remove('closeSay');
+    const modal = document.getElementById('toastValid');
+    modal.classList.remove('closeToast');
 
     if (isValid) {
 
@@ -135,20 +140,20 @@ function validModal(order, isValid) {
             modal.innerText = "MANDOU BEM!"
         else if (order === 5)
             modal.innerText = "POR POUCO!"
-        modal.classList.add('sayC');
+        modal.classList.add('toastC');
     }
     else {
         modal.innerText = "FILME INVÁLIDO"
-        modal.classList.add('sayW');
+        modal.classList.add('toastW');
     }
 
     setTimeout(function () {
-        modal.classList.add('closeSay');
+        modal.classList.add('closeToast');
     }, 3000);
 
     setTimeout(function () {
-        modal.classList.remove('sayW');
-        modal.classList.remove('sayC');
+        modal.classList.remove('toastW');
+        modal.classList.remove('toastC');
     }, 3500);
 
 }
@@ -160,7 +165,6 @@ function sortNumber(max) {
     return Math.floor(Math.random() * max)
 }
 
-//NÃO FUNFO
 function getDatabase() {
     fetch("database.json")
         .then(response => response.json())
@@ -168,12 +172,11 @@ function getDatabase() {
             outDatabase(database);
         });
 }
-
 getDatabase();
 
 
 function outDatabase(val) {
-    
+
     const i = sortNumber(val.length);
     const movie = val[i];
 
@@ -184,6 +187,4 @@ function outDatabase(val) {
     emoji3.innerText = movie.emoji[2];
     emoji4.innerText = movie.emoji[3];
     emoji5.innerText = movie.emoji[4];
-
-    console.log(movie.emoji);
 }
