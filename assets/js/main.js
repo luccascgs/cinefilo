@@ -119,7 +119,7 @@ function showEmoji(order) {
 function checkMovie(input) {
 
     ///REMOVENDO ACENTOS
-    const inputToCheck = input.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+    const inputToCheck = input.trim().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
 
     const movieFound = dailyMovie.acceptableNames.find(acceptableName => inputToCheck.toLowerCase() === acceptableName.toLowerCase())
     return !!movieFound;
