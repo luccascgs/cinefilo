@@ -19,6 +19,35 @@ const emoji3 = document.getElementById('emoji3');
 const emoji4 = document.getElementById('emoji4');
 const emoji5 = document.getElementById('emoji5');
 
+//BUTTONS
+const howtoplay = document.getElementById('howtoplay');
+const info = document.getElementById('info');
+const daily = document.getElementById('daily');
+const overlay = document.getElementById("overlay");
+
+//MODAL CONFIG
+howtoplay.addEventListener('click', function(){
+    document.getElementById("howtoplayModal").style.display = "block";
+    overlay.style.display = "block";
+})
+info.addEventListener('click', function(){
+    document.getElementById("infoModal").style.display = "block";
+    overlay.style.display = "block";
+})
+daily.addEventListener('click', function(){
+    document.getElementById("dailyModal").style.display = "block";
+    overlay.style.display = "block";
+})
+
+overlay.addEventListener('click', function(){
+    document.getElementById("howtoplayModal").style.display = "none";
+    document.getElementById("infoModal").style.display = "none";
+    document.getElementById("dailyModal").style.display = "none";
+    overlay.style.display = "none";
+})
+
+
+
 //FILME DIÁRIO
 let dailyMovie = "";
 
@@ -36,8 +65,6 @@ setWindowHeight();
 //CONFIRMAR O INPUT
 for (let i = 1; i <= 5; i++) {
     const currentInput = document.getElementById('guess' + i).getElementsByTagName('input')[0];
-    const teste = document.getElementsByClassName('howtoplay')[0];
-
 
     currentInput.addEventListener('keydown', function (event) {
         if ((event.code === "Enter" || event.keyCode === 13) && currentInput.value) {

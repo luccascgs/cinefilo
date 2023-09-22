@@ -48,6 +48,7 @@ nav {
 }
 
 nav a {
+    cursor: pointer;
     color: white;
     text-decoration: none;
 }
@@ -105,31 +106,6 @@ div.emojis {
     background-color: var(--white);
     border: solid 2px var(--black);
     border-radius: 10px;
-}
-
-/* RESPONSIVIDADE */
-@media screen and (max-width: 600px) {
-
-    nav,
-    .container {
-        width: 90%;
-    }
-
-    nav a+a {
-        margin-left: 0.5rem;
-    }
-
-    div.emojis {
-        position: -webkit-sticky;
-        position: -moz-sticky;
-        position: -o-sticky;
-        position: -ms-sticky;
-        position: sticky;
-        top: 60px;
-        font-size: 2.3rem;
-        height: 70px;
-        min-height: 70px;
-    }
 }
 
 .howtoplay {
@@ -228,4 +204,76 @@ div.emojis {
 
 .closeToast {
     transform: translateY(100%);
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    background-color: var(--white);
+    position: absolute;
+    max-width: 500px;
+    max-height: 550px;
+    border: solid var(--gray) 2px;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    overflow-y: auto;
+    z-index: 99999;
+}
+
+.modal h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.modal h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.modal p {
+    margin-bottom: 1.5rem;
+}
+
+#overlay {
+    display: none;
+    z-index: 9999;
+    position: absolute;
+    content: '';
+    background-color: black;
+    opacity: 0.7;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 600px) {
+
+    nav,
+    .container {
+        width: 90%;
+    }
+
+    nav a+a {
+        margin-left: 0.5rem;
+    }
+
+    div.emojis {
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -o-sticky;
+        position: -ms-sticky;
+        position: sticky;
+        top: 60px;
+        font-size: 2.3rem;
+        height: 70px;
+        min-height: 70px;
+    }
+
+    .modal {
+        width: 90%;
+        padding: 0.5rem 1rem;
+    }
 }
