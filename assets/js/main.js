@@ -80,7 +80,6 @@ function copyToClipboard(correct, order) {
     setTimeout(function () {
         toast.classList.remove('toastC');
     }, 1500);
-
     if (correct) {
         navigator.clipboard.writeText(`Joguei cinefi.lol #${order} ${emoji1.innerText} | ${order}/5`);
     }
@@ -116,8 +115,9 @@ function selectNext(order) {
 
     ///SE ACERTAR
     if (checkMovie(currentInput.value)) {
+        const guess = order;
         copyButton.addEventListener('click', function(){
-            copyToClipboard(true,order);
+            copyToClipboard(true,guess);
         });
         validToast(order, true);
         ////MOSTRAR OS PRÓXIMOS EMOJIS COM DELAY
