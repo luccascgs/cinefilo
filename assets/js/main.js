@@ -23,30 +23,33 @@ const emoji5 = document.getElementById('emoji5');
 const howtoplay = document.getElementById('howtoplay');
 const info = document.getElementById('info');
 const daily = document.getElementById('daily');
+const answerModal = document.getElementById('answerModal');
 const overlay = document.getElementById("overlay");
 
+//PERDEU
+const loose = false;
+
 //MODAL CONFIG
-howtoplay.addEventListener('click', function(){
+howtoplay.addEventListener('click', function () {
     document.getElementById("howtoplayModal").style.display = "block";
     overlay.style.display = "block";
 })
-info.addEventListener('click', function(){
+info.addEventListener('click', function () {
     document.getElementById("infoModal").style.display = "block";
     overlay.style.display = "block";
 })
-daily.addEventListener('click', function(){
+daily.addEventListener('click', function () {
     document.getElementById("dailyModal").style.display = "block";
     overlay.style.display = "block";
 })
 
-overlay.addEventListener('click', function(){
+overlay.addEventListener('click', function () {
     document.getElementById("howtoplayModal").style.display = "none";
     document.getElementById("infoModal").style.display = "none";
     document.getElementById("dailyModal").style.display = "none";
+    document.getElementById("answerModal").style.display = "none";
     overlay.style.display = "none";
 })
-
-
 
 //FILME DIÁRIO
 let dailyMovie = "";
@@ -54,12 +57,43 @@ let dailyMovie = "";
 //INICIA
 guess1Input.focus();
 
+//MODAL DE RESPOSTA
+function checkModal(order) {
+    answerModal.getElementsByTagName('h3')[0].innerText = (`Resposta: ${dailyMovie.name}`);
+    answerModal.style.display = "block";
+    overlay.style.display = "block";
+}
+
+//COPIAR PROGRESSO
+const copyButton = document.getElementById('clip');
+function copyToClipboard(correct, order) {
+    const toast = document.getElementById('toastValid');
+
+    toast.classList.remove('closeToast');
+    toast.innerText = 'COPIADO!';
+    toast.classList.add('toastC');
+
+    setTimeout(function () {
+        toast.classList.add('closeToast');
+    }, 1000);
+
+    setTimeout(function () {
+        toast.classList.remove('toastC');
+    }, 1500);
+
+    if (correct) {
+        navigator.clipboard.writeText(`Joguei cinefi.lol #${order} ${emoji1.innerText} | ${order}/5`);
+    }
+    else
+        navigator.clipboard.writeText(`Joguei cinefi.lol #${order} ${emoji1.innerText} | X/5`);
+}
+
 //RESIZE
-function setWindowHeight(){
-    const height = `${window.innerHeight-50}px`;
+function setWindowHeight() {
+    const height = `${window.innerHeight - 50}px`;
     document.getElementById('container').style.height = height;
 }
-window.addEventListener("resize",setWindowHeight,false);
+window.addEventListener("resize", setWindowHeight, false);
 setWindowHeight();
 
 //CONFIRMAR O INPUT
@@ -82,7 +116,10 @@ function selectNext(order) {
 
     ///SE ACERTAR
     if (checkMovie(currentInput.value)) {
-        validModal(order, true);
+        copyButton.addEventListener('click', function(){
+            copyToClipboard(true,order);
+        });
+        validToast(order, true);
         ////MOSTRAR OS PRÓXIMOS EMOJIS COM DELAY
         function delayEmoji() {
             showEmoji(order);
@@ -90,8 +127,6 @@ function selectNext(order) {
             setTimeout(function () {
                 if (order <= 5)
                     delayEmoji();
-                else if (order == 5)
-                    party.confetti(element);
             }, 500);
         }
         delayEmoji();
@@ -111,8 +146,17 @@ function selectNext(order) {
         currentLi.classList.remove('input');
 
         currentInput.setAttribute('readonly', true);
-    }
 
+        ///VOCÊ PERDEU
+        if(order === 5){
+            copyButton.addEventListener('click', function(){
+                copyToClipboard(false,order);
+            });
+            setTimeout(function () {
+                checkModal(order);
+            }, 1500);
+        }
+    }
 
     ///SELECIONAR O PRÓXIMO
     if (order < 5 && checkMovie(currentInput.value) === false) {
@@ -151,36 +195,39 @@ function checkMovie(input) {
     return !!movieFound;
 }
 
-function validModal(order, isValid) {
-    const modal = document.getElementById('toastValid');
-    modal.classList.remove('closeToast');
+//TOAST
+function validToast(order, isValid) {
+    const toast = document.getElementById('toastValid');
+    toast.classList.remove('closeToast');
 
     if (isValid) {
 
         if (order === 1)
-            modal.innerText = "CINÉFILO!"
+            toast.innerText = "CINÉFILO!"
         else if (order === 2)
-            modal.innerText = "PERFEITO!"
+            toast.innerText = "PERFEITO!"
         else if (order === 3)
-            modal.innerText = "MUITO BEM!"
+            toast.innerText = "MUITO BEM!"
         else if (order === 4)
-            modal.innerText = "MANDOU BEM!"
+            toast.innerText = "MANDOU BEM!"
         else if (order === 5)
-            modal.innerText = "POR POUCO!"
-        modal.classList.add('toastC');
+            toast.innerText = "POR POUCO!"
+        toast.classList.add('toastC');
     }
     else {
-        modal.innerText = "FILME INVÁLIDO"
-        modal.classList.add('toastW');
+        toast.innerText = "FILME INVÁLIDO"
+        toast.classList.add('toastW');
     }
 
     setTimeout(function () {
-        modal.classList.add('closeToast');
+        toast.classList.add('closeToast');
     }, 3000);
 
     setTimeout(function () {
-        modal.classList.remove('toastW');
-        modal.classList.remove('toastC');
+        toast.classList.remove('toastW');
+        toast.classList.remove('toastC');
+        party.confetti(answerModal);
+        checkModal(order);
     }, 3500);
 
 }

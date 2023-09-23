@@ -163,11 +163,11 @@ div.emojis {
     transform: translateY(0) !important;
 }
 
-/* MODAL */
+/* TOAST */
 
 .toast {
     position: fixed;
-    z-index: 999;
+    z-index: 99999;
     height: 35px;
     padding: 0 1rem;
     max-width: max-content;
@@ -211,13 +211,13 @@ div.emojis {
     display: none;
     background-color: var(--white);
     position: absolute;
-    max-width: 500px;
+    width: 500px;
     max-height: 550px;
     border: solid var(--gray) 2px;
     border-radius: 20px;
     padding: 1rem 2rem;
     overflow-y: auto;
-    z-index: 99999;
+    z-index: 9999;
 }
 
 .modal h2 {
@@ -228,6 +228,11 @@ div.emojis {
 
 .modal h3 {
     font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.modal h4 {
+    text-align: center;
     font-weight: bold;
 }
 
@@ -246,6 +251,52 @@ div.emojis {
     right: 0;
     bottom: 0;
     left: 0;
+}
+
+
+.modal.clip ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: currentColor solid 2px;
+}
+.modal.clip li{
+    flex-direction: column;
+    height: max-content;
+    width: 30%;
+    border: var(--gray) solid 2px;
+}
+.modal.modal.clip li *{
+    margin: 0;
+}
+.modal.clip li.defeat{
+    color: var(--red);
+    border: currentColor solid 2px;
+    background-color: var(--lightRed);
+}
+.modal.clip footer{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+.modal.clip span {
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+#clip{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 0.5rem;
+    background-color: var(--lightBlue);
+    color: var(--blue);
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: currentColor solid 2px;
+
 }
 
 /* RESPONSIVIDADE */
@@ -275,5 +326,26 @@ div.emojis {
     .modal {
         width: 90%;
         padding: 0.5rem 1rem;
+    }
+
+    .modal h4{
+        font-size: 0.8rem;
+    }
+    .modal.clip ul{
+        gap:20px
+    }
+    .modal.clip li {
+        flex: 40%;
+    }
+    .modal.clip span{
+        font-size: 1.3rem;
+    }
+    #clip{
+        font-size: 1rem;
+        gap: 0.2rem;
+        padding: 0.1rem 0.3rem;
+    }
+    #clip svg{
+        height: 16px;
     }
 }
