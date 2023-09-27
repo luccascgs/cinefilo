@@ -30,6 +30,57 @@ let dailyMovie;
 
 //INICIA
 guess1Input.focus();
+const dayLocalStore = dayjs(localStorage.getItem('day')) || dayjs().format("YYYY-MM-DD");
+if (dayjs().isAfter(dayLocalStore, 'day')){
+    //MUDOU O DIA
+    localStorage.setItem('day', dayjs());
+    console.log('mudou o dia');
+    nextDay();
+}
+else {
+    //CONTINUA NO MESMO DIA
+    localStorage.setItem('day', dayjs().format("YYYY-MM-DD"));
+    console.log('continua o mesmo dia');
+    sameDay();
+}
+
+async function sameDay(){
+    dailyMovie = JSON.parse(localStorage.getItem('answer'));
+    await setEmojis();
+}
+async function nextDay(){
+    getDatabase();
+    dailyMovie = JSON.parse(localStorage.getItem('answer'));
+}
+
+async function setEmojis() {
+
+    emoji1.innerText = await dailyMovie.emoji[0];
+    emoji2.innerText = await dailyMovie.emoji[1];
+    emoji3.innerText = await dailyMovie.emoji[2];
+    emoji4.innerText = await dailyMovie.emoji[3];
+    emoji5.innerText = await dailyMovie.emoji[4];
+}
+
+//PUXANDO O BANCO DE DADOS
+async function getDatabase() {
+    const response = await fetch("database.json");//ler a database dos filmes cadastrados e retornar o array completo
+    const database = await response.json();//transformar em json
+
+    const responseBd = await fetch(`https://api.adrianoneres.me/cinefilo-api/daily-movie?max=${database.length - 1}`);//ler api e retornar o filme
+    const movieDay = await responseBd.json();//transformar a resposta em json
+
+    outDatabase(database, movieDay.id_movie);//passar os valores para outra função
+};
+
+async function outDatabase(val, indice) {
+
+    const movie = await val[indice];
+    let moviesDatabase = await val;
+
+    await localStorage.setItem('answer', JSON.stringify(movie));
+    await setEmojis();
+}
 
 //MODAL CONFIG
 howtoplay.addEventListener('click', function () {
@@ -93,13 +144,24 @@ setWindowHeight();
 
 //CONFIRMAR O INPUT
 for (let i = 1; i <= 5; i++) {
+
+    const tries = JSON.parse(localStorage.getItem('tries')) || [];
     const currentInput = document.getElementById('guess' + (i)).getElementsByTagName('input')[0];
-    currentInput.addEventListener('keydown', function (event) {
-        if ((event.code === "Enter" || event.keyCode === 13) && currentInput.value) {
-            saveDataToLocalStorage(currentInput.value);
-            selectNext(i, currentInput.value);
-        }
-    });
+
+    if (tries[i - 1]) {
+        currentInput.value = tries[i - 1];
+        selectNext(i);
+    }
+    else {
+        currentInput.addEventListener('keydown', function (event) {
+            if ((event.code === "Enter" || event.keyCode === 13) && currentInput.value) {
+                saveDataToLocalStorage(currentInput.value);
+                selectNext(i);
+            }
+        });
+    }
+
+
 }
 
 //SALVAR OS INPUTS PARA O LOCALSTORAGE
@@ -115,7 +177,6 @@ function selectNext(order) {
     ///VALIDÇÃO VISUAL
     const currentLi = document.getElementById("guess" + order);
     const currentInput = currentLi.getElementsByTagName('input')[0];
-
 
     ///SE ACERTAR
     if (checkMovie(currentInput.value)) {
@@ -241,32 +302,3 @@ function validToast(order, isValid) {
 function sortNumber(max) {
     return Math.floor(Math.random() * max)
 }
-
-//PUXANDO O BANCO DE DADOS
-(async () => {
-    const response = await fetch("database.json");//ler a database dos filmes cadastrados e retornar o array completo
-    const database = await response.json();//transformar em json
-
-    const responseBd = await fetch(`https://api.adrianoneres.me/cinefilo-api/daily-movie?max=${database.length - 1}`);//ler api e retornar o filme
-    const dailyMovie = await responseBd.json();//transformar a resposta em json
-
-    outDatabase(database, dailyMovie.id_movie);//passar os valores para outra função
-})();
-
-async function outDatabase(val, indice) {
-
-    const movie = await val[indice];
-    let moviesDatabase = await val;
-
-    dailyMovie = await movie;
-
-    emoji1.innerText = movie.emoji[0];
-    emoji2.innerText = movie.emoji[1];
-    emoji3.innerText = movie.emoji[2];
-    emoji4.innerText = movie.emoji[3];
-    emoji5.innerText = movie.emoji[4];
-}
-
-//VERIFICAR SE TEM OS DADOS SALVOS NO LOCAL STORAGE
-//SE TIVER ENTÃO RECUPERE E TRANSCREVA TODOS OS DADOS
-//SENÃO SALVE OS DADOS
