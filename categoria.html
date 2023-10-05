@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="assets/images/icon.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+    <title>Cinéfilo</title>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <a id="howtoplay">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+            </a>
+            <a id="info">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+            </a>
+        </div>
+        <h1>CINÉFILO</h1>
+        <div>
+            <a id="daily">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+            </a>
+            <a href="">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+            </a>
+        </div>
+    </nav>
+    <main>
+        <div id="overlay"></div>
+        <div id="toastValid" class="toast closeToast"></div>
+        <section id="container" class="container">
+            <article id="howtoplayModal" class="modal">
+                <h2>Como Jogar?</h2>
+                <p>
+                    Descubra qual o filme/série em 5 palpites. Para cada erro um novo emoji aparecerá para ajuda-lo a
+                    desvendar o filme/série.
+                </p>
+                <h3>1º Palpite:</h3>
+                <div class="emojis">
+                    <span>👽</span>
+                    <span style="visibility: hidden;">🌌</span>
+                    <span style="visibility: hidden;">🌌</span>
+                    <span style="visibility: hidden;">🌌</span>
+                    <span style="visibility: hidden;">🌌</span>
+                </div>
+                <h3>5º Palpite:</h3>
+                <div class="emojis">
+                    <span>👽</span>
+                    <span>🕶️</span>
+                    <span>👥</span>
+                    <span>🔫</span>
+                    <span>🌌</span>
+                </div>
+                <p>
+                    Não precisa colocar o título original, além de que os acentos são adicionados automaticamente.
+                </p>
+                <p>
+                    Volte todo dia para tentar desvendar um título diferente por dia
+                </p>
+            </article>
+            <article id="infoModal" class="modal">
+                <h2>Sobre</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum autem voluptate quasi fugiat
+                    maxime
+                    suscipit temporibus quis obcaecati consequuntur soluta earum veniam mollitia, enim neque eius
+                    voluptates debitis eos dolorum?
+                </p>
+            </article>
+            <article id="dailyModal" class="modal">
+                <h2>Jogos Diários</h2>
+            </article>
+            <article id="answerModal" class="modal clip">
+                <h2>Progresso</h2>
+                <h3>Resposta: </h3>
+                <ul>
+                    <li>
+                        <h3>1º Palpite:</h3>
+                        <span>0</span>
+                    </li>
+                    <li>
+                        <h3>2º Palpite:</h3>
+                        <span>0</span>
+                    </li>
+                    <li>
+                        <h3>3º Palpite:</h3>
+                        <span>0</span>
+                    </li>
+                    <li>
+                        <h3>4º Palpite:</h3>
+                        <span>0</span>
+                    </li>
+                    <li>
+                        <h3>5º Palpite:</h3>
+                        <span>0</span>
+                    </li>
+                    <li class="defeat">
+                        <h3>Derrotas:</h3>
+                        <span>0</span>
+                    </li>
+                </ul>
+                <footer>
+                    <div>
+                        <h4>Próximo título: </h4>
+                        <span>00:00:00</span>
+                    </div>
+                    <button id="clip">Compartilhar <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+                            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                            class="css-i6dzq1">
+                            <circle cx="18" cy="5" r="3"></circle>
+                            <circle cx="6" cy="12" r="3"></circle>
+                            <circle cx="18" cy="19" r="3"></circle>
+                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                        </svg></button>
+                </footer>
+
+            </article>
+            <div class="emojis">
+                <span id="emoji1"></span>
+                <span id="emoji2"></span>
+                <span id="emoji3"></span>
+                <span id="emoji4"></span>
+                <span id="emoji5"></span>
+            </div>
+            <ul>
+                <li id="guess1" class="input">
+                    <img class="icon" src="assets/images/write.svg">
+                    <input type="text" placeholder="Digite o nome do filme">
+                </li>
+                <li id="guess2" class="toAns">
+                    <img class="icon" src="assets/images/chat.svg">
+                    <input type="text" placeholder="2º Palpite" readonly>
+                </li>
+                <li id="guess3" class="toAns">
+                    <img class="icon" src="assets/images/chat.svg">
+                    <input type="text" placeholder="3º Palpite" readonly>
+                </li>
+                <li id="guess4" class="toAns">
+                    <img class="icon" src="assets/images/chat.svg">
+                    <input type="text" placeholder="4º Palpite" readonly>
+                </li>
+                <li id="guess5" class="toAns">
+                    <img class="icon" src="assets/images/chat.svg">
+                    <input type="text" placeholder="5º Palpite" readonly>
+                </li>
+            </ul>
+            <article class="slide-category">
+        </section>
+        <section id="category">
+            <div class="slider">
+                <input type="radio" name="testimonial" id="t-1">
+                <input type="radio" name="testimonial" id="t-2">
+                <input type="radio" name="testimonial" id="t-3" checked>
+                <input type="radio" name="testimonial" id="t-4">
+                <input type="radio" name="testimonial" id="t-5">
+                <div class="testimonials">
+                    <label id="horror" class="item" for="t-1">
+                        <footer>
+                            <span>Terror</span>
+                        </footer>
+                    </label>
+                    <label id="action" class="item" for="t-2">
+                        <footer>
+                            <span>Ação</span>
+                        </footer>
+                    </label>
+                    <label id="series" class="item" for="t-3">
+                        <footer>
+                            <span>Série/Seriado</span>
+                        </footer>
+                    </label>
+                    <label id="comedy" class="item" for="t-4">
+                        <footer>
+                            <span>Comédia</span>
+                        </footer>
+                    </label>
+                    <label id="adam" class="item" for="t-5">
+                        <footer>
+                            <span>Adam Sandler</span>
+                        </footer>
+                    </label>
+                </div>
+                <br />
+                <div class="dots">
+                    <label for="t-1"></label>
+                    <label for="t-2"></label>
+                    <label for="t-3"></label>
+                    <label for="t-4"></label>
+                    <label for="t-5"></label>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/category.js"></script>
+</body>
+
+</html>
