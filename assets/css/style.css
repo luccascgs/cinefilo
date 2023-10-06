@@ -77,10 +77,22 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
-.container li {
+.modalContainer {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container.categorys{
+    width: auto;
+}
+
+li {
     height: 45px;
     display: flex;
     align-items: center;
@@ -89,7 +101,7 @@ input {
     border-radius: 10px;
 }
 
-.container li * {
+li * {
     margin-left: 0.7rem;
 }
 
@@ -164,7 +176,6 @@ div.emojis {
 }
 
 /* TOAST */
-
 .toast {
     position: fixed;
     z-index: 99999;
@@ -348,24 +359,24 @@ div.emojis {
 
 #action {
     color: #C87539;
-    background-image: url("https://f.i.uol.com.br/fotografia/2022/03/11/1647022766622b92ae0be3a_1647022766_3x2_md.jpg");
+    background-image: url("https://i.pinimg.com/474x/8c/16/4b/8c164b09f700cc8e4f14bc28b418565d.jpg");
 
 }
 
 #series {
     color: #00DE81;
-    background-image: url("https://f.i.uol.com.br/fotografia/2022/03/11/1647022766622b92ae0be3a_1647022766_3x2_md.jpg");
+    background-image: url("https://sm.ign.com/ign_br/screenshot/default/1-thumb-1920-882548_a7he.jpg");
 
 }
 
 #comedy {
     color: var(--blue);
-    background-image: url("https://f.i.uol.com.br/fotografia/2022/03/11/1647022766622b92ae0be3a_1647022766_3x2_md.jpg");
+    background-image: url("https://memoria.ebc.com.br/sites/_portalebc2014/files/atoms_image/ted.jpg");
 }
 
 #adam {
     color: #FBE200;
-    background-image: url("https://f.i.uol.com.br/fotografia/2022/03/11/1647022766622b92ae0be3a_1647022766_3x2_md.jpg");
+    background-image: url("https://br.web.img2.acsta.net/r_1280_720/medias/nmedia/18/71/80/48/19145616.jpg");
 }
 
 .testimonials .item footer {
@@ -389,11 +400,12 @@ div.emojis {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 .dots label {
-    height: 5px;
-    width: 5px;
+    height: 3px;
+    width: 3px;
     border-radius: 50%;
     cursor: pointer;
     background-color: var(--gray);
@@ -406,9 +418,9 @@ div.emojis {
 #t-3:checked~.dots label[for="t-3"],
 #t-4:checked~.dots label[for="t-4"],
 #t-5:checked~.dots label[for="t-5"] {
-    transform: scale(2);
-    background-color: #fff;
-    box-shadow: 0px 0px 0px 3px #dddddd24;
+    transform: scale(4);
+    background-color: var(--white);
+    box-shadow: 0px 0px 0px 2px #dddddd24;
 }
 
 #t-1:checked~.dots label[for="t-2"],
@@ -419,7 +431,7 @@ div.emojis {
 #t-4:checked~.dots label[for="t-3"],
 #t-4:checked~.dots label[for="t-5"],
 #t-5:checked~.dots label[for="t-4"] {
-    transform: scale(1.5);
+    transform: scale(3);
 }
 
 #t-1:checked~.testimonials label[for="t-3"],
@@ -427,7 +439,7 @@ div.emojis {
 #t-3:checked~.testimonials label[for="t-5"],
 #t-4:checked~.testimonials label[for="t-1"],
 #t-5:checked~.testimonials label[for="t-2"] {
-    transform: translate3d(800px, 0, -180px) rotateY(-25deg);
+    transform: translate3d(1000px, 0, -180px) rotateY(-0);
     z-index: 2;
 }
 
@@ -436,7 +448,7 @@ div.emojis {
 #t-3:checked~.testimonials label[for="t-4"],
 #t-4:checked~.testimonials label[for="t-5"],
 #t-5:checked~.testimonials label[for="t-1"] {
-    transform: translate3d(500px, 0, -90px) rotateY(-15deg);
+    transform: translate3d(500px, 0, -90px) rotateY(-0);
     z-index: 3;
 }
 
@@ -445,7 +457,7 @@ div.emojis {
 #t-4:checked~.testimonials label[for="t-3"],
 #t-5:checked~.testimonials label[for="t-4"],
 #t-1:checked~.testimonials label[for="t-5"] {
-    transform: translate3d(-500px, 0, -90px) rotateY(15deg);
+    transform: translate3d(-500px, 0, -90px) rotateY(0);
     z-index: 3;
 }
 
@@ -454,7 +466,7 @@ div.emojis {
 #t-5:checked~.testimonials label[for="t-3"],
 #t-2:checked~.testimonials label[for="t-5"],
 #t-1:checked~.testimonials label[for="t-4"] {
-    transform: translate3d(-800px, 0, -180px) rotateY(25deg);
+    transform: translate3d(-1000px, 0, -180px) rotateY(0);
 }
 
 #t-1:checked~.testimonials label[for="t-1"],

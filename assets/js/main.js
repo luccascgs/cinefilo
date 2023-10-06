@@ -22,12 +22,9 @@ const emoji5 = document.getElementById('emoji5');
 //BUTTONS
 const howtoplay = document.getElementById('howtoplay');
 const info = document.getElementById('info');
-const daily = document.getElementById('daily');
+// const daily = document.getElementById('daily');
 const answerModal = document.getElementById('answerModal');
 const overlay = document.getElementById("overlay");
-
-//PERDEU
-const loose = false;
 
 //MODAL CONFIG
 howtoplay.addEventListener('click', function () {
@@ -38,15 +35,15 @@ info.addEventListener('click', function () {
     document.getElementById("infoModal").style.display = "block";
     overlay.style.display = "block";
 })
-daily.addEventListener('click', function () {
-    document.getElementById("dailyModal").style.display = "block";
-    overlay.style.display = "block";
-})
+// daily.addEventListener('click', function () {
+//     document.getElementById("dailyModal").style.display = "block";
+//     overlay.style.display = "block";
+// })
 
 overlay.addEventListener('click', function () {
     document.getElementById("howtoplayModal").style.display = "none";
     document.getElementById("infoModal").style.display = "none";
-    document.getElementById("dailyModal").style.display = "none";
+    // document.getElementById("dailyModal").style.display = "none";
     document.getElementById("answerModal").style.display = "none";
     overlay.style.display = "none";
 })
