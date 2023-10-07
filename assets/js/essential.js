@@ -26,9 +26,9 @@ overlay.addEventListener('click', function () {
 })
 
 //RESIZE
-function setWindowHeight() {
+function setWindowWidth() {
     const height = `${window.innerHeight - 50}px`;
     document.getElementById('container').style.height = height;
 }
-window.addEventListener("resize", setWindowHeight, false);
-setWindowHeight();
+window.addEventListener("resize", setWindowWidth, false);
+setWindowWidth();

@@ -19,14 +19,14 @@ const emoji3 = document.getElementById('emoji3');
 const emoji4 = document.getElementById('emoji4');
 const emoji5 = document.getElementById('emoji5');
 
-//BUTTONS
+// BUTTONS
 const howtoplay = document.getElementById('howtoplay');
 const info = document.getElementById('info');
 // const daily = document.getElementById('daily');
 const answerModal = document.getElementById('answerModal');
 const overlay = document.getElementById("overlay");
 
-//MODAL CONFIG
+// MODAL CONFIG
 howtoplay.addEventListener('click', function () {
     document.getElementById("howtoplayModal").style.display = "block";
     overlay.style.display = "block";
@@ -43,7 +43,7 @@ info.addEventListener('click', function () {
 overlay.addEventListener('click', function () {
     document.getElementById("howtoplayModal").style.display = "none";
     document.getElementById("infoModal").style.display = "none";
-    // document.getElementById("dailyModal").style.display = "none";
+    document.getElementById("dailyModal").style.display = "none";
     document.getElementById("answerModal").style.display = "none";
     overlay.style.display = "none";
 })
@@ -84,7 +84,7 @@ function copyToClipboard(correct, order) {
         navigator.clipboard.writeText(`Joguei cinefi.lol #${order} ${emoji1.innerText} | X/5`);
 }
 
-//RESIZE
+// RESIZE
 function setWindowHeight() {
     const height = `${window.innerHeight - 50}px`;
     document.getElementById('container').style.height = height;
