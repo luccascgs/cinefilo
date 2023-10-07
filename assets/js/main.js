@@ -19,34 +19,32 @@ const emoji3 = document.getElementById('emoji3');
 const emoji4 = document.getElementById('emoji4');
 const emoji5 = document.getElementById('emoji5');
 
-// BUTTONS
-const howtoplay = document.getElementById('howtoplay');
-const info = document.getElementById('info');
-// const daily = document.getElementById('daily');
+// // MODAL
 const answerModal = document.getElementById('answerModal');
-const overlay = document.getElementById("overlay");
+// const howtoplay = document.getElementById('howtoplay');
+// const info = document.getElementById('info');
 
-// MODAL CONFIG
-howtoplay.addEventListener('click', function () {
-    document.getElementById("howtoplayModal").style.display = "block";
-    overlay.style.display = "block";
-})
-info.addEventListener('click', function () {
-    document.getElementById("infoModal").style.display = "block";
-    overlay.style.display = "block";
-})
-// daily.addEventListener('click', function () {
-//     document.getElementById("dailyModal").style.display = "block";
+// // MODAL CONFIG
+// howtoplay.addEventListener('click', function () {
+//     document.getElementById("howtoplayModal").style.display = "block";
+//     overlay.style.display = "block";
+// })
+// info.addEventListener('click', function () {
+//     document.getElementById("infoModal").style.display = "block";
 //     overlay.style.display = "block";
 // })
 
 overlay.addEventListener('click', function () {
-    document.getElementById("howtoplayModal").style.display = "none";
-    document.getElementById("infoModal").style.display = "none";
-    document.getElementById("dailyModal").style.display = "none";
-    document.getElementById("answerModal").style.display = "none";
-    overlay.style.display = "none";
+    answerModal.style.display = "none";
 })
+
+// // RESIZE
+// function setWindowHeight() {
+//     const height = `${window.innerHeight - 50}px`;
+//     document.getElementById('container').style.height = height;
+// }
+// window.addEventListener("resize", setWindowHeight, false);
+// setWindowHeight();
 
 //FILME DIÁRIO
 let dailyMovie = "";
@@ -84,13 +82,6 @@ function copyToClipboard(correct, order) {
         navigator.clipboard.writeText(`Joguei cinefi.lol #${order} ${emoji1.innerText} | X/5`);
 }
 
-// RESIZE
-function setWindowHeight() {
-    const height = `${window.innerHeight - 50}px`;
-    document.getElementById('container').style.height = height;
-}
-window.addEventListener("resize", setWindowHeight, false);
-setWindowHeight();
 
 //CONFIRMAR O INPUT
 for (let i = 1; i <= 5; i++) {
