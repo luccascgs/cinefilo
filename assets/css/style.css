@@ -12,6 +12,8 @@
     --lightGreen: #D1FAE5;
     --blue: #0284C7;
     --lightBlue: #E0F2FE;
+    --yellow: #B0891C;
+    --lightYellow: #F8EED3;
 }
 
 * {
@@ -33,11 +35,11 @@ body {
     background: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png"), linear-gradient(to top, var(--darkBlueBg), var(--blueBg));
 }
 
-h1 a{
+h1 a {
     font-weight: bolder;
 }
 
-.modal a{
+.modal a {
     color: rgb(10, 133, 227);
     font-weight: 600;
 }
@@ -71,24 +73,26 @@ nav h1 {
 }
 
 /*MAIN PAGE*/
-.welcome{
+.welcome {
     color: var(--white);
     text-align: center;
     font-weight: 500;
     font-size: 1.5rem;
 }
 
-.welcome b{
+.welcome b {
     font-weight: 700;
 }
 
-.welcome label{
+.welcome label {
+    font-size: 1rem;
     background-color: var(--white);
     padding: 0.5rem 1rem;
     border: currentColor solid 2px;
     border-radius: 1rem;
 }
-.welcome a{
+
+.welcome a {
     color: currentColor;
     text-decoration: none;
     display: inline-flex;
@@ -103,11 +107,12 @@ nav h1 {
     justify-content: center;
 }
 
-.welcome .perCategory{
-    color: var(--red);
-    background-color: var(--lightRed);
+.welcome .daily {
+    color: var(--yellow);
+    background-color: var(--lightYellow);
 }
-.welcome .daily{
+
+.welcome .perCategory {
     color: var(--green);
     background-color: var(--lightGreen);
 }
@@ -119,7 +124,7 @@ input {
     height: 100%;
 }
 
-.container h2.theme{
+.container h2.theme {
     margin: 0.5rem auto;
     padding: 0.2rem 1rem;
     width: fit-content;
@@ -351,7 +356,8 @@ div.emojis {
     font-size: 1.8rem;
     font-weight: 900;
 }
-.modal .colaborators{
+
+.modal .colaborators {
     display: flex;
     justify-content: space-between;
     border-bottom: dashed 1px currentColor;
@@ -375,43 +381,94 @@ div.emojis {
 }
 
 /* CATEGORIAS */
-.categoryGrid {
+.swiper {
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: calc(80% - 50px);
+}
+
+.swiper-slide {
+    height: 80%;
+    text-align: center;
+    font-size: 3.5rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    line-height: 3.5rem;
+}
+
+.swiper-slide svg {
+    position: absolute;
+    color: var(--white);
+    width: 60%;
+    height: 80%;
+    left: calc(20%);
+}
+
+.swiper-slide footer {
+    border-radius: 1rem;
+    position: absolute;
     display: flex;
-}
-
-.categoryGrid div {
-    width: 300px;
-    height: 400px;
-}
-
-.categoryGrid img{
+    justify-content: center;
+    align-items: end;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0) 50%, currentColor 100%);
+}
+
+.swiper-slide span {
+    z-index: 3;
+    color: var(--white);
+    padding: 3rem 3rem;
+    tex
 }
 
 #horror a {
     color: #C50C00;
 }
 
+#horror {
+    background-color: #2D0300;
+}
+
 #series a {
     color: #6200DE;
+}
+
+#series {
+    background-color: #002616;
 }
 
 #adam a {
     color: #FBE200;
 }
 
+#adam {
+    background-color: #262200;
+}
+
 #action a {
     color: #C87539;
+}
+
+#action {
+    background-color: #2D1A0D;
 }
 
 #comedy a {
     color: #00DE81;
 }
 
+#comedy {
+    background-color: #001f12;
+}
+
 #cartoon a {
     color: var(--green);
+}
+
+#cartoon {
+    background-color: #011a12;
 }
 
 /* RESPONSIVIDADE */
@@ -478,7 +535,7 @@ div.emojis {
         align-items: center;
     }
 
-    .welcome label{
+    .welcome label {
         width: 70%;
     }
 }
