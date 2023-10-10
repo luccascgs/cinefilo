@@ -16,6 +16,11 @@
     --lightYellow: #F8EED3;
 }
 
+::selection {
+    background: var(--darkBlueBg);
+    color: var(--white);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -391,13 +396,14 @@ div.emojis {
 .swiper-slide {
     height: 80%;
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 3rem;
     border-radius: 1rem;
     font-weight: 700;
-    line-height: 3.5rem;
+    line-height: 3rem;
 }
 
 .swiper-slide svg {
+    z-index: 1;
     position: absolute;
     color: var(--white);
     width: 60%;
@@ -406,6 +412,7 @@ div.emojis {
 }
 
 .swiper-slide footer {
+    z-index: 2;
     border-radius: 1rem;
     position: absolute;
     display: flex;
@@ -413,14 +420,13 @@ div.emojis {
     align-items: end;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0) 50%, currentColor 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0) 30%, currentColor 100%);
 }
 
 .swiper-slide span {
     z-index: 3;
     color: var(--white);
     padding: 3rem 3rem;
-    tex
 }
 
 #horror a {
@@ -436,7 +442,7 @@ div.emojis {
 }
 
 #series {
-    background-color: #002616;
+    background-color: #0d011e;
 }
 
 #adam a {
@@ -464,11 +470,27 @@ div.emojis {
 }
 
 #cartoon a {
-    color: var(--green);
+    color: #dbb300;
 }
 
 #cartoon {
-    background-color: #011a12;
+    background-color: #442200;
+}
+
+#scifi a {
+    color: #3000de;
+}
+
+#scifi {
+    background-color: #0e0041;
+}
+
+#drama a {
+    color: #DC2626;
+}
+
+#drama {
+    background-color: #2D0300;
 }
 
 /* RESPONSIVIDADE */
