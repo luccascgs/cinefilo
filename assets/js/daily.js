@@ -19,18 +19,118 @@ const emoji3 = document.getElementById('emoji3');
 const emoji4 = document.getElementById('emoji4');
 const emoji5 = document.getElementById('emoji5');
 
-//FILME DIÁRIO
-let dailyMovie = "";
-
 overlay.addEventListener('click', function () {
-    document.getElementById('answerModal').style.display = "none";
+    document.getElementById("answerModal").style.display = "none";
 })
 
 //INICIA
 guess1Input.focus();
 
+const dayLocalStorage = localStorage.getItem('day');
+const day = dayLocalStorage ? dayjs(dayLocalStorage).format("YYYY-MM-DD") : storeToday();
+function storeToday() {
+    localStorage.setItem('complete', '0');
+    const today = dayjs().format("YYYY-MM-DD");
+    localStorage.setItem('day', today);
+    return today;
+}
+
+const statsLocalStorage = localStorage.getItem('stats');
+function createStats() {
+    const newStats = '[0,0,0,0,0,0]';
+    localStorage.setItem('stats', newStats);
+    return newStats;
+}
+
+function getStats() {
+    const statsValue = statsLocalStorage ? statsLocalStorage : createStats();
+    const stats = JSON.parse(statsValue);
+    for (let i = 1; i <= 6; i++) {
+        const counter = document.getElementById('p' + i).getElementsByTagName('span')[0];
+        counter.innerText = stats[i - 1];
+    }
+}
+getStats();
+
+function storeStats(order) {
+    const statsValue = statsLocalStorage ? statsLocalStorage : createStats();
+    const stats = JSON.parse(statsValue);
+    const guess = document.getElementById('p' + order);
+    const counter = guess.getElementsByTagName('span')[0];
+    console.log(counter);
+    if (order === 6)
+        guess.classList.add('wrong');
+    else
+        guess.classList.add('correct');
+
+    if (localStorage.getItem('complete') == 0) {
+        stats[order-1]++;
+        localStorage.setItem('stats', JSON.stringify(stats));
+        counter.innerText = stats[order - 1];
+    }
+}
+
+async function checkDay() {
+    if (dayjs().isAfter(day, 'day')) {
+        //MUDOU O DIA
+        localStorage.setItem('day', dayjs().format("YYYY-MM-DD"));
+        localStorage.setItem('tries', "[]");
+        localStorage.setItem('complete', '0');
+        getDatabase();
+        dailyMovie = localStorage.getItem('answer');
+    }
+    else {
+        //CONTINUA NO MESMO DIA
+        await setEmojis();
+    }
+}
+checkDay();
+
+async function getDailyMovie() {
+    let dailyMovie = localStorage.getItem('answer');
+    if (!dailyMovie) {
+        await getDatabase()
+        dailyMovie = localStorage.getItem('answer');
+    }
+    return dailyMovie;
+}
+
+async function setEmojis() {
+    const dailyMovieValue = await getDailyMovie();
+    const dailyMovie = JSON.parse(dailyMovieValue);
+
+    emoji1.innerText = dailyMovie.emoji[0];
+    emoji2.innerText = dailyMovie.emoji[1];
+    emoji3.innerText = dailyMovie.emoji[2];
+    emoji4.innerText = dailyMovie.emoji[3];
+    emoji5.innerText = dailyMovie.emoji[4];
+}
+
+//PUXANDO O BANCO DE DADOS
+async function getDatabase() {
+    const response = await fetch("database.json");//ler a database dos filmes cadastrados e retornar o array completo
+    const database = await response.json();//transformar em json
+
+    const responseBd = await fetch(`https://api.adrianoneres.me/cinefilo-api/daily-movie?max=${database.length - 1}`);//ler api e retornar o filme
+    const movieDay = await responseBd.json();//transformar a resposta em json
+
+    await outDatabase(database, movieDay.id_movie);//passar os valores para outra função
+};
+
+async function outDatabase(val, indice) {
+    const movie = val[indice];
+    let moviesDatabase = val;
+
+    localStorage.setItem('answer', JSON.stringify(movie));
+    await setEmojis();
+}
+
+
 //MODAL DE RESPOSTA
-function checkModal(order) {
+async function checkModal(order) {
+    const dailyMovieValue = await getDailyMovie();
+    const dailyMovie = JSON.parse(dailyMovieValue);
+
     answerModal.getElementsByTagName('h3')[0].innerText = (`Resposta: ${dailyMovie.name}`);
     answerModal.style.display = "block";
     overlay.style.display = "block";
@@ -59,30 +159,50 @@ function copyToClipboard(correct, order) {
         navigator.clipboard.writeText(`Joguei cinefi.lol #${order} ${emoji1.innerText} | X/5`);
 }
 
-
 //CONFIRMAR O INPUT
 for (let i = 1; i <= 5; i++) {
-    const currentInput = document.getElementById('guess' + i).getElementsByTagName('input')[0];
 
-    currentInput.addEventListener('keydown', function (event) {
-        if ((event.code === "Enter" || event.keyCode === 13) && currentInput.value) {
-            selectNext(i);
-        }
-    });
+    const tries = JSON.parse(localStorage.getItem('tries')) || [];
+    const currentInput = document.getElementById('guess' + (i)).getElementsByTagName('input')[0];
+
+    if (tries[i - 1]) {
+        currentInput.value = tries[i - 1];
+        selectNext(i);
+    }
+    else {
+        currentInput.addEventListener('keydown', function (event) {
+            if ((event.code === "Enter" || event.keyCode === 13) && currentInput.value) {
+                saveDataToLocalStorage(currentInput.value);
+                selectNext(i);
+            }
+        });
+    }
+}
+
+//SALVAR OS INPUTS PARA O LOCALSTORAGE
+function saveDataToLocalStorage(data) {
+    let tries = [];
+    tries = JSON.parse(localStorage.getItem('tries')) || [];//verifica os valores que tem
+    tries.push(data);//adiciona o palpite
+    localStorage.setItem('tries', JSON.stringify(tries));
 }
 
 //FUNÇÃO PARA SELECIONAR O PRÓXIMO INTPUT E VALIDAR A RESPOSTA VISUALMENTE
-function selectNext(order) {
+async function selectNext(order) {
+    const dailyMovie = JSON.parse(await getDailyMovie());
 
     ///VALIDÇÃO VISUAL
     const currentLi = document.getElementById("guess" + order);
     const currentInput = currentLi.getElementsByTagName('input')[0];
 
+    const isMovieCorrect = await checkMovie(currentInput.value);
     ///SE ACERTAR
-    if (checkMovie(currentInput.value)) {
+    if (isMovieCorrect) {
+        storeStats(order);
+        localStorage.setItem('complete', '1');
         const guess = order;
-        copyButton.addEventListener('click', function(){
-            copyToClipboard(true,guess);
+        copyButton.addEventListener('click', function () {
+            copyToClipboard(true, guess);
         });
         validToast(order, true);
         ////MOSTRAR OS PRÓXIMOS EMOJIS COM DELAY
@@ -100,7 +220,6 @@ function selectNext(order) {
         currentLi.querySelector(".icon").src = "assets/images/check.svg"; //Muda o icon para outro SVG;
         currentLi.classList.remove('input');
         currentLi.classList.add('correct');
-
         currentInput.setAttribute('readonly', true);
         currentInput.value = dailyMovie.name;
 
@@ -109,22 +228,23 @@ function selectNext(order) {
         currentLi.querySelector(".icon").src = "assets/images/x.svg"; //Muda o icon para outro SVG;
         currentLi.classList.add('wrong');
         currentLi.classList.remove('input');
-
         currentInput.setAttribute('readonly', true);
 
         ///VOCÊ PERDEU
-        if(order === 5){
-            copyButton.addEventListener('click', function(){
-                copyToClipboard(false,order);
+        if (order === 5) {
+            storeStats(6);
+            localStorage.setItem('complete', '1');
+            copyButton.addEventListener('click', function () {
+                copyToClipboard(false, order);
             });
-            setTimeout(function () {
-                checkModal(order);
+            setTimeout(async function () {
+                await checkModal(order);
             }, 1500);
         }
     }
 
     ///SELECIONAR O PRÓXIMO
-    if (order < 5 && checkMovie(currentInput.value) === false) {
+    if (order < 5 && !isMovieCorrect) {
         const nextLi = document.getElementById("guess" + (order + 1));
         const nextInput = nextLi.getElementsByTagName('input')[0];
 
@@ -145,14 +265,13 @@ function selectNext(order) {
 //FUNÇÃO PARA SELECIONAR O PRÓXIMO EMOJI
 function showEmoji(order) {
     const nextEmoji = document.getElementById('emoji' + order);
-
     nextEmoji.classList.add('visible');
 }
 
 
 //CHECAGEM DO FILME
-function checkMovie(input) {
-
+async function checkMovie(input) {
+    const dailyMovie = JSON.parse(await getDailyMovie());
     ///REMOVENDO ACENTOS
     const inputToCheck = input.trim().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
 
@@ -202,28 +321,4 @@ function validToast(order, isValid) {
 //SORTEANDO NÚMERO ALEATÓRIO
 function sortNumber(max) {
     return Math.floor(Math.random() * max)
-}
-
-function getDatabase() {
-    fetch("database.json")
-        .then(response => response.json())
-        .then(database => {
-            outDatabase(database);
-        });
-}
-getDatabase();
-
-
-function outDatabase(val) {
-
-    const i = sortNumber(val.length);
-    const movie = val[i];
-
-    dailyMovie = movie;
-
-    emoji1.innerText = movie.emoji[0];
-    emoji2.innerText = movie.emoji[1];
-    emoji3.innerText = movie.emoji[2];
-    emoji4.innerText = movie.emoji[3];
-    emoji5.innerText = movie.emoji[4];
 }
