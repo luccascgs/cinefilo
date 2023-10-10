@@ -28,11 +28,46 @@ guess1Input.focus();
 
 const dayLocalStorage = localStorage.getItem('day');
 const day = dayLocalStorage ? dayjs(dayLocalStorage).format("YYYY-MM-DD") : storeToday();
-
-function storeToday(){
+function storeToday() {
+    localStorage.setItem('complete', '0');
     const today = dayjs().format("YYYY-MM-DD");
     localStorage.setItem('day', today);
     return today;
+}
+
+const statsLocalStorage = localStorage.getItem('stats');
+function createStats() {
+    const newStats = '[0,0,0,0,0,0]';
+    localStorage.setItem('stats', newStats);
+    return newStats;
+}
+
+function getStats() {
+    const statsValue = statsLocalStorage ? statsLocalStorage : createStats();
+    const stats = JSON.parse(statsValue);
+    for (let i = 1; i <= 6; i++) {
+        const counter = document.getElementById('p' + i).getElementsByTagName('span')[0];
+        counter.innerText = stats[i - 1];
+    }
+}
+getStats();
+
+function storeStats(order) {
+    const statsValue = statsLocalStorage ? statsLocalStorage : createStats();
+    const stats = JSON.parse(statsValue);
+    const guess = document.getElementById('p' + order);
+    const counter = guess.getElementsByTagName('span')[0];
+    console.log(counter);
+    if (order === 6)
+        guess.classList.add('wrong');
+    else
+        guess.classList.add('correct');
+
+    if (localStorage.getItem('complete') == 0) {
+        stats[order-1]++;
+        localStorage.setItem('stats', JSON.stringify(stats));
+        counter.innerText = stats[order - 1];
+    }
 }
 
 async function checkDay() {
@@ -40,6 +75,7 @@ async function checkDay() {
         //MUDOU O DIA
         localStorage.setItem('day', dayjs().format("YYYY-MM-DD"));
         localStorage.setItem('tries', "[]");
+        localStorage.setItem('complete', '0');
         getDatabase();
         dailyMovie = localStorage.getItem('answer');
     }
@@ -94,7 +130,7 @@ async function outDatabase(val, indice) {
 async function checkModal(order) {
     const dailyMovieValue = await getDailyMovie();
     const dailyMovie = JSON.parse(dailyMovieValue);
-    
+
     answerModal.getElementsByTagName('h3')[0].innerText = (`Resposta: ${dailyMovie.name}`);
     answerModal.style.display = "block";
     overlay.style.display = "block";
@@ -154,7 +190,7 @@ function saveDataToLocalStorage(data) {
 //FUNÇÃO PARA SELECIONAR O PRÓXIMO INTPUT E VALIDAR A RESPOSTA VISUALMENTE
 async function selectNext(order) {
     const dailyMovie = JSON.parse(await getDailyMovie());
-    
+
     ///VALIDÇÃO VISUAL
     const currentLi = document.getElementById("guess" + order);
     const currentInput = currentLi.getElementsByTagName('input')[0];
@@ -162,6 +198,8 @@ async function selectNext(order) {
     const isMovieCorrect = await checkMovie(currentInput.value);
     ///SE ACERTAR
     if (isMovieCorrect) {
+        storeStats(order);
+        localStorage.setItem('complete', '1');
         const guess = order;
         copyButton.addEventListener('click', function () {
             copyToClipboard(true, guess);
@@ -194,6 +232,8 @@ async function selectNext(order) {
 
         ///VOCÊ PERDEU
         if (order === 5) {
+            storeStats(6);
+            localStorage.setItem('complete', '1');
             copyButton.addEventListener('click', function () {
                 copyToClipboard(false, order);
             });

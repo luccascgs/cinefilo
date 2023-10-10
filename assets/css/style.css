@@ -36,6 +36,7 @@ img {
 }
 
 body {
+    color: var(--black);
     font-family: 'Poppins', sans-serif;
     background: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png"), linear-gradient(to top, var(--darkBlueBg), var(--blueBg));
 }
@@ -337,10 +338,10 @@ div.emojis {
     flex-direction: column;
     height: max-content;
     width: 30%;
-    border: var(--gray) solid 2px;
+    border: currentColor solid 2px;
 }
 
-.modal.modal.clip li * {
+.modal.clip li * {
     margin: 0;
 }
 
