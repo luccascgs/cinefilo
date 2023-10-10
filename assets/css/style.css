@@ -123,6 +123,44 @@ nav h1 {
     background-color: var(--lightGreen);
 }
 
+.comoFunciona{
+    background-color: var(--white);
+    border-radius: 2rem 2rem 0 0;
+    padding: 2rem 3rem;
+    text-align: center;
+}
+
+.comoFunciona h1{
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+}
+
+.comoFunciona h2 {
+    color: var(--blue);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.comoFunciona svg{
+    width: 100px;
+    height: 100px;
+    padding-bottom: 1rem;
+}
+
+.comoFunciona .cardsContainer{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.comoFunciona .card{
+    width: 350px;
+    padding: 2rem;
+    border: solid var(--gray) 2px;
+    border-radius: 1rem;
+}
+
 /* INPUT */
 input {
     all: unset;
@@ -281,7 +319,7 @@ div.emojis {
 .modal {
     display: none;
     background-color: var(--white);
-    position: absolute;
+    position: fixed;
     width: 500px;
     max-height: 550px;
     border: solid var(--gray) 2px;
@@ -315,7 +353,7 @@ div.emojis {
 #overlay {
     display: none;
     z-index: 9999;
-    position: absolute;
+    position: fixed;
     content: '';
     background-color: black;
     opacity: 0.7;
@@ -560,5 +598,13 @@ div.emojis {
 
     .welcome label {
         width: 70%;
+    }
+
+    .comoFunciona .cardsContainer{
+        flex-direction: column;
+    }
+
+    .comoFunciona .card{
+        width: 100%;
     }
 }
