@@ -23,6 +23,19 @@ overlay.addEventListener('click', function () {
     document.getElementById("answerModal").style.display = "none";
 })
 
+//TIMER
+const countdown = document.getElementById('countdown');
+
+const tomorrow = dayjs().add(1,'day').hour(0).minute(0).second(0);
+
+function countdownTimer() {
+    const now = dayjs();
+    const timer = tomorrow.subtract(1, 'day').subtract(now.format('ss'), 's').subtract(now.format('HH'), 'h').subtract(now.format('mm'), 'm');
+    countdown.innerText = timer.format('HH:mm:ss');
+    setInterval(function () { countdownTimer(); }, 1000);
+}
+countdownTimer();
+
 //INICIA
 guess1Input.focus();
 
@@ -57,14 +70,13 @@ function storeStats(order) {
     const stats = JSON.parse(statsValue);
     const guess = document.getElementById('p' + order);
     const counter = guess.getElementsByTagName('span')[0];
-    console.log(counter);
     if (order === 6)
         guess.classList.add('wrong');
     else
         guess.classList.add('correct');
 
     if (localStorage.getItem('complete') == 0) {
-        stats[order-1]++;
+        stats[order - 1]++;
         localStorage.setItem('stats', JSON.stringify(stats));
         counter.innerText = stats[order - 1];
     }

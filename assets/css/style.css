@@ -126,8 +126,12 @@ nav h1 {
 .comoFunciona{
     background-color: var(--white);
     border-radius: 2rem 2rem 0 0;
-    padding: 2rem 3rem;
+    padding: 5rem 3rem;
     text-align: center;
+}
+
+.main{
+    height: 85vh!important;
 }
 
 .comoFunciona h1{
