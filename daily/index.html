@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="assets/images/icon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/icon.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
     <title>Cinéfilo</title>
 </head>
 
 <body>
     <nav>
+
         <div>
-            <a href="daily.html">
+            <a href="../../daily/">
                 <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
                     stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -23,7 +24,7 @@
                     <line x1="3" y1="10" x2="21" y2="10"></line>
                 </svg>
             </a>
-            <a href="categoria.html">
+            <a href="../../categorys/">
                 <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
                     stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
                     <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
@@ -31,7 +32,7 @@
                 </svg>
             </a>
         </div>
-        <h1><a href="index.html">CINÉFILO</a></h1>
+        <h1><a href="../../">CINÉFILO</a></h1>
         <div>
             <a id="howtoplay">
                 <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
@@ -81,7 +82,7 @@
                     Não precisa colocar o título original, além de que os acentos são adicionados automaticamente.
                 </p>
                 <p>
-                    Volte amanhã para um novo desafio diário ou explore nossas <a href="categoria.html">categorias</a>.
+                    Volte amanhã para um novo desafio diário ou explore nossas <a href="../../categorys/">categorias</a>.
                 </p>
             </article>
             <article id="infoModal" class="modal">
@@ -92,44 +93,51 @@
                 </p>
                 <p>
                     Tudo começou com uma ideia de jogo de mímica, que então foi moldada até nosso projeto final: Um jogo
-                    de adivinhação de filmes, inspirado no lendário <a href="https://term.ooo" target="_blank">term.ooo</a>.
+                    de adivinhação de filmes, inspirado no lendário <a href="https://term.ooo"
+                        target="_blank">term.ooo</a>.
                 </p>
                 <p>
-                    Se você gostou, nos dê um fork e uma estrelinha no <a href="https://github.com/luccascgs/cinefilo" target="_blank">Github</a>, isso ajuda demais a alavancar nossa
+                    Se você gostou, nos dê um fork e uma estrelinha no <a href="https://github.com/luccascgs/cinefilo"
+                        target="_blank">Github</a>, isso ajuda demais a alavancar nossa
                     carreira!
                 </p>
                 <h2>Desenvolvedores</h2>
-                <div class="colaborators"><a href="https://github.com/luccascgs/" target="_blank">Luccas Gomes</a><span>Desenvolvedor-Líder</span></div>
-                <div class="colaborators"><a href="https://github.com/LucianoKohler" target="_blank">Luciano Kohler</a><span>Moderador-gestor</span></div>
-                <div class="colaborators"><a href="https://github.com/Vitoria-3436" target="_blank">Vitória Carolina</a><span>Geradora de filmes</span></div>
-                <div class="colaborators"><a href="https://github.com/lucasgbsilva" target="_blank">Lucas Gabriel</a><span>Designer</span></div>
-                <div class="colaborators"><a href="https://github.com/helenamaciel" target="_blank">Maria Helena</a><span>Designer</span></div>
+                <div class="colaborators"><a href="https://github.com/luccascgs/" target="_blank">Luccas
+                        Gomes</a><span>Desenvolvedor-Líder</span></div>
+                <div class="colaborators"><a href="https://github.com/LucianoKohler" target="_blank">Luciano
+                        Kohler</a><span>Moderador-gestor</span></div>
+                <div class="colaborators"><a href="https://github.com/Vitoria-3436" target="_blank">Vitória
+                        Carolina</a><span>Geradora de filmes</span></div>
+                <div class="colaborators"><a href="https://github.com/lucasgbsilva" target="_blank">Lucas
+                        Gabriel</a><span>Designer</span></div>
+                <div class="colaborators"><a href="https://github.com/helenamaciel" target="_blank">Maria
+                        Helena</a><span>Designer</span></div>
             </article>
             <article id="answerModal" class="modal clip">
                 <h2>Progresso</h2>
                 <h3>Resposta: </h3>
                 <ul>
-                    <li>
+                    <li id="p1">
                         <h3>1º Palpite:</h3>
                         <span>0</span>
                     </li>
-                    <li>
+                    <li id="p2">
                         <h3>2º Palpite:</h3>
                         <span>0</span>
                     </li>
-                    <li>
+                    <li id="p3">
                         <h3>3º Palpite:</h3>
                         <span>0</span>
                     </li>
-                    <li>
+                    <li id="p4">
                         <h3>4º Palpite:</h3>
                         <span>0</span>
                     </li>
-                    <li>
+                    <li id="p5">
                         <h3>5º Palpite:</h3>
                         <span>0</span>
                     </li>
-                    <li class="defeat">
+                    <li id="p6">
                         <h3>Derrotas:</h3>
                         <span>0</span>
                     </li>
@@ -137,7 +145,7 @@
                 <footer>
                     <div>
                         <h4>Próximo título: </h4>
-                        <span>00:00:00</span>
+                        <span id="countdown">00:00:00</span>
                     </div>
                     <button id="clip">Compartilhar <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
                             stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
@@ -151,7 +159,7 @@
                 </footer>
 
             </article>
-            <h2 class="theme">MODO: ADAM SANDLER</h2>
+            <h2 class="theme">MODO: DIÁRIO</h2>
             <div class="emojis">
                 <span id="emoji1"></span>
                 <span id="emoji2"></span>
@@ -161,30 +169,31 @@
             </div>
             <ul>
                 <li id="guess1" class="input">
-                    <img class="icon" src="assets/images/write.svg">
+                    <img class="icon" src="../assets/images/write.svg">
                     <input type="text" placeholder="Digite o nome do filme">
                 </li>
                 <li id="guess2" class="toAns">
-                    <img class="icon" src="assets/images/chat.svg">
+                    <img class="icon" src="../assets/images/chat.svg">
                     <input type="text" placeholder="2º Palpite" readonly>
                 </li>
                 <li id="guess3" class="toAns">
-                    <img class="icon" src="assets/images/chat.svg">
+                    <img class="icon" src="../assets/images/chat.svg">
                     <input type="text" placeholder="3º Palpite" readonly>
                 </li>
                 <li id="guess4" class="toAns">
-                    <img class="icon" src="assets/images/chat.svg">
+                    <img class="icon" src="../assets/images/chat.svg">
                     <input type="text" placeholder="4º Palpite" readonly>
                 </li>
                 <li id="guess5" class="toAns">
-                    <img class="icon" src="assets/images/chat.svg">
+                    <img class="icon" src="../assets/images/chat.svg">
                     <input type="text" placeholder="5º Palpite" readonly>
                 </li>
             </ul>
         </section>
     </main>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/essential.js"></script>
+    <script src="../assets/js/essential.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="../assets/js/daily.js"></script>
 </body>
 
 </html>

@@ -97,7 +97,7 @@ function selectNext(order) {
         delayEmoji();
 
         ////MUDAR A COR
-        currentLi.querySelector(".icon").src = "assets/images/check.svg"; //Muda o icon para outro SVG;
+        currentLi.querySelector(".icon").src = "../../assets/images/check.svg"; //Muda o icon para outro SVG;
         currentLi.classList.remove('input');
         currentLi.classList.add('correct');
 
@@ -106,7 +106,7 @@ function selectNext(order) {
 
     }///SE ERRAR
     else {
-        currentLi.querySelector(".icon").src = "assets/images/x.svg"; //Muda o icon para outro SVG;
+        currentLi.querySelector(".icon").src = "../../assets/images/x.svg"; //Muda o icon para outro SVG;
         currentLi.classList.add('wrong');
         currentLi.classList.remove('input');
 
@@ -130,7 +130,7 @@ function selectNext(order) {
 
         nextLi.classList.add('input');
         nextLi.classList.remove('toAns');
-        nextLi.querySelector(".icon").src = "assets/images/write.svg"; //Muda o icon para outro SVG;
+        nextLi.querySelector(".icon").src = "../../assets/images/write.svg"; //Muda o icon para outro SVG;
 
 
         nextInput.removeAttribute('readonly');
@@ -205,7 +205,7 @@ function sortNumber(max) {
 }
 
 function getDatabase() {
-    fetch("database.json")
+    fetch("../../database.json")
         .then(response => response.json())
         .then(database => {
             outDatabase(database);
