@@ -19,6 +19,7 @@ const emoji3 = document.getElementById('emoji3');
 const emoji4 = document.getElementById('emoji4');
 const emoji5 = document.getElementById('emoji5');
 
+
 overlay.addEventListener('click', function () {
     document.getElementById("answerModal").style.display = "none";
 })
@@ -120,7 +121,7 @@ async function setEmojis() {
 
 //PUXANDO O BANCO DE DADOS
 async function getDatabase() {
-    const response = await fetch("database.json");//ler a database dos filmes cadastrados e retornar o array completo
+    const response = await fetch("../database.json");//ler a database dos filmes cadastrados e retornar o array completo
     const database = await response.json();//transformar em json
 
     const responseBd = await fetch(`https://api.adrianoneres.me/cinefilo-api/daily-movie?max=${database.length - 1}`);//ler api e retornar o filme
@@ -165,10 +166,10 @@ function copyToClipboard(correct, order) {
         toast.classList.remove('toastC');
     }, 1500);
     if (correct) {
-        navigator.clipboard.writeText(`Joguei cinefi.lol #${order} ${emoji1.innerText} | ${order}/5`);
+        navigator.clipboard.writeText(`Joguei cinefi.lol #1 ${emoji1.innerText} | ${order}/5`);
     }
     else
-        navigator.clipboard.writeText(`Joguei cinefi.lol #${order} ${emoji1.innerText} | X/5`);
+        navigator.clipboard.writeText(`Joguei cinefi.lol #1 ${emoji1.innerText} | X/5`);
 }
 
 //CONFIRMAR O INPUT
@@ -229,7 +230,7 @@ async function selectNext(order) {
         delayEmoji();
 
         ////MUDAR A COR
-        currentLi.querySelector(".icon").src = "assets/images/check.svg"; //Muda o icon para outro SVG;
+        currentLi.querySelector(".icon").src = "../assets/images/check.svg"; //Muda o icon para outro SVG;
         currentLi.classList.remove('input');
         currentLi.classList.add('correct');
         currentInput.setAttribute('readonly', true);
@@ -237,7 +238,7 @@ async function selectNext(order) {
 
     }///SE ERRAR
     else {
-        currentLi.querySelector(".icon").src = "assets/images/x.svg"; //Muda o icon para outro SVG;
+        currentLi.querySelector(".icon").src = "../assets/images/x.svg"; //Muda o icon para outro SVG;
         currentLi.classList.add('wrong');
         currentLi.classList.remove('input');
         currentInput.setAttribute('readonly', true);
@@ -262,7 +263,7 @@ async function selectNext(order) {
 
         nextLi.classList.add('input');
         nextLi.classList.remove('toAns');
-        nextLi.querySelector(".icon").src = "assets/images/write.svg"; //Muda o icon para outro SVG;
+        nextLi.querySelector(".icon").src = "../assets/images/write.svg"; //Muda o icon para outro SVG;
 
 
         nextInput.removeAttribute('readonly');
