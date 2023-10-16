@@ -16,11 +16,6 @@
     --lightYellow: #F8EED3;
 }
 
-::selection {
-    background: var(--darkBlueBg);
-    color: var(--white);
-}
-
 * {
     margin: 0;
     padding: 0;
