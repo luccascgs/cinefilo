@@ -25,17 +25,54 @@ overlay.addEventListener('click', function () {
 })
 
 //TIMER
-const countdown = document.getElementById('countdown');
+var today = new Date();
 
-const tomorrow = dayjs().add(1,'day').hour(0).minute(0).second(0);
+var tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
+tomorrow.setHours(0, 0, 0, 0);
 
-function countdownTimer() {
-    const now = dayjs();
-    const timer = tomorrow.subtract(1, 'day').subtract(now.format('ss'), 's').subtract(now.format('HH'), 'h').subtract(now.format('mm'), 'm');
-    countdown.innerText = timer.format('HH:mm:ss');
-    setInterval(function () { countdownTimer(); }, 1000);
+var diffMs = (tomorrow - today); // milliseconds between now & Christmas
+var minutes = Math.floor((diffMs / 1000) / 60);
+
+countdown(minutes);
+
+function countdown(minutes) {
+
+    var target_date = new Date().getTime() + ((minutes * 60) * 1000); // set the countdown date
+    var days, hours, minutes, seconds; // variables for time units
+
+    var countdown = document.getElementById("countdown"); // get tag element
+
+    getCountdown();
+
+    setInterval(function () { getCountdown(); }, 1000);
+
+    function getCountdown() {
+
+        // find the amount of "seconds" between now and target
+        var current_date = new Date().getTime();
+        var seconds_left = (target_date - current_date) / 1000;
+
+        if (seconds_left >= 0) {
+
+            days = pad(parseInt(seconds_left / 86400));
+            seconds_left = seconds_left % 86400;
+
+            hours = pad(parseInt(seconds_left / 3600));
+            seconds_left = seconds_left % 3600;
+
+            minutes = pad(parseInt(seconds_left / 60));
+            seconds = pad(parseInt(seconds_left % 60));
+
+            // format countdown string + set tag value
+            countdown.innerText = hours + ":" + minutes + ":" + seconds;
+        }
+    }
+
+    function pad(n) {
+        return (n < 10 ? '0' : '') + n;
+    }
 }
-countdownTimer();
 
 //INICIA
 guess1Input.focus();
@@ -153,6 +190,8 @@ async function checkModal(order) {
 const copyButton = document.getElementById('clip');
 function copyToClipboard(correct, order) {
     const toast = document.getElementById('toastValid');
+    const id = dayjs().diff('2023-10-07', 'day');
+    console.log(id);
 
     toast.classList.remove('closeToast');
     toast.innerText = 'COPIADO!';
@@ -166,10 +205,10 @@ function copyToClipboard(correct, order) {
         toast.classList.remove('toastC');
     }, 1500);
     if (correct) {
-        navigator.clipboard.writeText(`Joguei cinefi.lol #1 ${emoji1.innerText} | ${order}/5`);
+        navigator.clipboard.writeText(`Joguei cinefi.lol #${id} ${emoji1.innerText} | ${order}/5`);
     }
     else
-        navigator.clipboard.writeText(`Joguei cinefi.lol #1 ${emoji1.innerText} | X/5`);
+        navigator.clipboard.writeText(`Joguei cinefi.lol #${id} ${emoji1.innerText} | X/5`);
 }
 
 //CONFIRMAR O INPUT
