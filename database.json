@@ -22,7 +22,7 @@
     {
         "name": "Mistério em Paris",
         "acceptableNames": ["misterio em paris", "o misterio em paris"],
-        "emoji": ["🌃""🕰️""🚶‍♂️""📜""🗼"]
+        "emoji": ["🌃","🕰️","🚶‍♂️","📜","🗼"]
     },
     {
         "name": "Creed",
@@ -32,7 +32,7 @@
     {
         "name": "Space Jam",
         "acceptableNames": ["space jam", "spacejam"],
-        "emoji": ["⛹🏽🏆🏀⏲️🌟"]
+        "emoji": ["⛹🏽","🏆","🏀","⏲️","🌟"]
     },
     {
         "name": "Star Wars",
@@ -248,5 +248,5 @@
         "name": "Como Se Fosse a Primeira Vez",
         "acceptableNames": ["como se fosse a primeira vez", "50 first dates","fifty first date"],
         "emoji": ["🌺", "🏖️", "🐟", "💏", "🌈"]
-    },
+    }
 ]
