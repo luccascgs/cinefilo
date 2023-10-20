@@ -30,6 +30,11 @@
         "emoji": ["🥊","🏆","👊","🏋️‍♂️","🎤"]
     },
     {
+        "name": "Rocky",
+        "acceptableNames": ["rocky", "rocky balboa", "rock", "rock balboa"],
+        "emoji": ["🥊","🏆","🇮🇹","🥇","🥋"]
+    },
+    {
         "name": "Space Jam",
         "acceptableNames": ["space jam", "spacejam"],
         "emoji": ["⛹🏽","🏆","🏀","⏲️","🌟"]
