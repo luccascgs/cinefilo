@@ -325,7 +325,7 @@ function showEmoji(order) {
 async function checkMovie(input) {
     const dailyMovie = JSON.parse(await getDailyMovie());
     ///REMOVENDO ACENTOS
-    const inputToCheck = input.trim().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+    const inputToCheck = input.trim().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s/g, '');
 
     const movieFound = dailyMovie.acceptableNames.find(acceptableName => inputToCheck.toLowerCase() === acceptableName.toLowerCase())
     return !!movieFound;
