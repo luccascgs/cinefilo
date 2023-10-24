@@ -42,7 +42,7 @@
     {
         "name": "Batman",
         "acceptableNames": ["batman"],
-        "emoji": ["🌃","🦸","🦹‍♂️","🦇","💥"]
+        "emoji": ["🌃","🦸‍♂️","🦹‍♂️","🦇","💥"]
     },
     {
         "name": "Guardiões da Galáxia",
@@ -122,7 +122,7 @@
     {
         "name": "Up - Altas Aventuras",
         "acceptableNames": ["up", "upaltasaventuras"],
-        "emoji": ["🏠","🎈👴","👴","👦","🐶"]
+        "emoji": ["🏠","🎈","👴","👦","🐶"]
     },
     {
         "name": "Wolverine",
@@ -136,7 +136,7 @@
     },
     {
         "name": "As Aventuras de Pi",
-        "acceptableNames": ["asaventurasdepi","aventurasdepi","lifeofpi","thelifeofpi","asaventurasde314","aventurasde314"],
+        "acceptableNames": ["asaventurasdepi","aventurasdepi","lifeofpi","thelifeofpi","asaventurasde314","aventurasde314", "pi", "314"],
         "emoji": ["🚤", "🐅", "🌊", "🙏", "🌴"]
     },
     {
@@ -223,5 +223,20 @@
         "name": "A Origem dos Guardiões",
         "acceptableNames": ["aorigemdosguardioes", "riseoftheguardians","origemdosguardioes","jackfrost"],
         "emoji": ["🌟", "👼", "❄️", "🐰", "🎅"]
+    },
+    {
+        "name": "Creed",
+        "acceptableNames": ["creed", "thecreed","ocreed"],
+        "emoji": ["🥊","🏆","🥋","👨‍🏫","🥇"]
+    },
+    {
+        "name": "Laranja Mecânica",
+        "acceptableNames": ["LaranjaMecanica","ClockworkOrange"],
+        "emoji": ["🍊","🛠️","👁️","🔪","🎩"]
+    },
+    {
+        "name": "Taxi Driver",
+        "acceptableNames": ["TaxiDriver","motoristadetaxi"],
+        "emoji": ["🚖","🌃","🔫","👁️‍🗨️","💔"]
     }
 ]
