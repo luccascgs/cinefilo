@@ -278,5 +278,100 @@
         "name": "Jogos Vorazes",
         "acceptableNames": ["JogosVorazes","TheHungerGames","HungerGames"],
         "emoji": ["🔥","🏹","👑","🪓","🐦"]
+    },
+    {
+        "name": "Velozes e Furiosos",
+        "acceptableNames": ["VelozeseFuriosos", "VelozesFuriosos", "FastAndFurious"],
+        "emoji": ["🚗","💨","🔥","🚓","👊"]
+    },
+    {
+        "name": "Missão Impossível",
+        "acceptableNames": ["missaoimpossivel", "missionimpossible"],
+        "emoji": ["💼","🕶️","🕵️‍♂️","🔓","🚁"]
+    },
+    {
+        "name": "Carros",
+        "acceptableNames": ["carros", "cars","relampagomcqueen","relampagomarquinhos","oscarros","thecars"],
+        "emoji": ["🚗","🏎️","🏁","🏜","🚦"]
+    },
+    {
+        "name": "Uma Noite No Museu",
+        "acceptableNames": ["umanoitenomuseu", "noitenomuseu","nightatthemuseum","anightatthemuseum"],
+        "emoji": ["🏛️","🌙","🦖","🐒","🎭"]
+    },
+    {
+        "name": "Flash",
+        "acceptableNames": ["flash", "theflash","oflash"],
+        "emoji": ["⚡","🏃‍♂️","🔴","🌩️","💨"]
+    },
+    {
+        "name": "O Diabo Veste Prada",
+        "acceptableNames": ["diabovesteprada", "odiabovesteprada","TheDevilWearsPrada"],
+        "emoji": ["👠","👜","✒️","👗","🌃"]
+    },
+    {
+        "name": "Maze Runner",
+        "acceptableNames": ["mazerunner","mazeruner"],
+        "emoji": ["🏃‍♂️","🧩","🔥","🗝️","🏢"]
+    },
+    {
+        "name": "Mulher Maravilha",
+        "acceptableNames": ["mulhermaravilha","wonderwoman"],
+        "emoji": ["🦸‍♀️","⚔️","🛡️","🌟","🧶"]
+    },
+    {
+        "name": "It: A Coisa",
+        "acceptableNames": ["it","itacoisa"],
+        "emoji": ["🤡","🎈","🎪","🎢","🏠"]
+    },
+    {
+        "name": "Zootopia",
+        "acceptableNames": ["zootopia"],
+        "emoji": ["🦊","🐰","👮‍♀️","🏙️","🕵️‍♂️"]
+    },
+    {
+        "name": "Doutor Estranho",
+        "acceptableNames": ["doutorestranho","odoutorestranho","doctorstrange","thedoctorstrange"],
+        "emoji": ["👁","⏳","🦸‍♂️","🔮","🔺"]
+    },
+    {
+        "name": "Vingadores",
+        "acceptableNames": ["vingadores","osvingadores","avangers","theavangers"],
+        "emoji": ["🛡","🦾","🕷","🟢","🏹"]
+    },
+    {
+        "name": "Jogos Mortais",
+        "acceptableNames": ["jogosmortais","osjogosmortais","saw","jigsaw","digsaw"],
+        "emoji": ["🧩","☠️","🛴","📺","⏳"]
+    },
+    {
+        "name": "Thor",
+        "acceptableNames": ["thor","othor","thethor"],
+        "emoji": ["🔨","⚡","🌩️","🌈","🏜"]
+    },
+    {
+        "name": "Parasita",
+        "acceptableNames": ["parasita","oparasita","parasite", "theparasite"],
+        "emoji": ["🏠","🐜","💰","🤝","🕵️"]
+    },
+    {
+        "name": "Os Intocáveis",
+        "acceptableNames": ["intocaveis","osintocaveis","Intouchables","theIntouchables"],
+        "emoji": ["🦼","🤝","💰","❤️","🎶"]
+    },
+    {
+        "name": "O Exterminador do Futuro",
+        "acceptableNames": ["exterminadordofuturo","oexterminadordofuturo","Terminator","TheTerminator"],
+        "emoji": ["🤖","🔫","⏳","🌎","🕶"]
+    },
+    {
+        "name": "Alien",
+        "acceptableNames": ["alien","oalien","thealien"],
+        "emoji": ["👽","🚀","🔫","🌌","😱"]
+    },
+    {
+        "name": "Monstros S.A.",
+        "acceptableNames": ["monstrossa","monstersinc","osmonstrossa","themonstersinc", "monstrosa","omonstrosa","monsterinc","themonsterinc"],
+        "emoji": ["👾","👁","🚪","😱","⚡"]
     }
 ]
