@@ -61,7 +61,7 @@
     },
     {
         "name": "O Mágico de Oz",
-        "acceptableNames": ["magicodeoz","omagicodeoz"],
+        "acceptableNames": ["magicodeoz","omagicodeoz","oz"],
         "emoji": ["👠","🌈","👧","🦁","🧙‍♀️"]
     },
     {
@@ -91,7 +91,7 @@
     },
     {
         "name": "Mary Poppins",
-        "acceptableNames": ["MaryPoppins","MaryPopins"],
+        "acceptableNames": ["MaryPoppins","MaryPopins","MarryPoppins","MarryPopins"],
         "emoji": ["👜","🌂","🎶","👩","👒"]
     },
     {
@@ -238,5 +238,45 @@
         "name": "Taxi Driver",
         "acceptableNames": ["TaxiDriver","motoristadetaxi"],
         "emoji": ["🚖","🌃","🔫","👁️‍🗨️","💔"]
+    },
+    {
+        "name": "Esqueceram de Mim",
+        "acceptableNames": ["EsqueceramdeMim","homealone"],
+        "emoji": ["🏠","👦","🎄","🚂","😱"]
+    },
+    {
+        "name": "Superman",
+        "acceptableNames": ["superman","homemdeaco"],
+        "emoji": ["🦸‍♂️","🔵","🔴","👓","✊"]
+    },
+    {
+        "name": "Aquaman",
+        "acceptableNames": ["Aquaman"],
+        "emoji": ["🔱","🐟","🌊","🔥","🌅"]
+    },
+    {
+        "name": "Homem-Aranha",
+        "acceptableNames": ["spiderman","homemaranha","aranhahomem","aranhahumana"],
+        "emoji": ["🕷️","🦸‍♂️","🕸️","🏙️","🤘"]
+    },
+    {
+        "name": "Homem de Ferro",
+        "acceptableNames": ["ironman","homemdeferro"],
+        "emoji": ["🦾","🔴","💼","🦸‍♂️","🔨"]
+    },
+    {
+        "name": "Liga da Justiça",
+        "acceptableNames": ["ligadajustica","justiceleague"],
+        "emoji": ["🦸‍♂️","🦸‍♀️","⚡","🦇","🤖"]
+    },
+    {
+        "name": "Coringa",
+        "acceptableNames": ["joker","coringa"],
+        "emoji": ["🃏","🤡","🔪","🎭","💣"]
+    },
+    {
+        "name": "Jogos Vorazes",
+        "acceptableNames": ["JogosVorazes","TheHungerGames","HungerGames"],
+        "emoji": ["🔥","🏹","👑","🪓","🐦"]
     }
 ]

@@ -21,27 +21,31 @@ const emoji5 = document.getElementById('emoji5');
 
 //FILME DIÁRIO
 let dailyMovie = "";
+let databaseMovies = "";
 
 overlay.addEventListener('click', function () {
     document.getElementById('answerModal').style.display = "none";
 })
 
 //BOTÃO DE REINICIAR
-document.addEventListener
+document.getElementById('refresh').addEventListener('click', function(){
+    location.reload();
+});
 
 //INICIA
 guess1Input.focus();
 
 //MODAL DE RESPOSTA
-function checkModal(order) {
+function checkModal(streak) {
     answerModal.getElementsByTagName('h3')[0].innerText = (`Resposta: ${dailyMovie.name}`);
+    answerModal.getElementsByTagName('h1')[0].innerText = streak;
     answerModal.style.display = "block";
     overlay.style.display = "block";
 }
 
 //COPIAR PROGRESSO
 const copyButton = document.getElementById('clip');
-function copyToClipboard(order) {
+function copyToClipboard(streak = 0) {
     const toast = document.getElementById('toastValid');
 
     toast.classList.remove('closeToast');
@@ -55,7 +59,7 @@ function copyToClipboard(order) {
     setTimeout(function () {
         toast.classList.remove('toastC');
     }, 1500);
-    navigator.clipboard.writeText(`Joguei cinefi.lol de série ${emoji1.innerText} | 🔥${order}`);
+    navigator.clipboard.writeText(`Joguei cinefi.lol de série ${emoji1.innerText} | 🔥${streak}`);
 }
 
 
@@ -76,6 +80,7 @@ function selectNext(order) {
     ///VALIDÇÃO VISUAL
     const currentLi = document.getElementById("guess" + order);
     const currentInput = currentLi.getElementsByTagName('input')[0];
+    const streak = localStorage.getItem('serieStreak');
 
     ///SE ACERTAR
     if (checkMovie(currentInput.value)) {
@@ -111,10 +116,11 @@ function selectNext(order) {
         if (order === 5) {
             localStorage.setItem('serieStreak', 0);
             copyButton.addEventListener('click', function () {
-                copyToClipboard(order);
+                copyToClipboard(streak);
             });
             setTimeout(function () {
-                checkModal(order);
+                checkModal(streak);
+                storeSrike();
             }, 1500);
         }
     }
@@ -148,12 +154,16 @@ function showEmoji(order) {
 
 //CHECAGEM DO FILME
 function checkMovie(input) {
-
     ///REMOVENDO ACENTOS
     const inputToCheck = input.trim().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s/g, '');
 
     const movieFound = dailyMovie.acceptableNames.find(acceptableName => inputToCheck.toLowerCase() === acceptableName.toLowerCase())
     return !!movieFound;
+}
+
+function storeSrike() {
+    localStorage.setItem('serieStreak', 0);
+    return 0;
 }
 
 //TOAST
@@ -162,10 +172,6 @@ function validToast(order, isValid) {
     const streakStoreage = localStorage.getItem('serieStreak');
     const streak = streakStoreage ? streakStoreage : storeSrike();
     localStorage.setItem('serieStreak', (Number(streak) + 1));
-    function storeSrike() {
-        localStorage.setItem('serieStreak', 0);
-        return 0;
-    }
 
     const toast = document.getElementById('toastValid');
     toast.classList.remove('closeToast');
@@ -221,6 +227,7 @@ function outDatabase(val) {
     const i = sortNumber(val.length);
     const movie = val[i];
 
+    databaseMovies = val;
     dailyMovie = movie;
 
     emoji1.innerText = movie.emoji[0];
