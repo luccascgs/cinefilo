@@ -533,5 +533,25 @@
         "name": "Meu Malvado Favorito",
         "acceptableNames": ["meumalvadofavorito","gru","despicableme"],
         "emoji": ["🌕","👨‍👧‍👦","🚀","🍌","💛"]
+    },
+    {
+        "name": "Frozen",
+        "acceptableNames": ["forzen",""afrozen","thefrozen","elza"],
+        "emojis": ["❄️","👭","⛄","🎶","🏰"]
+    },
+    {
+        "name": "Era do Gelo",
+        "acceptableNames": ["eradogelo","aeradogelo","iceage","theiceage"],
+        "emojis": ["❄️","🌰","🐅","🐿️","🌍"]
+    },
+    {
+        "name": "Pinóquio",
+        "acceptableNames": ["pinoquio","opinoquio","Pinocchio","thepinocchio"],
+        "emojis": ["🤥","🎪","🧵","🌟","👴"]
+    },
+    {
+        "name": "A Vida É Bela",
+        "acceptableNames": ["avidaebela","thelifeisbeautiful","vidaebela","lifeisbeautiful"],
+        "emojis": ["🎭","👨‍👦","🕊️","💖","🏭"]
     }
 ]
