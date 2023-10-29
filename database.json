@@ -385,8 +385,8 @@
         "emoji": ["👦","👻","🔮","😱","6️⃣"]
     },
     {
-        "name": "Procucando Nemo",
-        "acceptableNames": ["nemo","procuranonemo","procurandoonemo","findingnemo"],
+        "name": "Procurando Nemo",
+        "acceptableNames": ["nemo","procuradonemo","procurandoonemo","findingnemo"],
         "emoji": ["🐟","🌊","🐢","🐳","🔍"]
     },
     {
@@ -563,5 +563,15 @@
         "name": "A Bela e A Fera",
         "acceptableNames": ["BelaeaFera","aBelaeaFera","BeautyandtheBeast","theBeautyandtheBeast"],
         "emojis": ["🌹","👹","👩","🏰","🎶"]
+    },
+    {
+        "name": "A Fantastica Fábrica de Chocolate",
+        "acceptableNames": ["fantasticafabricadechocolate","fantasticafabricadechocolate","fabricadechocolate","afabricadechocolate", "ChocolateFactory","theChocolateFactory","CharlieandtheChocolateFactory"],
+        "emojis": ["🍫","🏭","🎩","🍬","🏆"]
+    },
+    {
+        "name": "Edward Mãos de Tesoura",
+        "acceptableNames": ["EdwardMaosdeTesoura","oEdwardMaosdeTesoura","MaosdeTesoura","EduardMaosdeTesoura","oEduardMaosdeTesoura","EdwardScissorhands"],
+        "emojis": ["✂️","🏠","👨‍🦰","🖐","🌹"]
     }
 ]
