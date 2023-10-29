@@ -212,6 +212,23 @@ function sortNumber(max) {
     return Math.floor(Math.random() * max)
 }
 
+function randomizeEmojis(movie){
+
+    const numerosSorteados = [];
+    while (numerosSorteados.length < 5) {
+        const numero = Math.floor(Math.random() * 5);
+        if (numerosSorteados.indexOf(numero) === -1) {
+            numerosSorteados.push(numero);
+        }
+    }
+
+    emoji1.innerText = movie.emoji[numerosSorteados[0]];
+    emoji2.innerText = movie.emoji[numerosSorteados[1]];
+    emoji3.innerText = movie.emoji[numerosSorteados[2]];
+    emoji4.innerText = movie.emoji[numerosSorteados[3]];
+    emoji5.innerText = movie.emoji[numerosSorteados[4]];
+}
+
 function getDatabase() {
     fetch("../../database.json")
         .then(response => response.json())
@@ -221,7 +238,6 @@ function getDatabase() {
 }
 getDatabase();
 
-
 function outDatabase(val) {
 
     const i = sortNumber(val.length);
@@ -230,9 +246,5 @@ function outDatabase(val) {
     databaseMovies = val;
     dailyMovie = movie;
 
-    emoji1.innerText = movie.emoji[0];
-    emoji2.innerText = movie.emoji[1];
-    emoji3.innerText = movie.emoji[2];
-    emoji4.innerText = movie.emoji[3];
-    emoji5.innerText = movie.emoji[4];
+    randomizeEmojis(movie);
 }

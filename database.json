@@ -32,7 +32,7 @@
     {
         "name": "Corra!",
         "acceptableNames": ["corra", "getout"],
-        "emoji": ["🏃‍♂️","😱","🏠","👁","🔪"]
+        "emoji": ["🏃‍♂️","😱","🏠","👁️","🔪"]
     },
     {
         "name": "Interestelar",
@@ -217,7 +217,7 @@
     {
         "name": "Enrolados",
         "acceptableNames": ["osenrolados", "enrolados", "tangled", "rapunzel"],
-        "emoji": ["👸","✨","✂","🏰","🦎"]
+        "emoji": ["👸","✨","✂️","🏰","🦎"]
     },
     {
         "name": "A Origem dos Guardiões",
@@ -332,12 +332,12 @@
     {
         "name": "Doutor Estranho",
         "acceptableNames": ["doutorestranho","odoutorestranho","doctorstrange","thedoctorstrange"],
-        "emoji": ["👁","⏳","🦸‍♂️","🔮","🔺"]
+        "emoji": ["👁️","⏳","🦸‍♂️","🔮","🔺"]
     },
     {
         "name": "Vingadores",
         "acceptableNames": ["vingadores","osvingadores","avangers","theavangers"],
-        "emoji": ["🛡","🦾","🕷","🟢","🏹"]
+        "emoji": ["🛡️","🦾","🕷️","🟢","🏹"]
     },
     {
         "name": "Jogos Mortais",
@@ -362,7 +362,7 @@
     {
         "name": "O Exterminador do Futuro",
         "acceptableNames": ["exterminadordofuturo","oexterminadordofuturo","Terminator","TheTerminator"],
-        "emoji": ["🤖","🔫","⏳","🌎","🕶"]
+        "emoji": ["🤖","🔫","⏳","🌎","🕶️"]
     },
     {
         "name": "Alien",
@@ -397,7 +397,7 @@
     {
         "name": "O Massacre da Serra Elétrica",
         "acceptableNames": ["massacredaserraeletrica","omassacredaserraeletrica","TheTexasChainSawMassacre","TexasChainSawMassacre"],
-        "emoji": ["🩸","⚙️","🌳","😱","⛓"]
+        "emoji": ["🩸","⚙️","🌳","😱","⛓️"]
     },
     {
         "name": "Carrie: A Estranha",
@@ -482,7 +482,7 @@
     {
         "name": "X-Men",
         "acceptableNames": ["xmen","osxmen","thexmen"],
-        "emoji": ["🦸‍♂️","⛈","👥","🦽","❌"]
+        "emoji": ["🦸‍♂️","⛈️","👥","🦽","❌"]
     },
     {
         "name": "Planeta dos Macacos",
@@ -507,7 +507,7 @@
     {
         "name": "Como Treinar Seu Dragão",
         "acceptableNames": ["comotreinarseudragao","howtotrainyourdragon","how2trainyourdragon"],
-        "emoji": ["🐉","🛡","👨‍🏫","👦","🦷"]
+        "emoji": ["🐉","🛡️","👨‍🏫","👦","🦷"]
     },
     {
         "name": "Shrek",
@@ -521,13 +521,13 @@
     },
     {
         "name": "Ratatouille",
-        "acceptableNames": ["ratatatouie","ratatatoulie","ratatatoullie","ratatatulho","ratatatulio"],
+        "acceptableNames": ["ratatouie","ratatoulie","ratatoullie","ratatulho","ratatulio"],
         "emoji": ["🐭","🍲","👨‍🍳","🍽️","🌟"]
     },
     {
         "name": "Coraline e o Mundo Screto",
         "acceptableNames": ["Coraline","coralineeomundosecreto"],
-        "emoji": ["🔘","🚪","👧","👁️","🕳️"]
+        "emoji": ["🔘","🐕","👧","👁️","🕳️"]
     },
     {
         "name": "Meu Malvado Favorito",
@@ -536,7 +536,7 @@
     },
     {
         "name": "Frozen",
-        "acceptableNames": ["forzen",""afrozen","thefrozen","elza"],
+        "acceptableNames": ["forzen","afrozen","thefrozen","elza"],
         "emojis": ["❄️","👭","⛄","🎶","🏰"]
     },
     {
@@ -553,5 +553,15 @@
         "name": "A Vida É Bela",
         "acceptableNames": ["avidaebela","thelifeisbeautiful","vidaebela","lifeisbeautiful"],
         "emojis": ["🎭","👨‍👦","🕊️","💖","🏭"]
+    },
+    {
+        "name": "Tempos Modernos",
+        "acceptableNames": ["Temposmodernos","moderntimes","ostemposmodernos","themoderntimes"],
+        "emojis": ["🏭","👨","🌐","⏰","🎩"]
+    },
+    {
+        "name": "A Bela e A Fera",
+        "acceptableNames": ["BelaeaFera","aBelaeaFera","BeautyandtheBeast","theBeautyandtheBeast"],
+        "emojis": ["🌹","👹","👩","🏰","🎶"]
     }
 ]
