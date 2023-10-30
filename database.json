@@ -573,5 +573,75 @@
         "name": "Edward Mãos de Tesoura",
         "acceptableNames": ["EdwardMaosdeTesoura","oEdwardMaosdeTesoura","MaosdeTesoura","EduardMaosdeTesoura","oEduardMaosdeTesoura","EdwardScissorhands"],
         "emojis": ["✂️","🏠","👨‍🦰","🖐","🌹"]
+    },
+    {
+        "name": "Frankenstein",
+        "acceptableNames": ["frankenstein","ofrankenstein","thefrankenstein","frankstein","ofrankstein","thefrankstein"],
+        "emojis": ["🧟","🔬","🔥","👨‍🔬","⚡"]
+    },
+    {
+        "name": "Crepúsculo",
+        "acceptableNames": ["Crepusculo","oCrepusculo","theTwilight","Twilight"],
+        "emojis": ["🌕","🐺","🧛‍♂️","💑","📚"]
+    },
+    {
+        "name": "Os Caça-Fantasmas",
+        "acceptableNames": ["OsCacaFantasmas","CacaFantasmas","Ghostbusters","theGhostbusters"],
+        "emojis": ["👻","🚫","🔦","🚐","👷‍♂️"]
+    },
+    {
+        "name": "Múmia",
+        "acceptableNames": ["mumia","amumia","Mummy","theMummy"],
+        "emojis": ["🏺","🧟","👑","🔒","🧻"]
+    },
+    {
+        "name": "Robocop",
+        "acceptableNames": ["robocop","therobocop","orobocop"],
+        "emojis": ["🤖","👮‍♂️","🏙️","🔫","💥"]
+    },
+    {
+        "name": "Gremilins",
+        "acceptableNames": ["Gremilins","theGremilins","osGremilins"],
+        "emojis": ["🐭","🚫","😈","🌧️","🎁"]
+    },
+    {
+        "name": "Os Gonnies",
+        "acceptableNames": ["OsGonnies","Gonnies","theGonnies"],
+        "emojis": ["🗺️","🏴‍☠️","🔦","🚴‍♂️","👦"]
+    },
+    {
+        "name": "O Menino do Pijama Listrado",
+        "acceptableNames": ["meninodopijamalistrado","omeninodopijamalistrado","TheBoyintheStripedPyjamas","BoyintheStripedPyjamas","BoyinStripedPyjamas","TheBoyinStripedPyjamas"],
+        "emojis": ["👦","👕","⛓️","🇩🇪","⭐"]
+    },
+    {
+        "name": "A Rede Social",
+        "acceptableNames": ["ARedeSocial","RedeSocial","TheSocialNetwork","SocialNetwork"],
+        "emojis": ["📱","👥","💰","📈","🤔"]
+    },
+    {
+        "name": "À Espera de um Milagre",
+        "acceptableNames": ["aesperadeummilagre","esperadeummilagre","TheGreenMile","GreenMile"],
+        "emojis": ["⚡","🙏","🔒","⏳","👬"]
+    },
+    {
+        "name": "Marley & Eu",
+        "acceptableNames": ["marleyeu","marleyeeu"],
+        "emojis": ["🐾","👫","🐶","😢","❤️"]
+    },
+    {
+        "name": "Histórias Cruzadas",
+        "acceptableNames": ["HistoriasCruzadas","thehelp","help"],
+        "emojis": ["📚","👩‍👧‍👦","🏠","✊","🚻"]
+    },
+    {
+        "name": "Cidade de Deus",
+        "acceptableNames": ["CidadedeDeus","aCidadedeDeus"],
+        "emojis": ["🏙️","🔫","🇧🇷","🚬","📸"]
+    },
+    {
+        "name": "Extraordinário",
+        "acceptableNames": ["Extraordinario","oExtraordinario","wonder","thewonder"],
+        "emojis": ["👨‍🚀","📚","👦","❤️","🏫"]
     }
 ]
