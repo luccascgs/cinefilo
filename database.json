@@ -1,677 +1,824 @@
 [
     {
+        "id": 6,
         "name": "Matrix",
         "acceptableNames": ["TheMatrix", "Matrix", "OMatrix"],
         "emoji": ["💻","🧠","💊","🕶️","🐇"]
     },
     {
+        "id": 6,
         "name": "Homens de Preto",
         "acceptableNames": ["Homensdepreto", "OsHomensdepreto", "Mib", "ManInBlack", "MenInBlack"],
         "emoji": ["👽","🕶️","👥","🔫","🌌"]
     },
     {
+        "id": 8,
         "name": "Lobo de Wall Street",
         "acceptableNames": ["OLoboDeWallStreet", "LoboDeWallStreet", "TheWolfOfWallStreet", "WolfOfWallStreet"],
         "emoji": ["🐺","💼","💰","📈","🥂"]
     },
     {
+        "id": 4,
         "name": "Mad Max",
         "acceptableNames": ["madmax", "themadmax"],
         "emoji": ["🚗","☠️","🏜️","🔥","🌪️"]
     },
     {
+        "id": 8,
         "name": "La La Land",
         "acceptableNames": ["lalaland", "CantandoEstacoes", "lalalend"],
         "emoji": ["🎶","🎥","🌟","🎹","💃"]
     },
     {
+        "id": 6,
         "name": "Star Wars",
         "acceptableNames": ["starwars", "guerraNasEstrelas"],
         "emoji": ["🌌","⭐","🔦","🤖","👽"]
     },
     {
+        "id": 1,
         "name": "Corra!",
         "acceptableNames": ["corra", "getout"],
         "emoji": ["🏃‍♂️","😱","🏠","👁️","🔪"]
     },
     {
+        "id": 6,
         "name": "Interestelar",
         "acceptableNames": ["interestelar", "interstelar","interstellar"],
         "emoji": ["⌛","🌠","🌌","🌽","👩‍🚀"]
     },
     {
+        "id": 6,
         "name": "Batman",
         "acceptableNames": ["batman"],
         "emoji": ["🌃","🦸‍♂️","🦹‍♂️","🦇","💥"]
     },
     {
+        "id": 6,
         "name": "Guardiões da Galáxia",
         "acceptableNames": ["guardioesdagalaxia","guariansofthegalaxy","osguardioesdagalaxia"],
         "emoji": ["🌌","🦝","🚀","🎵","🪐"]
     },
     {
+        "id": 4,
         "name": "O Poderoso Chefão",
         "acceptableNames": ["poderosochefao","opoderosochefao","godfather", "thegodfather"],
         "emoji": ["🤵","🇮🇹","🔫","💼","🩸"]
     },
     {
+        "id": 6,
         "name": "E.T. - O Extraterrestre",
         "acceptableNames": ["et", "ete","etoextraterrestre"],
         "emoji": ["👽","🌕","🚲","🌌","👦"]
     },
     {
+        "id": 6,
         "name": "O Mágico de Oz",
         "acceptableNames": ["magicodeoz","omagicodeoz","oz"],
         "emoji": ["👠","🌈","👧","🦁","🧙‍♀️"]
     },
     {
+        "id": 6,
         "name": "De Volta Para o Futuro",
         "acceptableNames": ["devoltaparaofuturo","devoltaprofuturo","backtothefuture"],
         "emoji": ["⏰","🚗","⚡","🎸","🔙"]
     },
     {
+        "id": 5,
         "name": "Curtindo a Vida Adoidado",
         "acceptableNames": ["curtindoavidaadoidado","curtindovidaadoidado","ferrisbullerdayoff","ferrisbullersdayoff"],
         "emoji": ["🚗","🏫","🕺","🎉","🎓"]
     },
     {
+        "id": 8,
         "name": "Titanic",
         "acceptableNames": ["titanic","thetitanic","otitanic"],
         "emoji": ["🚢","🌊","🚪","💔","🎻"]
     },
     {
+        "id": 6,
         "name": "Jurassic Park",
         "acceptableNames": ["jurassicpark","jurrasicpark","jurasicpark", "jurassicworld","jurrasicworld","jurasicworld", "jurassicword","jurrasicword","jurasicword"],
         "emoji": ["🦖","🚙","🌴","🔬","⚡"]
     },
     {
+        "id": 7,
         "name": "Toy Story",
         "acceptableNames": ["toystory"],
         "emoji": ["🤠","🚀","🧸","🐕","🌟"]
     },
     {
+        "id": 5,
         "name": "Mary Poppins",
         "acceptableNames": ["MaryPoppins","MaryPopins","MarryPoppins","MarryPopins"],
         "emoji": ["👜","🌂","🎶","👩","👒"]
     },
     {
+        "id": 6,
         "name": "Avatar",
         "acceptableNames": ["avatar"],
         "emoji": ["🌍","🌿","🚁","🔵","👽"]
     },
     {
+        "id": 7,
         "name": "O Rei Leão",
         "acceptableNames": ["oreileao","reileao","lionking","thelionking"],
         "emoji": ["🦁","👑","🌅","👨‍👦","🎶"]
     },
     {
+        "id": 7,
         "name": "Wall-E",
         "acceptableNames": ["walle","wale"],
         "emoji": ["🤖","🌍","🌱","🚀","💙"]
     },
     {
+        "id": 6,
         "name": "Senhor dos Anéis",
         "acceptableNames": ["senhordosaneis", "osenhordosaneis","TheLordoftheRings", "LordoftheRings"],
         "emoji": ["🧙‍♂️","💍","🌋","👣","🗡️"]
     },
     {
+        "id": 4,
         "name": "Rocky",
         "acceptableNames": ["Rocky", "Rock","RockyBalboa", "RockBalboa"],
         "emoji": ["🥊","🏆","🇮🇹","🏋️‍♂️","🎤"]
     },
     {
+        "id": 7,
         "name": "Up - Altas Aventuras",
         "acceptableNames": ["up", "upaltasaventuras"],
         "emoji": ["🏠","🎈","👴","👦","🐶"]
     },
     {
+        "id": 6,
         "name": "Wolverine",
         "acceptableNames": ["Wolverine", "logan", "volverine"],
         "emoji": ["🐺","🔪","⚔️","💪","🩸"]
     },
     {
+        "id": 6,
         "name": "Deadpool",
         "acceptableNames": ["deadpool"],
         "emoji": ["🦸‍♂️","🔴","🗡️","🦄","🔞"]
     },
     {
+        "id": 8,
         "name": "As Aventuras de Pi",
         "acceptableNames": ["asaventurasdepi","aventurasdepi","lifeofpi","thelifeofpi","asaventurasde314","aventurasde314", "pi", "314"],
         "emoji": ["🚤", "🐅", "🌊", "🙏", "🌴"]
     },
     {
+        "id": 5,
         "name": "O Show de Truman",
         "acceptableNames": ["oshowdetruman", "thetrumanshow", "trumanshow","showdetruman"],
         "emoji": ["🌎", "📺", "🎥", "👀", "🌞"]
     },
     {
+        "id": 6,
         "name": "Perdido em Marte",
         "acceptableNames": ["perdidoemmarte", "perdidosemmarte", "themartian", "martain"],
         "emoji": ["🚀", "🪐", "🥔", "🌌", "👨‍🚀"]
     },
     {
+        "id": 6,
         "name": "Quarteto Fantástico",
         "acceptableNames": ["quartetofantastico", "fantasticfour","thefantasticfour","oquartetofantastico"],
         "emoji": ["🦸‍♂️", "4️⃣", "🔥", "🧪", "🌐"]
     },
     {
+        "id": 8,
         "name": "Forrest Gump",
         "acceptableNames": ["forrestgump", "forestgump"],
         "emoji": ["🏃‍♂️", "🍫", "🌾", "🪑", "🏅"]
     },
     {
+        "id": 1,
         "name": "O Iluminado",
         "acceptableNames": ["oiluminado", "theshining","iluminado"],
         "emoji": ["🪓", "👿", "🏨", "🌨️", "🚪"]
     },
     {
+        "id": 1,
         "name": "O Chamado",
         "acceptableNames": ["ochamado", "thering","chamado", "ring", "samara"],
         "emoji": ["📼", "👧", "📞", "💍", "👻"]
     },
     {
+        "id": 7,
         "name": "O Pequeno Príncipe",
         "acceptableNames": ["opequenoprincipe", "thelittleprince","pequenoprincipe", "littleprince"],
         "emoji": ["👑", "🌌", "🌹", "🦊", "📖"]
     },
     {
+        "id": 7,
         "name": "A Pantera Cor de Rosa",
         "acceptableNames": ["apanteracorderosa", "thepinkpanther","panteracorderosa"],
         "emoji": ["🌸", "🕵️‍♂️", "🎷", "💎", "🎀"]
     },
     {
+        "id": 4,
         "name": "Indiana Jones",
         "acceptableNames": ["indianajones"],
         "emoji": ["🕵️‍♂️", "🌴", "🏺", "🐍", "🌑"]
     },
     {
+        "id": 4,
         "name": "007",
         "acceptableNames": ["007","zerozerosete","jamesbond"],
         "emoji": ["🕵️‍♂️","🍸","🔫","🔦","🚁"]
     },
     {
+        "id": 7,
         "name": "Madagascar",
         "acceptableNames": ["madagascar", "omadagascar"],
         "emoji": ["🦁","🦓","🦒","🐧","🌴"]
     },
     {
+        "id": 7,
         "name": "A Pequena Sereia",
         "acceptableNames": ["apequenasereia", "pequenasereia", "ariel", "littlemermaid","thelittlemermaid"],
         "emoji": ["🧜‍♀️","🌊","🐠","🦀","👑"]
     },
     {
+        "id": 6,
         "name": "Pantera Negra",
         "acceptableNames": ["panteranegra", "opanteranegra", "blackpanther", "theblackpanther"],
-        "emoji": ["🐾","⚫","🐱","👑","✊"]
+        "emoji": ["👑","🐈‍⬛","🏞️","🦸‍♂️","✊"]
     },
     {
+        "id": 6,
         "name": "Space Jam",
         "acceptableNames": ["spacejam"],
         "emoji": ["⛹🏽","🐰","🏀","🚀","🌟"]
     },
     {
+        "id": 6,
         "name": "Harry Potter",
         "acceptableNames": ["harrypotter", "harypoter", "harypotter", "harrypoter"],
         "emoji": ["⚡","🧙‍♂️","📚","🔮","🏰"]
     },
     {
+        "id": 7,
         "name": "Enrolados",
         "acceptableNames": ["osenrolados", "enrolados", "tangled", "rapunzel"],
         "emoji": ["👸","✨","✂️","🏰","🦎"]
     },
     {
+        "id": 7,
         "name": "A Origem dos Guardiões",
         "acceptableNames": ["aorigemdosguardioes", "riseoftheguardians","origemdosguardioes","jackfrost"],
         "emoji": ["🌟", "👼", "❄️", "🐰", "🎅"]
     },
     {
+        "id": 4,
         "name": "Creed",
         "acceptableNames": ["creed", "thecreed","ocreed"],
         "emoji": ["🥊","🏆","🥋","👨‍🏫","🥇"]
     },
     {
+        "id": 1,
         "name": "Laranja Mecânica",
         "acceptableNames": ["LaranjaMecanica","ClockworkOrange"],
         "emoji": ["🍊","🛠️","👁️","🔪","🎩"]
     },
     {
+        "id": 4,
         "name": "Taxi Driver",
         "acceptableNames": ["TaxiDriver","motoristadetaxi"],
         "emoji": ["🚖","🌃","🔫","👁️‍🗨️","💔"]
     },
     {
+        "id": 5,
         "name": "Esqueceram de Mim",
         "acceptableNames": ["EsqueceramdeMim","homealone"],
         "emoji": ["🏠","👦","🎄","🚂","😱"]
     },
     {
+        "id": 6,
         "name": "Superman",
         "acceptableNames": ["superman","homemdeaco"],
         "emoji": ["🦸‍♂️","🔵","🔴","👓","✊"]
     },
     {
+        "id": 6,
         "name": "Aquaman",
         "acceptableNames": ["Aquaman"],
         "emoji": ["🔱","🐟","🌊","🔥","🌅"]
     },
     {
+        "id": 6,
         "name": "Homem-Aranha",
         "acceptableNames": ["spiderman","homemaranha","aranhahomem","aranhahumana"],
         "emoji": ["🕷️","🦸‍♂️","🕸️","🏙️","🤘"]
     },
     {
+        "id": 6,
         "name": "Homem de Ferro",
         "acceptableNames": ["ironman","homemdeferro"],
         "emoji": ["🦾","🔴","💼","🦸‍♂️","🔨"]
     },
     {
+        "id": 6,
         "name": "Liga da Justiça",
         "acceptableNames": ["ligadajustica","justiceleague"],
         "emoji": ["🦸‍♂️","🦸‍♀️","⚡","🦇","🤖"]
     },
     {
+        "id": 6,
         "name": "Coringa",
         "acceptableNames": ["joker","coringa"],
         "emoji": ["🃏","🤡","🔪","🎭","💣"]
     },
     {
+        "id": 4,
         "name": "Jogos Vorazes",
         "acceptableNames": ["JogosVorazes","TheHungerGames","HungerGames"],
         "emoji": ["🔥","🏹","👑","🪓","🐦"]
     },
     {
+        "id": 4,
         "name": "Velozes e Furiosos",
         "acceptableNames": ["VelozeseFuriosos", "VelozesFuriosos", "FastAndFurious"],
         "emoji": ["🚗","💨","🔥","🚓","👊"]
     },
     {
+        "id": 4,
         "name": "Missão Impossível",
         "acceptableNames": ["missaoimpossivel", "missionimpossible"],
         "emoji": ["💼","🕶️","🕵️‍♂️","🔓","🚁"]
     },
     {
+        "id": 7,
         "name": "Carros",
         "acceptableNames": ["carros", "cars","relampagomcqueen","relampagomarquinhos","oscarros","thecars"],
         "emoji": ["🚗","🏎️","🏁","🏜️","🚦"]
     },
     {
+        "id": 6,
         "name": "Uma Noite No Museu",
         "acceptableNames": ["umanoitenomuseu", "noitenomuseu","nightatthemuseum","anightatthemuseum"],
         "emoji": ["🏛️","🌙","🦖","🐒","🎭"]
     },
     {
+        "id": 6,
         "name": "Flash",
         "acceptableNames": ["flash", "theflash","oflash"],
         "emoji": ["⚡","🏃‍♂️","🔴","🌩️","💨"]
     },
     {
+        "id": 5,
         "name": "O Diabo Veste Prada",
         "acceptableNames": ["diabovesteprada", "odiabovesteprada","TheDevilWearsPrada"],
         "emoji": ["👠","👜","✒️","👗","🌃"]
     },
     {
+        "id": 4,
         "name": "Maze Runner",
         "acceptableNames": ["mazerunner","mazeruner"],
         "emoji": ["🏃‍♂️","🧩","🔥","🗝️","🏢"]
     },
     {
+        "id": 6,
         "name": "Mulher Maravilha",
         "acceptableNames": ["mulhermaravilha","wonderwoman"],
         "emoji": ["🦸‍♀️","⚔️","🛡️","🌟","🧶"]
     },
     {
+        "id": 1,
         "name": "It: A Coisa",
         "acceptableNames": ["it","itacoisa"],
         "emoji": ["🤡","🎈","🎪","🎢","🏠"]
     },
     {
+        "id": 7,
         "name": "Zootopia",
         "acceptableNames": ["zootopia"],
         "emoji": ["🦊","🐰","👮‍♀️","🏙️","🕵️‍♂️"]
     },
     {
+        "id": 6,
         "name": "Doutor Estranho",
         "acceptableNames": ["doutorestranho","odoutorestranho","doctorstrange","thedoctorstrange"],
         "emoji": ["👁️","⏳","🦸‍♂️","🔮","🔺"]
     },
     {
+        "id": 6,
         "name": "Vingadores",
         "acceptableNames": ["vingadores","osvingadores","avangers","theavangers"],
         "emoji": ["🛡️","🦾","🕷️","🟢","🏹"]
     },
     {
+        "id": 1,
         "name": "Jogos Mortais",
         "acceptableNames": ["jogosmortais","osjogosmortais","saw","jigsaw","digsaw"],
         "emoji": ["🧩","☠️","🛴","📺","⏳"]
     },
     {
+        "id": 6,
         "name": "Thor",
         "acceptableNames": ["thor","othor","thethor"],
         "emoji": ["🔨","⚡","🌩️","🌈","🏜️"]
     },
     {
+        "id": 8,
         "name": "Parasita",
         "acceptableNames": ["parasita","oparasita","parasite", "theparasite"],
         "emoji": ["🏠","🐜","💰","🤝","🕵️"]
     },
     {
+        "id": 8,
         "name": "Os Intocáveis",
         "acceptableNames": ["intocaveis","osintocaveis","Intouchables","theIntouchables"],
         "emoji": ["🦼","🤝","💰","❤️","🎶"]
     },
     {
+        "id": 6,
         "name": "O Exterminador do Futuro",
         "acceptableNames": ["exterminadordofuturo","oexterminadordofuturo","Terminator","TheTerminator"],
         "emoji": ["🤖","🔫","⏳","🌎","🕶️"]
     },
     {
+        "id": 1,
         "name": "Alien",
         "acceptableNames": ["alien","oalien","thealien"],
         "emoji": ["👽","🚀","🔫","🌌","😱"]
     },
     {
+        "id": 7,
         "name": "Monstros S.A.",
         "acceptableNames": ["monstrossa","monstersinc","osmonstrossa","themonstersinc", "monstrosa","omonstrosa","monsterinc","themonsterinc"],
         "emoji": ["👾","👁️","🚪","😱","⚡"]
     },
     {
+        "id": 8,
         "name": "Sherlock Holmes",
         "acceptableNames": ["sherlokholmes","sherlockholmes"],
         "emoji": ["🔍","🕵️‍♂️","📚","🎻","🔬"]
     },
     {
+        "id": 1,
         "name": "O Sexto Sentido",
         "acceptableNames": ["sextosentido","osextosentido","6sentido","o6sentido","TheSixthSense","SixthSense","The6Sense","6Sense"],
         "emoji": ["👦","👻","🔮","😱","6️⃣"]
     },
     {
+        "id": 7,
         "name": "Procurando Nemo",
         "acceptableNames": ["nemo","procuradonemo","procurandoonemo","findingnemo"],
         "emoji": ["🐟","🌊","🐢","🐳","🔍"]
     },
     {
+        "id": 6,
         "name": "Piratas do Caribe",
         "acceptableNames": ["piratasdocaribe","ospiratasdocaribe","jacksparrow","jacksparow","piratesofthecaribbean","thepiratesofthecaribbean"],
         "emoji": ["🐙","🏴‍☠️","⚔️","🌊","💎"]
     },
     {
+        "id": 1,
         "name": "O Massacre da Serra Elétrica",
         "acceptableNames": ["massacredaserraeletrica","omassacredaserraeletrica","TheTexasChainSawMassacre","TexasChainSawMassacre"],
         "emoji": ["🩸","⚙️","🌳","😱","⛓️"]
     },
     {
+        "id": 1,
         "name": "Carrie: A Estranha",
         "acceptableNames": ["Carieaestranha","carrieaestranha","carie","carrie",""],
         "emoji": ["🔥","👩‍🎓","🩸","🕊️","💔"]
     },
     {
+        "id": 1,
         "name": "Tubarão",
         "acceptableNames": ["tubarao","otubarao","jaws"],
         "emoji": ["⛵","🏖️","🦈","🎣","😱"]
     },
     {
+        "id": 1,
         "name": "Invocação do Mal",
         "acceptableNames": ["invocacaodomal","ainvocacaodomal","conjuring","theconjuring"],
         "emoji": ["👻","👫","🕯️","🔮","😱"]
     },
     {
+        "id": 1,
         "name": "O Brinquedo Assassino",
         "acceptableNames": ["ChuckyOBrinquedoAssassino","Chucky","oChucky","brinquedoassassino","obrinquedoassassino","childplay","childsplay"],
         "emoji": ["🎠","👨‍🔧","🔪","👦","😱"]
     },
     {
-        "name": "O Predador: A Caçada",
+        "id": 1,
+        "name": "O Predador",
         "acceptableNames": ["predador","opredador","predadoracacada","opredadoracacada","prey"],
         "emoji": ["👽","🌿","🦷","🌸","😱"]
     },
     {
+        "id": 1,
         "name": "Sexta Feira 13",
         "acceptableNames": ["sextafeira13","friday13th","fridaythe13th","friday13","fridaythe13","jason","ojason","thejason"],
         "emoji": ["🔪","🏕️","📅","🎭","😱"]
     },
     {
+        "id": 1,
         "name": "A Hora do Pesadelo",
         "acceptableNames": ["ahoradopesadelo","horadopesadelo","freddykrueger","frediekrueger","fredykrueger","freddykrugger","frediekrugger","fredykrugger","freddykruger","frediekruger","fredykruger"],
         "emoji": ["🔪","🎩","🔥","😴","😱"]
     },
     {
+        "id": 1,
         "name": "Pânico",
         "acceptableNames": ["panico","scream","opanico","thescream"],
         "emoji": ["🔪","🎭","📞","😱","🚪"]
     },
     {
+        "id": 6,
         "name": "Transformers",
         "acceptableNames": ["transformers","transformer","otransformer","ostransformers","thetranformer","thetranformers"],
         "emoji": ["🤖","🚗","🚚","🌌","⚔️"]
     },
     {
+        "id": 4,
         "name": "Top Gun",
         "acceptableNames": ["topgun"],
         "emoji": ["✈️","🎖️","🔥","👨‍✈️","🔝"]
     },
     {
+        "id": 4,
         "name": "300: A Ascenssão do Império",
         "acceptableNames": ["300","300espartas","300deesparta","300ascenssaodoimperio","300aascenssaodoimperio","300riseofanempire","300theriseofanempire"],
         "emoji": ["🦿","🗡️","🛡️","⚔️","🏛️"]
     },
     {
+        "id": 4,
         "name": "Tropa de Elite",
         "acceptableNames": ["tropadeelite"],
         "emoji": ["🔫","👊","🚓","💀","🇧🇷"]
     },
     {
+        "id": 4,
         "name": "Rambo",
         "acceptableNames": ["rambo","orambo","therambo"],
         "emoji": ["🔫","🪓","💪","🏞️","🇺🇸"]
     },
     {
+        "id": 4,
         "name": "Clube da Luta",
         "acceptableNames": ["ClubedaLuta","oClubedaLuta","fightclub","thefightclub"],
         "emoji": ["👥","🥊","🧼","🧠","😵"]
     },
     {
+        "id": 6,
         "name": "Guerra Mundial Z",
         "acceptableNames": ["GuerraMundialZ","worldwarz"],
         "emoji": ["🧟","🌍","🔫","💉","💤"]
     },
     {
+        "id": 6,
         "name": "Blade",
         "acceptableNames": ["blade"],
         "emoji": ["🦇","🔪","💉","💪","🧛"]
     },
     {
+        "id": 6,
         "name": "X-Men",
         "acceptableNames": ["xmen","osxmen","thexmen"],
         "emoji": ["🦸‍♂️","⛈️","👥","🦽","❌"]
     },
     {
+        "id": 6,
         "name": "Planeta dos Macacos",
         "acceptableNames": ["PlanetadosMacacos","oPlanetadosMacacos","thePlanetoftheApes","PlanetoftheApes","PlanetofApes","thePlanetofApes"],
         "emoji": ["🌍","🐵","🐎","🔬","🧠"]
     },
     {
+        "id": 8,
         "name": "Até o ultimo homem",
         "acceptableNames": ["ateoultimohomem","HacksawRidge"],
         "emoji": ["🎖️","🔫","🇺🇸","💪","🩹"]
     },
     {
+        "id": 6,
         "name": "Eu sou a Lenda",
         "acceptableNames": ["eusoualenda","iamlegend"],
         "emoji": ["🌍","🧟","💉","🐕","👨"]
     },
     {
+        "id": 5,
         "name": "Jojo Rabbit",
         "acceptableNames": ["JojoRabbit","jojorabit"],
         "emoji": ["🇩🇪","🤝","🧒","👡","❤️"]
     },
     {
+        "id": 7,
         "name": "Como Treinar Seu Dragão",
         "acceptableNames": ["comotreinarseudragao","howtotrainyourdragon","how2trainyourdragon"],
         "emoji": ["🐉","🛡️","👨‍🏫","👦","🦷"]
     },
     {
+        "id": 7,
         "name": "Shrek",
         "acceptableNames": ["Shrek","sherek","shereck","shreck"],
         "emoji": ["🟢","👹","👸","🐎","🐉"]
     },
     {
+        "id": 7,
         "name": "Aladdin",
         "acceptableNames": ["aladin","alladin","aladdin","alladdin"],
         "emoji": ["🕌","🧞","👳","✨","🐒"]
     },
     {
+        "id": 7,
         "name": "Ratatouille",
         "acceptableNames": ["ratatouie","ratatoulie","ratatoullie","ratatulho","ratatulio"],
         "emoji": ["🐭","🍲","👨‍🍳","🍽️","🌟"]
     },
     {
+        "id": 7,
         "name": "Coraline e o Mundo Screto",
         "acceptableNames": ["Coraline","coralineeomundosecreto"],
         "emoji": ["🔘","🐕","👧","👁️","🕳️"]
     },
     {
+        "id": 7,
         "name": "Meu Malvado Favorito",
         "acceptableNames": ["meumalvadofavorito","gru","despicableme"],
         "emoji": ["🌕","👨‍👧‍👦","🚀","🍌","💛"]
     },
     {
+        "id": 7,
         "name": "Frozen",
         "acceptableNames": ["forzen","afrozen","thefrozen","elza"],
-        "emojis": ["❄️","👭","⛄","🎶","🏰"]
+        "emoji": ["❄️","👭","⛄","🎶","🏰"]
     },
     {
+        "id": 7,
         "name": "Era do Gelo",
         "acceptableNames": ["eradogelo","aeradogelo","iceage","theiceage"],
-        "emojis": ["❄️","🌰","🐅","🐿️","🌍"]
+        "emoji": ["❄️","🌰","🐅","🐿️","🌍"]
     },
     {
+        "id": 7,
         "name": "Pinóquio",
         "acceptableNames": ["pinoquio","opinoquio","Pinocchio","thepinocchio"],
-        "emojis": ["🤥","🎪","🧵","🌟","👴"]
+        "emoji": ["🤥","🎪","🧵","🌟","👴"]
     },
     {
+        "id": 8,
         "name": "A Vida É Bela",
         "acceptableNames": ["avidaebela","thelifeisbeautiful","vidaebela","lifeisbeautiful"],
-        "emojis": ["🎭","👨‍👦","🕊️","💖","🏭"]
+        "emoji": ["🎭","👨‍👦","🕊️","💖","🏭"]
     },
     {
+        "id": 5,
         "name": "Tempos Modernos",
         "acceptableNames": ["Temposmodernos","moderntimes","ostemposmodernos","themoderntimes"],
-        "emojis": ["🏭","👨","🌐","⏰","🎩"]
+        "emoji": ["🏭","👨","🌐","⏰","🎩"]
     },
     {
+        "id": 7,
         "name": "A Bela e A Fera",
         "acceptableNames": ["BelaeaFera","aBelaeaFera","BeautyandtheBeast","theBeautyandtheBeast"],
-        "emojis": ["🌹","👹","👩","🏰","🎶"]
+        "emoji": ["🌹","👹","👩","🏰","🎶"]
     },
     {
+        "id": 6,
         "name": "A Fantastica Fábrica de Chocolate",
         "acceptableNames": ["fantasticafabricadechocolate","fantasticafabricadechocolate","fabricadechocolate","afabricadechocolate", "ChocolateFactory","theChocolateFactory","CharlieandtheChocolateFactory"],
-        "emojis": ["🍫","🏭","🎩","🍬","🏆"]
+        "emoji": ["🍫","🏭","🎩","🍬","🏆"]
     },
     {
+        "id": 8,
         "name": "Edward Mãos de Tesoura",
         "acceptableNames": ["EdwardMaosdeTesoura","oEdwardMaosdeTesoura","MaosdeTesoura","EduardMaosdeTesoura","oEduardMaosdeTesoura","EdwardScissorhands"],
-        "emojis": ["✂️","🏠","👨‍🦰","🖐","🌹"]
+        "emoji": ["✂️","🏠","👨‍🦰","🖐","🌹"]
     },
     {
+        "id": 6,
         "name": "Frankenstein",
         "acceptableNames": ["frankenstein","ofrankenstein","thefrankenstein","frankstein","ofrankstein","thefrankstein"],
-        "emojis": ["🧟","🔬","🔥","👨‍🔬","⚡"]
+        "emoji": ["🧟","🔬","🔥","👨‍🔬","⚡"]
     },
     {
+        "id": 8,
         "name": "Crepúsculo",
         "acceptableNames": ["Crepusculo","oCrepusculo","theTwilight","Twilight"],
-        "emojis": ["🌕","🐺","🧛‍♂️","💑","📚"]
+        "emoji": ["🌕","🐺","🧛‍♂️","💑","📚"]
     },
     {
+        "id": 6,
         "name": "Os Caça-Fantasmas",
         "acceptableNames": ["OsCacaFantasmas","CacaFantasmas","Ghostbusters","theGhostbusters"],
-        "emojis": ["👻","🚫","🔦","🚐","👷‍♂️"]
+        "emoji": ["👻","🚫","🔦","🚐","👷‍♂️"]
     },
     {
+        "id": 6,
         "name": "Múmia",
         "acceptableNames": ["mumia","amumia","Mummy","theMummy"],
-        "emojis": ["🏺","🧟","👑","🔒","🧻"]
+        "emoji": ["🏺","🧟","👑","🔒","🧻"]
     },
     {
+        "id": 6,
         "name": "Robocop",
         "acceptableNames": ["robocop","therobocop","orobocop"],
-        "emojis": ["🤖","👮‍♂️","🏙️","🔫","💥"]
+        "emoji": ["🤖","👮‍♂️","🏙️","🔫","💥"]
     },
     {
+        "id": 6,
         "name": "Gremilins",
         "acceptableNames": ["Gremilins","theGremilins","osGremilins"],
-        "emojis": ["🐭","🚫","😈","🌧️","🎁"]
+        "emoji": ["🐭","🚫","😈","🌧️","🎁"]
     },
     {
+        "id": 6,
         "name": "Os Gonnies",
         "acceptableNames": ["OsGonnies","Gonnies","theGonnies"],
-        "emojis": ["🗺️","🏴‍☠️","🔦","🚴‍♂️","👦"]
+        "emoji": ["🗺️","🏴‍☠️","🔦","🚴‍♂️","👦"]
     },
     {
+        "id": 8,
         "name": "O Menino do Pijama Listrado",
         "acceptableNames": ["meninodopijamalistrado","omeninodopijamalistrado","TheBoyintheStripedPyjamas","BoyintheStripedPyjamas","BoyinStripedPyjamas","TheBoyinStripedPyjamas"],
-        "emojis": ["👦","👕","⛓️","🇩🇪","⭐"]
+        "emoji": ["👦","👕","⛓️","🇩🇪","⭐"]
     },
     {
+        "id": 8,
         "name": "A Rede Social",
         "acceptableNames": ["ARedeSocial","RedeSocial","TheSocialNetwork","SocialNetwork"],
-        "emojis": ["📱","👥","💰","📈","🤔"]
+        "emoji": ["📱","👥","💰","📈","🤔"]
     },
     {
+        "id": 8,
         "name": "À Espera de um Milagre",
         "acceptableNames": ["aesperadeummilagre","esperadeummilagre","TheGreenMile","GreenMile"],
-        "emojis": ["⚡","🙏","🔒","⏳","👬"]
+        "emoji": ["⚡","🙏","🔒","⏳","👬"]
     },
     {
+        "id": 8,
         "name": "Marley & Eu",
         "acceptableNames": ["marleyeu","marleyeeu"],
-        "emojis": ["🐾","👫","🐶","😢","❤️"]
+        "emoji": ["🐾","👫","🐶","😢","❤️"]
     },
     {
+        "id": 8,
         "name": "Histórias Cruzadas",
         "acceptableNames": ["HistoriasCruzadas","thehelp","help"],
-        "emojis": ["📚","👩‍👧‍👦","🏠","✊","🚻"]
+        "emoji": ["📚","👩‍👧‍👦","🏠","✊","🚻"]
     },
     {
+        "id": 8,
         "name": "Cidade de Deus",
         "acceptableNames": ["CidadedeDeus","aCidadedeDeus"],
-        "emojis": ["🏙️","🔫","🇧🇷","🚬","📸"]
+        "emoji": ["🏙️","🔫","🇧🇷","🚬","📸"]
     },
     {
+        "id": 8,
         "name": "Extraordinário",
         "acceptableNames": ["Extraordinario","oExtraordinario","wonder","thewonder"],
-        "emojis": ["👨‍🚀","📚","👦","❤️","🏫"]
+        "emoji": ["👨‍🚀","📚","👦","❤️","🏫"]
     },
     {
+        "id": 8,
         "name": "O Quarto de Jack",
         "acceptableNames": ["oquartodejack","quartodejack","room","theroom"],
-        "emojis": ["👦","🏠","🗝️","🔒","🛏️"]
+        "emoji": ["👦","🏠","🗝️","🔒","🛏️"]
     },
     {
+        "id": 8,
         "name": "O Milagre da Cela 7",
         "acceptableNames": ["omilagredacela7","milagredacela7","omilagredacelasete","milagredacelasete"],
-        "emojis": ["👨‍👧","⚖️","🪑","🎒","😥"]
+        "emoji": ["👨‍👧","⚖️","🪑","🎒","😥"]
     },
     {
+        "id": 8,
         "name": "O Náufrago",
         "acceptableNames": ["ONaufrago","ONaufrago","wilson","CastAway"],
-        "emojis": ["🏝️","⛵","🔥","🏐","🤯"]
+        "emoji": ["🏝️","⛵","🔥","🏐","🤯"]
     },
     {
+        "id": 8,
         "name": "Os Miseráveis",
         "acceptableNames": ["osmiseraveis","miseraveis"],
-        "emojis": ["🇫🇷","🥖","🔗","👮‍♂️","⚖️"]
+        "emoji": ["🇫🇷","🥖","🔗","👮‍♂️","⚖️"]
     },
     {
+        "id": 8,
         "name": "Os Dez Mandamentos",
         "acceptableNames": ["dezmandamentos","osdezmandamentos","os10mandamentos","10mandamentos","TheTenCommandments","TenCommandments","The10Commandments","10Commandments"],
-        "emojis": ["📜","🔥","👩‍⚖️","✋","🔟"]
+        "emoji": ["📜","🔥","👩‍⚖️","✋","🔟"]
     },
     {
+        "id": 8,
         "name": "O Impossível",
         "acceptableNames": ["impossivel","oimpossivel","Impossible"],
-        "emojis": ["🌊","👨‍👩‍👦","🏥","🔥","👊"]
+        "emoji": ["🌊","👨‍👩‍👦","🏥","🔥","👊"]
+    },
+    {
+        "id": 3,
+        "name": "Gente Grande",
+        "acceptableNames": ["gentegrande","GrownUps"],
+        "emoji": ["👨‍👩‍👦‍👦","🏖️","😂","🏹","🏀"]
+    },
+    {
+        "id": 2,
+        "name": "Game of Thrones",
+        "acceptableNames": ["gameofthrones","gameoftrones","gameoftrhones","got"],
+        "emoji": ["🎮","👑","❄️","⚔️","🐉"]
     }
 ]

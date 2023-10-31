@@ -306,7 +306,7 @@ async function selectNext(order) {
 
 
         nextInput.removeAttribute('readonly');
-        nextInput.setAttribute('placeholder', 'Digite o nome do filme')
+        nextInput.setAttribute('placeholder', 'Digite um título')
         nextInput.focus();
 
         showEmoji(order + 1);
