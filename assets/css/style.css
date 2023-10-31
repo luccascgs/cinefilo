@@ -441,7 +441,6 @@ div.emojis {
     border-radius: 10px;
     cursor: pointer;
     border: currentColor solid 2px;
-
 }
 
 /* CATEGORIAS */
@@ -486,6 +485,13 @@ div.emojis {
     z-index: 3;
     color: var(--white);
     padding: 3rem 3rem;
+}
+
+#geral a{
+    color: rgb(168, 255, 55);
+}
+#geral{
+    background-color: rgb(79, 121, 24);
 }
 
 #horror a {
@@ -598,6 +604,7 @@ div.emojis {
     }
 
     #clip {
+        min-height: 2.5rem;
         font-size: 1rem;
         gap: 0.2rem;
         padding: 0.1rem 0.3rem;

@@ -59,7 +59,7 @@ function copyToClipboard(streak = 0) {
     setTimeout(function () {
         toast.classList.remove('toastC');
     }, 1500);
-    navigator.clipboard.writeText(`Joguei cinefi.lol de série ${emoji1.innerText} | 🔥${streak}`);
+    navigator.clipboard.writeText(`Joguei cinefi.lol de comédia ${emoji1.innerText} | 🔥${streak}`);
 }
 
 
@@ -80,7 +80,7 @@ function selectNext(order) {
     ///VALIDÇÃO VISUAL
     const currentLi = document.getElementById("guess" + order);
     const currentInput = currentLi.getElementsByTagName('input')[0];
-    const streak = localStorage.getItem('serieStreak');
+    const streak = localStorage.getItem('comedyStreak');
 
     ///SE ACERTAR
     if (checkMovie(currentInput.value)) {
@@ -114,7 +114,7 @@ function selectNext(order) {
 
         ///VOCÊ PERDEU
         if (order === 5) {
-            localStorage.setItem('serieStreak', 0);
+            localStorage.setItem('comedyStreak', 0);
             copyButton.addEventListener('click', function () {
                 copyToClipboard(streak);
             });
@@ -136,7 +136,7 @@ function selectNext(order) {
 
 
         nextInput.removeAttribute('readonly');
-        nextInput.setAttribute('placeholder', 'Digite o nome do filme')
+        nextInput.setAttribute('placeholder', 'Digite um título')
         nextInput.focus();
 
         showEmoji(order + 1);
@@ -162,16 +162,16 @@ function checkMovie(input) {
 }
 
 function storeSrike() {
-    localStorage.setItem('serieStreak', 0);
+    localStorage.setItem('comedyStreak', 0);
     return 0;
 }
 
 //TOAST
 function validToast(order, isValid) {
 
-    const streakStoreage = localStorage.getItem('serieStreak');
+    const streakStoreage = localStorage.getItem('comedyStreak');
     const streak = streakStoreage ? streakStoreage : storeSrike();
-    localStorage.setItem('serieStreak', (Number(streak) + 1));
+    localStorage.setItem('comedyStreak', (Number(streak) + 1));
 
     const toast = document.getElementById('toastValid');
     toast.classList.remove('closeToast');
@@ -239,8 +239,13 @@ function getDatabase() {
 getDatabase();
 
 function outDatabase(val) {
-
-    const i = sortNumber(val.length);
+    
+    let i = 0;
+    do {
+        i = sortNumber(val.length);
+    }
+    while(val[i].id != 5)
+    
     const movie = val[i];
 
     databaseMovies = val;
