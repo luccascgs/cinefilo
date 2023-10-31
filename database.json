@@ -6,7 +6,7 @@
         "emoji": ["💻","🧠","💊","🕶️","🐇"]
     },
     {
-        "id": 6,
+        "id": 5,
         "name": "Homens de Preto",
         "acceptableNames": ["Homensdepreto", "OsHomensdepreto", "Mib", "ManInBlack", "MenInBlack"],
         "emoji": ["👽","🕶️","👥","🔫","🌌"]
@@ -820,5 +820,137 @@
         "name": "Game of Thrones",
         "acceptableNames": ["gameofthrones","gameoftrones","gameoftrhones","got"],
         "emoji": ["🎮","👑","❄️","⚔️","🐉"]
+    },
+    {
+        "id": 8,
+        "name": "Coach Carter",
+        "acceptableNames": ["coachcarter","ocoachcarter","thecoachcarter"],
+        "emoji": ["🏀","🎓","💪","🏫","👔"]
+    },
+    {
+        "id": 7,
+        "name": "Tarzan",
+        "acceptableNames": ["tarzan","otarzan","thetarzan"],
+        "emoji": ["🌴","🐒","🌄","🍃","👨"]
+    },
+    {
+        "id": 5,
+        "name": "Um Dia de Fúria",
+        "acceptableNames": ["umdiadefuria","diadefuria","FallingDown"],
+        "emoji": ["😡","🏙️","💼","🍔","⏰"]
+    },
+    {
+        "id": 4,
+        "name": "Ford Vs Ferrari",
+        "acceptableNames": ["FordvsFerrari","FordxFerrari","FordversusFerrari","FordvFerrari"],
+        "emoji": ["🚗","🏎️","🏁","🕶️","💰"]
+    },
+    {
+        "id": 8,
+        "name": "Como Eu Era Antes de Você",
+        "acceptableNames": ["comoeueraantesdevoce","MeBeforeYou","comoeueraantesdevc","comoeraantesdevoce","comoeraantesdevc"],
+        "emoji": ["📚","🛵","💑","👨‍🦼","❤️"]
+    },
+    {
+        "id": 5,
+        "name": "Karate Kid",
+        "acceptableNames": ["KarateKid","theKarateKid"],
+        "emoji": ["🥋","👦","👴","🏆","👊"]
+    },
+    {
+        "id": 7,
+        "name": "Kung Fu Panda",
+        "acceptableNames": ["kungfupanda","okungfupanda","thekungfupanda"],
+        "emoji": ["😂","🥋","🍜","👊","🐼"]
+    },
+    {
+        "id": 4,
+        "name": "Jonh Wick",
+        "acceptableNames": ["JonhWick","johnwick","joaovic","oJonhWick","theJonh Wick"],
+        "emoji": ["🐕","🔫","🚗","💔","🕴"]
+    },
+    {
+        "id": 6,
+        "name": "O Incrível Hulk",
+        "acceptableNames": ["Hulk","theHulk","oincrivelhulk","incrivelhulk","Incrediblehulk","theIncrediblehulk"],
+        "emoji": ["💪","👹","🟢","🏙️","🔬"]
+    },
+    {
+        "id": 8,
+        "name": "Openheimer",
+        "acceptableNames": ["Openheimer"],
+        "emoji": ["💣","💥","🍄","🎩","🔬"]
+    },
+    {
+        "id": 7,
+        "name": "Valente",
+        "acceptableNames": ["Valente","brave","aValente","thebrave"],
+        "emoji": ["🏹","👑","🐻","👩‍👧","🔥"]
+    },
+    {
+        "id": 8,
+        "name": "À Procura da Felcidade",
+        "acceptableNames": ["aprocuradafelicidade","aprocuradefelicidade","procuradefelicidade","aprocuradafelicidade","ThePursuitofHappyness","PursuitofHappyness"],
+        "emoji": ["👨‍👦","🌆","💼","🚇","😢"]
+    },
+    {
+        "id": 7,
+        "name": "Bolt: O Super Cão",
+        "acceptableNames": ["bolt","boltosupercao","boltsupercao","supercao"],
+        "emoji": ["🐶","⚡️","🎥","🔍","❤️"]
+    },
+    {
+        "id": 8,
+        "name": "2012",
+        "acceptableNames": ["2012","doismiledoze"],
+        "emoji": ["🌍","🔥","🌊","💥","⏳"]
+    },
+    {
+        "id": 7,
+        "name": "Dama e o Vagabundo",
+        "acceptableNames": ["DamaeoVagabundo","damaevagabundo","LadyandtheTramp","LadyandTramp"],
+        "emoji": ["🐶","🍝","🎶","💖","🌃"]
+    },
+    {
+        "id": 7,
+        "name": "Tá Dando Onda",
+        "acceptableNames": ["Tadandoonda","dandoonda","SurfsUp","SurfUp"],
+        "emoji": ["🏄‍♂️","🐓","🐧","😎","🏝️"]
+    },
+    {
+        "id": 5,
+        "name": "Sonic",
+        "acceptableNames": ["sonic","osonic","thesonic"],
+        "emoji": ["🦔","🌀","💨","🎮","🌍"]
+    },
+    {
+        "id": 5,
+        "name": "Smurf",
+        "acceptableNames": ["Smurf","ossmurfs","smurfs","thesmurf","thesmurfs","osmurf"],
+        "emoji": ["🔵","🍄","🏞️","👫","🧙‍♂️"]
+    },
+    {
+        "id": 4,
+        "name": "Crocodilo Dundee",
+        "acceptableNames": ["crocodilodundee","crocodilodande","crocodilodunde","crocodilodandee","Crocodiledundee","Crocodiledunde"],
+        "emoji": ["🐊","🔪","🌍","🌄","👢"]
+    },
+    {
+        "id": 5,
+        "name": "Herbie",
+        "acceptableNames": ["herby","herbymeufuscaturbinado","herbyofuscaturbinado","theherby","herbie","herbiemeufuscaturbinado","herbieofuscaturbinado","theherbie"],
+        "emoji": ["🚗","🏁","🤖","💨","👀"]
+    },
+    {
+        "id": 4,
+        "name": "Gigantes de Aço",
+        "acceptableNames": ["gigantesdeaco","gigantedeaco","osgigantesdeaco","RealSteel","ogigantedeaco","therealsteel"],
+        "emoji": ["🤖","🥊","🏆","🔧","👨‍👦"]
+    },
+    {
+        "id": 6,
+        "name": "Gigantes de Aço",
+        "acceptableNames": ["gigantesdeaco","gigantedeaco","osgigantesdeaco","RealSteel","ogigantedeaco","therealsteel"],
+        "emoji": ["🤖","🥊","🏆","🔧","👨‍👦"]
     }
 ]
