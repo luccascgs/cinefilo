@@ -347,7 +347,7 @@
     {
         "name": "Thor",
         "acceptableNames": ["thor","othor","thethor"],
-        "emoji": ["🔨","⚡","🌩️","🌈","🏜"]
+        "emoji": ["🔨","⚡","🌩️","🌈","🏜️"]
     },
     {
         "name": "Parasita",
@@ -372,7 +372,7 @@
     {
         "name": "Monstros S.A.",
         "acceptableNames": ["monstrossa","monstersinc","osmonstrossa","themonstersinc", "monstrosa","omonstrosa","monsterinc","themonsterinc"],
-        "emoji": ["👾","👁","🚪","😱","⚡"]
+        "emoji": ["👾","👁️","🚪","😱","⚡"]
     },
     {
         "name": "Sherlock Holmes",
@@ -643,5 +643,35 @@
         "name": "Extraordinário",
         "acceptableNames": ["Extraordinario","oExtraordinario","wonder","thewonder"],
         "emojis": ["👨‍🚀","📚","👦","❤️","🏫"]
+    },
+    {
+        "name": "O Quarto de Jack",
+        "acceptableNames": ["oquartodejack","quartodejack","room","theroom"],
+        "emojis": ["👦","🏠","🗝️","🔒","🛏️"]
+    },
+    {
+        "name": "O Milagre da Cela 7",
+        "acceptableNames": ["omilagredacela7","milagredacela7","omilagredacelasete","milagredacelasete"],
+        "emojis": ["👨‍👧","⚖️","🪑","🎒","😥"]
+    },
+    {
+        "name": "O Náufrago",
+        "acceptableNames": ["ONaufrago","ONaufrago","wilson","CastAway"],
+        "emojis": ["🏝️","⛵","🔥","🏐","🤯"]
+    },
+    {
+        "name": "Os Miseráveis",
+        "acceptableNames": ["osmiseraveis","miseraveis"],
+        "emojis": ["🇫🇷","🥖","🔗","👮‍♂️","⚖️"]
+    },
+    {
+        "name": "Os Dez Mandamentos",
+        "acceptableNames": ["dezmandamentos","osdezmandamentos","os10mandamentos","10mandamentos","TheTenCommandments","TenCommandments","The10Commandments","10Commandments"],
+        "emojis": ["📜","🔥","👩‍⚖️","✋","🔟"]
+    },
+    {
+        "name": "O Impossível",
+        "acceptableNames": ["impossivel","oimpossivel","Impossible"],
+        "emojis": ["🌊","👨‍👩‍👦","🏥","🔥","👊"]
     }
 ]
