@@ -428,8 +428,8 @@
     {
         "id": 8,
         "name": "Os Intocáveis",
-        "acceptableNames": ["intocaveis","osintocaveis","Intouchables","theIntouchables"],
-        "emoji": ["🦼","🤝","💰","❤️","🎶"]
+        "acceptableNames": ["intocaveis","osintocaveis","Intouchables","theIntouchables", "amigosparasempre"],
+        "emoji": ["🦼","🤝","💰","🚬","🎶"]
     },
     {
         "id": 6,
@@ -843,7 +843,7 @@
         "id": 4,
         "name": "Ford Vs Ferrari",
         "acceptableNames": ["FordvsFerrari","FordxFerrari","FordversusFerrari","FordvFerrari"],
-        "emoji": ["🚗","🏎️","🏁","🕶️","💰"]
+        "emoji": ["🆚","🏎️","🏁","🕶️","💰"]
     },
     {
         "id": 8,
