@@ -949,8 +949,68 @@
     },
     {
         "id": 6,
-        "name": "Gigantes de Aço",
-        "acceptableNames": ["gigantesdeaco","gigantedeaco","osgigantesdeaco","RealSteel","ogigantedeaco","therealsteel"],
-        "emoji": ["🤖","🥊","🏆","🔧","👨‍👦"]
+        "name": "Eu Robô",
+        "acceptableNames": ["eurobo","IRobot"],
+        "emoji": ["🤖","🧠","🤝","🌐","💔"]
+    },
+    {
+        "id": 6,
+        "name": "Viagem ao Centro da Terra",
+        "acceptableNames": ["viagemaocentrodaterra","aviagemaocentrodaterra"],
+        "emoji": ["🌍","⛏️","🔥","🦕","🔮"]
+    },
+    {
+        "id": 5,
+        "name": "De Repente 30",
+        "acceptableNames": ["derepente30","derepentetrinta","13Goingon30"],
+        "emoji": ["⌛","✨","👧","👠","❤️"]
+    },
+    {
+        "id": 5,
+        "name": "S.O.S. Malibu",
+        "acceptableNames": ["baywatch","sosmalibu","baywatchsosmalibu"],
+        "emoji": ["🏖️","👮‍♂️","👙","🔍","💪"]
+    },
+    {
+        "id": 7,
+        "name": "Moana",
+        "acceptableNames": ["moana","amoana","themoana"],
+        "emoji": ["🌊","🚣‍♀️","🏝️","🌺","🌀"]
+    },
+    {
+        "id": 7,
+        "name": "Deu a Louca na Chapeuzinho Vermelho",
+        "acceptableNames": ["deualoucanachapeuzinhovermelho","Hoodwinked"],
+        "emoji": ["🔺","🐺","👵","🐿️","🐸"]
+    },
+    {
+        "id": 8,
+        "name": "Ghost: Do Outro Lado da Vida",
+        "acceptableNames": ["ghostooutroladodavida","ghost","ghostdooutroladodavida"],
+        "emoji": ["👻","💑","🏥","😢","🚗"]
+    },
+    {
+        "id": 5,
+        "name": "Debi & Lóide",
+        "acceptableNames": ["debieloide","debiloide","dumbanddumber","dumbdumber"],
+        "emoji": ["🤪","🚗","🐶","👥","😂"]
+    },
+    {
+        "id": 5,
+        "name": "Dennis: O Pimentinha",
+        "acceptableNames": ["DennisOPimentinha","OPimentinha","Pimentinha","DennisPimentinha","DenisPimentinha","DenisoPimentinha","dennis","denis","DennistheMenace","DenistheMenace"],
+        "emoji": ["👦","🌶️","🤪","🏠","🎉"]
+    },
+    {
+        "id": 5,
+        "name": "Os Batutinhas",
+        "acceptableNames": ["batutinhas","osbatutinhas","TheLittleRascals","LittleRascals","Rascals"],
+        "emoji": ["♟️","🧒","👥","🎩","🐶"]
+    },
+    {
+        "id": 5,
+        "name": "Nanny McPhee",
+        "acceptableNames": ["nannymcphee","babanannymcphee","nanymcphee","babananymcphee"],
+        "emoji": ["💂‍♂️","🛵","✨","👩‍🦳","🧒"]
     }
 ]
