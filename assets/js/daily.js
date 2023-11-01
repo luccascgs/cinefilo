@@ -158,7 +158,7 @@ async function setEmojis() {
 
 //PUXANDO O BANCO DE DADOS
 async function getDatabase() {
-    const response = await fetch("../database.json");//ler a database dos filmes cadastrados e retornar o array completo
+    const response = await fetch("database.json");//ler a database dos filmes cadastrados e retornar o array completo
     const database = await response.json();//transformar em json
 
     const responseBd = await fetch(`https://api.adrianoneres.me/cinefilo-api/daily-movie?max=${database.length - 1}`);//ler api e retornar o filme
@@ -269,7 +269,7 @@ async function selectNext(order) {
         delayEmoji();
 
         ////MUDAR A COR
-        currentLi.querySelector(".icon").src = "../assets/images/check.svg"; //Muda o icon para outro SVG;
+        currentLi.querySelector(".icon").src = "assets/images/check.svg"; //Muda o icon para outro SVG;
         currentLi.classList.remove('input');
         currentLi.classList.add('correct');
         currentInput.setAttribute('readonly', true);
@@ -277,7 +277,7 @@ async function selectNext(order) {
 
     }///SE ERRAR
     else {
-        currentLi.querySelector(".icon").src = "../assets/images/x.svg"; //Muda o icon para outro SVG;
+        currentLi.querySelector(".icon").src = "assets/images/x.svg"; //Muda o icon para outro SVG;
         currentLi.classList.add('wrong');
         currentLi.classList.remove('input');
         currentInput.setAttribute('readonly', true);
@@ -302,7 +302,7 @@ async function selectNext(order) {
 
         nextLi.classList.add('input');
         nextLi.classList.remove('toAns');
-        nextLi.querySelector(".icon").src = "../assets/images/write.svg"; //Muda o icon para outro SVG;
+        nextLi.querySelector(".icon").src = "assets/images/write.svg"; //Muda o icon para outro SVG;
 
 
         nextInput.removeAttribute('readonly');
