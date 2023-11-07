@@ -704,7 +704,7 @@
     {
         "id": 6,
         "name": "Os Caça-Fantasmas",
-        "acceptableNames": ["OsCacaFantasmas","CacaFantasmas","Ghostbusters","theGhostbusters"],
+        "acceptableNames": ["OsCacaFantasmas","CacaFantasmas","Ghostbusters","theGhostbusters","Ghostbuster","theGhostbuster"],
         "emoji": ["👻","🚫","🔦","🚐","👷‍♂️"]
     },
     {
@@ -877,8 +877,8 @@
     },
     {
         "id": 8,
-        "name": "Openheimer",
-        "acceptableNames": ["Openheimer"],
+        "name": "Oppenheimer",
+        "acceptableNames": ["Openheimer","Oppenheimer"],
         "emoji": ["💣","💥","🍄","🎩","🔬"]
     },
     {
