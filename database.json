@@ -369,7 +369,7 @@
         "id": 5,
         "name": "O Diabo Veste Prada",
         "acceptableNames": ["diabovesteprada", "odiabovesteprada","TheDevilWearsPrada"],
-        "emoji": ["👠","👜","✒️","👗","🌃"]
+        "emoji": ["👠","👜","👿","👗","🌃"]
     },
     {
         "id": 4,
@@ -417,7 +417,7 @@
         "id": 6,
         "name": "Thor",
         "acceptableNames": ["thor","othor","thethor"],
-        "emoji": ["🔨","⚡","🌩️","🌈","🏜️"]
+        "emoji": ["🔨","⚡","🧔","🌈","🏜️"]
     },
     {
         "id": 8,
@@ -603,7 +603,7 @@
         "id": 5,
         "name": "Jojo Rabbit",
         "acceptableNames": ["JojoRabbit","jojorabit"],
-        "emoji": ["🇩🇪","🤝","🧒","👡","❤️"]
+        "emoji": ["🇩🇪","🤝","🧒","👡","✡️"]
     },
     {
         "id": 7,
@@ -728,7 +728,7 @@
     {
         "id": 6,
         "name": "Os Gonnies",
-        "acceptableNames": ["OsGonnies","Gonnies","theGonnies"],
+        "acceptableNames": ["OsGonnies","Gonnies","theGonnies","Gonies","thGonies","osGonies"],
         "emoji": ["🗺️","🏴‍☠️","🔦","🚴‍♂️","👦"]
     },
     {
@@ -831,7 +831,7 @@
         "id": 7,
         "name": "Tarzan",
         "acceptableNames": ["tarzan","otarzan","thetarzan"],
-        "emoji": ["🌴","🐒","🌄","🍃","👨"]
+        "emoji": ["🌴","👨","🌄","🍃","🦍"]
     },
     {
         "id": 5,
@@ -855,7 +855,7 @@
         "id": 5,
         "name": "Karate Kid",
         "acceptableNames": ["KarateKid","theKarateKid"],
-        "emoji": ["🥋","👦","👴","🏆","👊"]
+        "emoji": ["🥋","👦","👴","🧥","👊"]
     },
     {
         "id": 7,
@@ -951,13 +951,13 @@
         "id": 6,
         "name": "Eu Robô",
         "acceptableNames": ["eurobo","IRobot"],
-        "emoji": ["🤖","🧠","🤝","🌐","💔"]
+        "emoji": ["🤖","🧠","🤝","🌐","👥"]
     },
     {
         "id": 6,
         "name": "Viagem ao Centro da Terra",
         "acceptableNames": ["viagemaocentrodaterra","aviagemaocentrodaterra"],
-        "emoji": ["🌍","⛏️","🔥","🦕","🔮"]
+        "emoji": ["🌍","⛏️","🔥","🦕","🚀"]
     },
     {
         "id": 5,
