@@ -1012,5 +1012,23 @@
         "name": "Nanny McPhee",
         "acceptableNames": ["nannymcphee","babanannymcphee","nanymcphee","babananymcphee"],
         "emoji": ["💂‍♂️","🛵","✨","👩‍🦳","🧒"]
+    },
+    {
+        "id": 5,
+        "name": "Jumanji",
+        "acceptableNames": ["jumanji","ojumanji","thejumanji"],
+        "emoji": ["🎲","🌴","📺","🦏","🔍"]
+    },
+    {
+        "id": 5,
+        "name": "Zathura",
+        "acceptableNames": ["Zathura"],
+        "emoji": ["🎲","🌌","🤖","🏠","🧒"]
+    },
+    {
+        "id": 7,
+        "name": "Astroboy",
+        "acceptableNames": ["astroboy","oastroboy","theastroboy"],
+        "emoji": ["🤖","🌌","👦","🏙️","🌍"]
     }
 ]
