@@ -147,7 +147,6 @@ async function selectNext(order) {
 
             ///VOCÊ PERDEU
             if (order === 5) {
-                storeStats(6);
                 localStorage.setItem('geralStreak', 0);
                 copyButton.addEventListener('click', function () {
                     copyToClipboard(streak);

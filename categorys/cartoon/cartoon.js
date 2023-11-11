@@ -150,13 +150,13 @@ async function selectNext(order) {
 
             ///VOCÊ PERDEU
             if (order === 5) {
-                storeStats(6);
-                localStorage.setItem('complete', '1');
+                localStorage.setItem('cartoonStreak', 0);
                 copyButton.addEventListener('click', function () {
-                    copyToClipboard(false, order);
+                    copyToClipboard(streak);
                 });
                 setTimeout(async function () {
-                    await checkModal(order);
+                    checkModal(streak);
+                    storeSrike();
                 }, 1500);
             }
         }
@@ -241,6 +241,7 @@ function validToast(order, isValid) {
             toast.innerText = "MANDOU BEM!"
         else if (order === 5)
             toast.innerText = "POR POUCO!"
+        toast.classList.remove('toastW');
         toast.classList.add('toastC');
 
         setTimeout(function () {
@@ -253,7 +254,6 @@ function validToast(order, isValid) {
     }
 
     setTimeout(function () {
-        toast.classList.remove('toastW');
         toast.classList.add('closeToast');
     }, 3000);
 
