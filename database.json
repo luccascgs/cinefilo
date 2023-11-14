@@ -1059,7 +1059,7 @@
         "id": 7,
         "name": "A Hora do Rush",
         "acceptableNames": ["horadorush","ahoradorush","rushhour","therushhour"],
-        "emoji": ["🚗","🕑","👮‍♂️","👨","🇨🇳"]
+        "emoji": ["🚗","🕑","👮‍♂️","👘","🇨🇳"]
     },
     {
         "id": 1,
@@ -1198,5 +1198,107 @@
         "name": "50 Tons de Cinza",
         "acceptableNames": ["50tonsdecinza","cinquentatonsdecinza","50shadesofgrey","fifityshadesofgrey"],
         "emoji": ["🔒", "📖", "💑", "🌹", "⬛"]
+    },
+    {
+        "id": 6,
+        "name": "Depois da Terra",
+        "acceptableNames": ["depoisdaterra","afterearth"],
+        "emoji": ["🌍", "🚀", "👨‍👦", "🌿", "👽"]
+    },
+    {
+        "id": 8,
+        "name": "Free Willy",
+        "acceptableNames": ["freewilly","willy"],
+        "emoji": ["🐳", "🌊", "👦", "🌟", "🤝"]
+    },
+    {
+        "id": 7,
+        "name": "Happy Feet",
+        "acceptableNames": ["happyfeet"],
+        "emoji": ["🐧", "🎤", "🕺", "❄️", "🌊"]
+    },
+    {
+        "id": 5,
+        "name": "Até Que a Sorte Nos Separe",
+        "acceptableNames": ["ateqasortenossepare","atequeasortenossepare"],
+        "emoji": ["💸", "📉", "🎰", "👫", "🏡"]
+    },
+    {
+        "id": 5,
+        "name": "Meu Primeiro Amor",
+        "acceptableNames": ["meuprimeiroamor","mygirl"],
+        "emoji": ["💔", "👦", "👧", "🚲", "🌸"]
+    },
+    {
+        "id": 2,
+        "name": "Os Cavaleiros do Zodiaco",
+        "acceptableNames": ["cavaleirosdozodiaco","oscavaleirosdozodiaco","saintseiya","knightsofthezodiac","saintseiyaknightsofthezodiac"],
+        "emoji": ["🌌", "👦", "⚔️", "🦅", "🌟"]
+    },
+    {
+        "id": 4,
+        "name": "Hellboy",
+        "acceptableNames": ["hellboy","ohellboy","thehellboy"],
+        "emoji": ["🔥", "👹", "🤜", "💪", "🌍"]
+    },
+    {
+        "id": 6,
+        "name": "Percy Jackson",
+        "acceptableNames": ["percyjackson","opercyjackson","thepercyjackson"],
+        "emoji": ["📚", "⚔️", "🔱", "🔥", "🌊"]
+    },
+    {
+        "id": 6,
+        "name": "Presságio",
+        "acceptableNames": ["pressagio","knowing","opressagio","theknowing"],
+        "emoji": ["🌎", "🔥", "🌊", "🚨", "✈️"]
+    },
+    {
+        "id": 6,
+        "name": "Motoqueiro Fantasma",
+        "acceptableNames": ["motoqueirofantasma","ghostrider","omotoqueirofantasma","theghostrider"],
+        "emoji": ["🔥", "🏍️", "💀", "👹", "⛓️"]
+    },
+    {
+        "id": 6,
+        "name": "Antes do Pôr do Sol",
+        "acceptableNames": ["antesdopordosol","beforesunset"],
+        "emoji": ["🌇", "💏", "💬", "⏳", "🇫🇷"]
+    },
+    {
+        "id": 8,
+        "name": "Meu Nome é Rádio",
+        "acceptableNames": ["radio","meunomeeradio"],
+        "emoji": ["📻", "🏈", "👴", "📚", "❤️"]
+    },
+    {
+        "id": 5,
+        "name": "Paddington",
+        "acceptableNames": ["paddington","paddignton","padington","padignton","paddinton","padinton"],
+        "emoji": ["🧸", "🕵️", "🍯", "🚂", "💂‍♂️"]
+    },
+    {
+        "id": 4,
+        "name": "Tróia",
+        "acceptableNames": ["troia","troy","cavalodetroia","troyhorse","ocavalodetroia","thetroyhorse"],
+        "emoji": ["⚔️", "🏛️", "🛶", "🛡️", "🐎"]
+    },
+    {
+        "id": 4,
+        "name": "No Limite Do Amanhã",
+        "acceptableNames": ["NoLimiteDaManha","nolimitedoamanha","edgeoftomorrow"],
+        "emoji": ["🕰️", "🌅", "✈️", "🪓", "👨‍🚀"]
+    },
+    {
+        "id": 1,
+        "name": "A Morte Te Dá Parabéns",
+        "acceptableNames": ["AMorteTeDaParabens","mortetedaparabens","happydeathday"],
+        "emoji": ["🎂", "⏰", "🔁", "🔪", "👩"]
+    },
+    {
+        "id": 6,
+        "name": "Shazam",
+        "acceptableNames": ["shazam","theshazam","oshazam"],
+        "emoji": ["⚡", "🧙‍♂️", "👦", "👨‍👨‍👧‍👦", "🦸‍♂️"]
     }
 ]
