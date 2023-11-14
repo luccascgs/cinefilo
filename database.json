@@ -543,7 +543,7 @@
         "id": 4,
         "name": "300: A Ascenssão do Império",
         "acceptableNames": ["300","300espartas","300deesparta","300ascenssaodoimperio","300aascenssaodoimperio","300riseofanempire","300theriseofanempire"],
-        "emoji": ["🦿","🗡️","🛡️","⚔️","🏛️"]
+        "emoji": ["🦵","🗡️","🛡️","⚔️","🏛️"]
     },
     {
         "id": 4,
@@ -626,7 +626,7 @@
     {
         "id": 7,
         "name": "Ratatouille",
-        "acceptableNames": ["ratatouie","ratatoulie","ratatoullie","ratatulho","ratatulio"],
+        "acceptableNames": ["ratatouille","ratatouie","ratatoulie","ratatoullie","ratatulho","ratatulio"],
         "emoji": ["🐭","🍲","👨‍🍳","🍽️","🌟"]
     },
     {
@@ -1132,5 +1132,71 @@
         "name": "Alerta Vermelho",
         "acceptableNames": ["alertavermelho","oalertavermelho","rednotice","therednotice"],
         "emoji": ["🚢","🕵️‍♂️","🥚","🛕","🚨"]
+    },
+    {
+        "id": 5,
+        "name": "Escola de Heróis",
+        "acceptableNames": ["escoladeherois","aescoladeherois","SkyHigh","theskyhigh"],
+        "emoji": ["🏫","🦸‍♂️","📚","🚀","🌌"]
+    },
+    {
+        "id": 4,
+        "name": "Tartarugas Nija",
+        "acceptableNames": ["tartarugasninja","tartarugasninjas","ninjaturtles"],
+        "emoji": ["🐢","🐢","🐢","🐢","🍕"]
+    },
+    {
+        "id": 1,
+        "name": "Megatubarão",
+        "acceptableNames": ["megatubarao","omegatubarao","meg","themeg"],
+        "emoji": ["🦈", "🌊", "🚢", "👩‍🔬", "🔍"]
+    },
+    {
+        "id": 1,
+        "name": "Bird Box",
+        "acceptableNames": ["birdbox","obirdbox","thebirdbox"],
+        "emoji": ["🐦", "📦", "👁️", "🚣‍♀️", "🏙️"]
+    },
+    {
+        "id": 6,
+        "name": "Star Trek",
+        "acceptableNames": ["startrek","jornadanasestrelas"],
+        "emoji": ["⭐", "🚀", "🌌", "🖖", "🛰️"]
+    },
+    {
+        "id": 5,
+        "name": "Barbie",
+        "acceptableNames": ["barbie","abarbie","thebarbie"],
+        "emoji": ["👱‍♀️", "👗", "🎀", "👠", "🌈"]
+    },
+    {
+        "id": 4,
+        "name": "Kick Boxer",
+        "acceptableNames": ["kickboxer","okickboxer","thekickboxer"],
+        "emoji": ["🥊", "🦵", "👨‍🦲", "🌅", "💔"]
+    },
+    {
+        "id": 4,
+        "name": "Chamas de Vingança",
+        "acceptableNames": ["chamasdevinganca","chamadevinganca","manonfire"],
+        "emoji": ["🔥", "👮‍♂️", "👧", "⚖️", "🌆"]
+    },
+    {
+        "id": 7,
+        "name": "Divertidamente",
+        "acceptableNames": ["divertidamente","insideout"],
+        "emoji": ["😄", "😢", "😡", "😨", "💭"]
+    },
+    {
+        "id": 7,
+        "name": "Megamente",
+        "acceptableNames": ["megamente","omegamente","megamind","themegamind"],
+        "emoji": ["🦹‍♂️", "🧠", "🐡", "⚙️", "🔫"]
+    },
+    {
+        "id": 8,
+        "name": "50 Tons de Cinza",
+        "acceptableNames": ["50tonsdecinza","cinquentatonsdecinza","50shadesofgrey","fifityshadesofgrey"],
+        "emoji": ["🔒", "📖", "💑", "🌹", "⬛"]
     }
 ]
