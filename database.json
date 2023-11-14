@@ -134,7 +134,7 @@
     {
         "id": 6,
         "name": "Senhor dos Anéis",
-        "acceptableNames": ["senhordosaneis", "osenhordosaneis","TheLordoftheRings", "LordoftheRings"],
+        "acceptableNames": ["senhordosaneis", "osenhordosaneis","TheLordoftheRings", "LordoftheRings","hobit","hobbit"],
         "emoji": ["🧙‍♂️","💍","🌋","👣","🗡️"]
     },
     {
@@ -1030,5 +1030,107 @@
         "name": "Astroboy",
         "acceptableNames": ["astroboy","oastroboy","theastroboy"],
         "emoji": ["🤖","🌌","👦","🏙️","🌍"]
+    },
+    {
+        "id": 7,
+        "name": "Mogli",
+        "acceptableNames": ["mogli","mogliomeninolobo","moglimeninolobo","themogli","omogli"],
+        "emoji": ["🌳","🐅","👦","🐍","🐺"]
+    },
+    {
+        "id": 6,
+        "name": "Alita",
+        "acceptableNames": ["alita","aalita","thealita"],
+        "emoji": ["🤖","👁️","🌃","🗡️","👩"]
+    },
+    {
+        "id": 5,
+        "name": "Prenda-me Se For Capaz",
+        "acceptableNames": ["prendameseforcapaz","catchmeifyoucan","catchmeifucan"],
+        "emoji": ["✈️","🎭","💼","🕵️‍♂️","💸"]
+    },
+    {
+        "id": 7,
+        "name": "Encanto",
+        "acceptableNames": ["encanto","oencanto","theencanto"],
+        "emoji": ["🏰","👁️","👨‍👩‍👧‍👦","✨","🇲🇽"]
+    },
+    {
+        "id": 7,
+        "name": "A Hora do Rush",
+        "acceptableNames": ["horadorush","ahoradorush","rushhour","therushhour"],
+        "emoji": ["🚗","🕑","👮‍♂️","👨","🇨🇳"]
+    },
+    {
+        "id": 1,
+        "name": "Uma Noite de Crime",
+        "acceptableNames": ["umanoitedecrime","noitedecrime","purgatorio","opurgatorio","purge","thepurge"],
+        "emoji": ["🔪","⏰","🌃","👥","💀"]
+    },
+    {
+        "id": 7,
+        "name": "Gato de Botas",
+        "acceptableNames": ["gatodebotas","ogatodebotas","pussinboots","thepussinboots"],
+        "emoji": ["🐈","🕵️‍♂️","👢","🤠","🦜"]
+    },
+    {
+        "id": 4,
+        "name": "Zorro",
+        "acceptableNames": ["zorro","loneranger","thezorro","ozorro","theloneranger","cavaleirosolitario","ocavaleirosolitario"],
+        "emoji": ["🐎","🏹","🦅","🤠","💤"]
+    },
+    {
+        "id": 1,
+        "name": "A Freira",
+        "acceptableNames": ["freira","afreira","nun","thenun"],
+        "emoji": ["👻","⛪","😇","✝️","🔪"]
+    },
+    {
+        "id": 7,
+        "name": "Scooby Doo",
+        "acceptableNames": ["scoobydoo","scobydo"],
+        "emoji": ["🐾","🕵️‍♂️","👻","🚐","🍔"]
+    },
+    {
+        "id": 4,
+        "name": "Grand Turismo",
+        "acceptableNames": ["grandturismo","granturismo"],
+        "emoji": ["🏎️","🌍","🏆","🎮","🚥"]
+    },
+    {
+        "id": 4,
+        "name": "O Protetor",
+        "acceptableNames": ["oprotetor","protetor","equalizer","theequalizer"],
+        "emoji": ["👨‍🦲","🌆","👊","🇮🇹","🔫"]
+    },
+    {
+        "id": 8,
+        "name": "Sete Vidas",
+        "acceptableNames": ["setevidas","7vidas","sevenpounds","7pounds"],
+        "emoji": ["👤","🚗","☠️","🔄","7️⃣"]
+    },
+    {
+        "id": 8,
+        "name": "AIR",
+        "acceptableNames": ["air","jordan"],
+        "emoji": ["🏀","🐐","👟","🏆","✈️"]
+    },
+    {
+        "id": 8,
+        "name": "4 Vidas de Um Cachorro",
+        "acceptableNames": ["4vidasdeumcachorro","quatrovidasdeumcachorro","dogspurpose","adogspurpose"],
+        "emoji": ["🐶","🔄","❤️","👦","⏳"]
+    },
+    {
+        "id": 5,
+        "name": "Um Espião e Meio",
+        "acceptableNames": ["umespiaoemeio","1espiaoemeio","centralinteligence","centralintelligence"],
+        "emoji": ["🕵️‍♂️","👥","🔄","💪","🚗"]
+    },
+    {
+        "id": 5,
+        "name": "Alerta Vermelho",
+        "acceptableNames": ["alertavermelho","oalertavermelho","rednotice","therednotice"],
+        "emoji": ["🚢","🕵️‍♂️","🥚","🛕","🚨"]
     }
 ]
