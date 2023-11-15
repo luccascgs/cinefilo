@@ -753,7 +753,7 @@
         "id": 8,
         "name": "Marley & Eu",
         "acceptableNames": ["marleyeu","marleyeeu"],
-        "emoji": ["🐾","👫","🐶","😢","❤️"]
+        "emoji": ["☠️","👫","🐶","😢","❤️"]
     },
     {
         "id": 8,
@@ -1296,7 +1296,7 @@
         "emoji": ["🎂", "⏰", "🔁", "🔪", "👩"]
     },
     {
-        "id": 6,
+        "id": 5,
         "name": "Shazam",
         "acceptableNames": ["shazam","theshazam","oshazam"],
         "emoji": ["⚡", "🧙‍♂️", "👦", "👨‍👨‍👧‍👦", "🦸‍♂️"]
@@ -1462,5 +1462,47 @@
         "name": "Trem-Bala",
         "acceptableNames": ["trembala","otrembala","bullettrain","thebullettrain"],
         "emoji": ["👱‍♂️", "💼", "🕵️‍♂️", "🎶", "🚄"]
+    },
+    {
+        "id": 5,
+        "name": "Meu Passado Me Condena",
+        "acceptableNames": ["meupassadomecondena","omeupassadomecondena"],
+        "emoji": ["👫", "🔏", "⏳", "🚢", "😅"]
+    },
+    {
+        "id": 5,
+        "name": "Adão Negro",
+        "acceptableNames": ["adaonegro","blackadam","oadaonegro","theblackadam"],
+        "emoji": ["⚫", "👨‍🦲", "⚡", "👁️‍🗨️", "🦸‍♂️"]
+    },
+    {
+        "id": 7,
+        "name": "O Poderoso Chefinho",
+        "acceptableNames": ["opoderosochefinho","poderosochefinho","bossbaby","thebossbaby"],
+        "emoji": ["👶", "👔", "💼", "🌐", "🎩"]
+    },
+    {
+        "id": 8,
+        "name": "A Lagoa Azul",
+        "acceptableNames": ["alagoaazul","lagoaazul","TheBlueLagoon","BlueLagoon"],
+        "emoji": ["🏝️", "🌊", "👫", "❤️", "🌴"]
+    },
+    {
+        "id": 1,
+        "name": "Não! Não Olhe!",
+        "acceptableNames": ["naonaoolhe","naoolhe","nope"],
+        "emoji": ["🎐", "👁️", "🐎", "👽", "🐒"]
+    },
+    {
+        "id": 7,
+        "name": "Rio",
+        "acceptableNames": ["rio"],
+        "emoji": ["🐦", "🔵", "🇧🇷", "🎶", "🎉"]
+    },
+    {
+        "id": 5,
+        "name": "Jamaica Abaixo de Zero",
+        "acceptableNames": ["jamaicaabaixodezero","jamaicaabaixode0","jamaicabaixodezero","jamaicabaixode0","coolrunnings","coolrunning"],
+        "emoji": ["⛷️", "❄️", "🏅", "👥", "🇯🇲"]
     }
 ]
