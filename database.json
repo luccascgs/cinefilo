@@ -1274,7 +1274,7 @@
     {
         "id": 5,
         "name": "Paddington",
-        "acceptableNames": ["paddington","paddignton","padington","padignton","paddinton","padinton"],
+        "acceptableNames": ["paddington","paddignton","padington","padignton","paddinton","padinton","peddington","peddignton","pedington","pedignton","peddinton","pedinton"],
         "emoji": ["🧸", "🕵️", "🍯", "🚂", "💂‍♂️"]
     },
     {
@@ -1425,7 +1425,7 @@
         "id": 5,
         "name": "Entrando Numa Fria",
         "acceptableNames": ["entrandonumafria","entrandoemumafria","meettheparents","meettheparent"],
-        "emoji": ["🐈", "❄️", "🏠", "👫", "🔥"]
+        "emoji": ["🐈", "❄️", "🏠", "👫", "😓"]
     },
     {
         "id": 7,
