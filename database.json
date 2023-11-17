@@ -1504,5 +1504,23 @@
         "name": "Jamaica Abaixo de Zero",
         "acceptableNames": ["jamaicaabaixodezero","jamaicaabaixode0","jamaicabaixodezero","jamaicabaixode0","coolrunnings","coolrunning"],
         "emoji": ["⛷️", "❄️", "🏅", "👥", "🇯🇲"]
+    },
+    {
+        "id": 7,
+        "name": "Lucas: Um Intruso no Formigueiro",
+        "acceptableNames": ["lucasumintrusonoformigueiro","lucasointrusonoformigueiro","umintrusonoformigueiro","ointrusonoformigueiro","TheAntBully","AntBully"],
+        "emoji": ["🐜", "🌱", "🏡", "🧒", "🐾"]
+    },
+    {
+        "id": 7,
+        "name": "Garfield",
+        "acceptableNames": ["Garfield","ogarfield","thegarfield","garfieldthemovie","garfieldofilme"],
+        "emoji": ["😼", "🍕", "📰", "🐾", "🏠"]
+    },
+    {
+        "id": 5,
+        "name": "Hotel Bom Pra Cachorro",
+        "acceptableNames": ["hotelbomparacachorro","hotelbompracachorro","hotelfordogs","hotel4dogs"],
+        "emoji": ["🏨", "🐶", "🐾", "🍖", "🎾"]
     }
 ]
