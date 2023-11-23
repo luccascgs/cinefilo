@@ -19,41 +19,12 @@ const emoji3 = document.getElementById('emoji3');
 const emoji4 = document.getElementById('emoji4');
 const emoji5 = document.getElementById('emoji5');
 
-let moviesDatabase = [];
-let allAcceptableNames = [];
 
 overlay.addEventListener('click', function () {
     document.getElementById("answerModal").style.display = "none";
 })
 
-//PUXANDO O BANCO DE DADOS
-async function getDatabase() {
-    const response = await fetch("database.json");//ler a database dos filmes cadastrados e retornar o array completo
-    const database = await response.json();//transformar em json
-
-    const responseBd = await fetch(`https://api.adrianoneres.me/cinefilo-api/daily-movie?max=${database.length - 1}`);//ler api e retornar o filme
-    const movieDay = await responseBd.json();//transformar a resposta em json
-
-    await outDatabase(database, movieDay.id_movie);//passar os valores para outra função
-};
-
-async function outDatabase(val, indice) {
-    const movie = val[indice];
-    moviesDatabase = val;
-
-    localStorage.setItem('answer', JSON.stringify(movie));
-    await setEmojis();
-}
-
-function orderAcceptableNames() {
-    allAcceptableNames = moviesDatabase.reduce((acc, movie) => {
-        const normalizedAcceptableNames = movie.acceptableNames.map((element) => element.toLowerCase());
-        acc = acc.concat(normalizedAcceptableNames);
-        return acc;
-    }, []);
-}
-
-//TIMER - ESSE CÓDIGO DO TIMER N É MEU, PEGUEI AQUI => 
+//TIMER
 var today = new Date();
 
 var tomorrow = new Date();
@@ -155,6 +126,7 @@ async function checkDay() {
         localStorage.setItem('day', dayjs().format("YYYY-MM-DD"));
         localStorage.setItem('tries', "[]");
         localStorage.setItem('complete', '0');
+        getDatabase();
         dailyMovie = localStorage.getItem('answer');
     }
     else {
@@ -162,7 +134,7 @@ async function checkDay() {
         await setEmojis();
     }
 }
-getDatabase().then(_ => checkDay()).then(_ => orderAcceptableNames()).then(_ => confirmInput());
+checkDay();
 
 async function getDailyMovie() {
     let dailyMovie = localStorage.getItem('answer');
@@ -183,6 +155,26 @@ async function setEmojis() {
     emoji4.innerText = dailyMovie.emoji[3];
     emoji5.innerText = dailyMovie.emoji[4];
 }
+
+//PUXANDO O BANCO DE DADOS
+async function getDatabase() {
+    const response = await fetch("database.json");//ler a database dos filmes cadastrados e retornar o array completo
+    const database = await response.json();//transformar em json
+
+    const responseBd = await fetch(`https://api.adrianoneres.me/cinefilo-api/daily-movie?max=${database.length - 1}`);//ler api e retornar o filme
+    const movieDay = await responseBd.json();//transformar a resposta em json
+
+    await outDatabase(database, movieDay.id_movie);//passar os valores para outra função
+};
+
+async function outDatabase(val, indice) {
+    const movie = val[indice];
+    let moviesDatabase = val;
+
+    localStorage.setItem('answer', JSON.stringify(movie));
+    await setEmojis();
+}
+
 
 //MODAL DE RESPOSTA
 async function checkModal(order) {
@@ -220,22 +212,22 @@ function copyToClipboard(correct, order) {
 }
 
 //CONFIRMAR O INPUT
-async function confirmInput() {
-    for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= 5; i++) {
 
-        const tries = JSON.parse(localStorage.getItem('tries')) || [];
-        const currentInput = document.getElementById('guess' + (i)).getElementsByTagName('input')[0];
-        if (tries[i - 1]) {
-            currentInput.value = tries[i - 1];
-            selectNext(i);
-        }
-        else {
-            currentInput.addEventListener('keydown', function (event) {
-                if ((event.code === "Enter" || event.keyCode === 13) && currentInput.value) {
-                    selectNext(i, true);
-                }
-            });
-        }
+    const tries = JSON.parse(localStorage.getItem('tries')) || [];
+    const currentInput = document.getElementById('guess' + (i)).getElementsByTagName('input')[0];
+
+    if (tries[i - 1]) {
+        currentInput.value = tries[i - 1];
+        selectNext(i);
+    }
+    else {
+        currentInput.addEventListener('keydown', function (event) {
+            if ((event.code === "Enter" || event.keyCode === 13) && currentInput.value) {
+                saveDataToLocalStorage(currentInput.value);
+                selectNext(i);
+            }
+        });
     }
 }
 
@@ -248,7 +240,7 @@ function saveDataToLocalStorage(data) {
 }
 
 //FUNÇÃO PARA SELECIONAR O PRÓXIMO INTPUT E VALIDAR A RESPOSTA VISUALMENTE
-async function selectNext(order, saveTries) {
+async function selectNext(order) {
     const dailyMovie = JSON.parse(await getDailyMovie());
 
     ///VALIDÇÃO VISUAL
@@ -256,76 +248,69 @@ async function selectNext(order, saveTries) {
     const currentInput = currentLi.getElementsByTagName('input')[0];
 
     const isMovieCorrect = await checkMovie(currentInput.value);
-    const isAcceptableName = allAcceptableNames.includes(normalizeName(currentInput.value));
-    if (isAcceptableName) {
-        if (saveTries)
-            saveDataToLocalStorage(currentInput.value);
-        ///SE ACERTAR
-        if (isMovieCorrect) {
-            storeStats(order);
-            localStorage.setItem('complete', '1');
-            const guess = order;
-            copyButton.addEventListener('click', function () {
-                copyToClipboard(true, guess);
-            });
-            validToast(order, true);
-            ////MOSTRAR OS PRÓXIMOS EMOJIS COM DELAY
-            function delayEmoji() {
-                showEmoji(order);
-                order++;
-                setTimeout(function () {
-                    if (order <= 5)
-                        delayEmoji();
-                }, 500);
-            }
-            delayEmoji();
-
-            ////MUDAR A COR
-            currentLi.querySelector(".icon").src = "assets/images/check.svg"; //Muda o icon para outro SVG;
-            currentLi.classList.remove('input');
-            currentLi.classList.add('correct');
-            currentInput.setAttribute('readonly', true);
-            currentInput.value = dailyMovie.name;
-
-        }///SE ERRAR
-        else {
-            currentLi.querySelector(".icon").src = "assets/images/x.svg"; //Muda o icon para outro SVG;
-            currentLi.classList.add('wrong');
-            currentLi.classList.remove('input');
-            currentInput.setAttribute('readonly', true);
-
-            ///VOCÊ PERDEU
-            if (order === 5) {
-                storeStats(6);
-                localStorage.setItem('complete', '1');
-                copyButton.addEventListener('click', function () {
-                    copyToClipboard(false, order);
-                });
-                setTimeout(async function () {
-                    await checkModal(order);
-                }, 1500);
-            }
+    ///SE ACERTAR
+    if (isMovieCorrect) {
+        storeStats(order);
+        localStorage.setItem('complete', '1');
+        const guess = order;
+        copyButton.addEventListener('click', function () {
+            copyToClipboard(true, guess);
+        });
+        validToast(order, true);
+        ////MOSTRAR OS PRÓXIMOS EMOJIS COM DELAY
+        function delayEmoji() {
+            showEmoji(order);
+            order++;
+            setTimeout(function () {
+                if (order <= 5)
+                    delayEmoji();
+            }, 500);
         }
-        ///SELECIONAR O PRÓXIMO
-        if (order < 5 && !isMovieCorrect) {
-            const nextLi = document.getElementById("guess" + (order + 1));
-            const nextInput = nextLi.getElementsByTagName('input')[0];
+        delayEmoji();
 
-            nextLi.classList.add('input');
-            nextLi.classList.remove('toAns');
-            nextLi.querySelector(".icon").src = "assets/images/write.svg"; //Muda o icon para outro SVG;
+        ////MUDAR A COR
+        currentLi.querySelector(".icon").src = "assets/images/check.svg"; //Muda o icon para outro SVG;
+        currentLi.classList.remove('input');
+        currentLi.classList.add('correct');
+        currentInput.setAttribute('readonly', true);
+        currentInput.value = dailyMovie.name;
 
+    }///SE ERRAR
+    else {
+        currentLi.querySelector(".icon").src = "assets/images/x.svg"; //Muda o icon para outro SVG;
+        currentLi.classList.add('wrong');
+        currentLi.classList.remove('input');
+        currentInput.setAttribute('readonly', true);
 
-            nextInput.removeAttribute('readonly');
-            nextInput.setAttribute('placeholder', 'Digite um título')
-            nextInput.focus();
-
-            showEmoji(order + 1);
+        ///VOCÊ PERDEU
+        if (order === 5) {
+            storeStats(6);
+            localStorage.setItem('complete', '1');
+            copyButton.addEventListener('click', function () {
+                copyToClipboard(false, order);
+            });
+            setTimeout(async function () {
+                await checkModal(order);
+            }, 1500);
         }
     }
-    else
-        validToast(undefined, false);
 
+    ///SELECIONAR O PRÓXIMO
+    if (order < 5 && !isMovieCorrect) {
+        const nextLi = document.getElementById("guess" + (order + 1));
+        const nextInput = nextLi.getElementsByTagName('input')[0];
+
+        nextLi.classList.add('input');
+        nextLi.classList.remove('toAns');
+        nextLi.querySelector(".icon").src = "assets/images/write.svg"; //Muda o icon para outro SVG;
+
+
+        nextInput.removeAttribute('readonly');
+        nextInput.setAttribute('placeholder', 'Digite um título')
+        nextInput.focus();
+
+        showEmoji(order + 1);
+    }
 }
 
 
@@ -335,28 +320,15 @@ function showEmoji(order) {
     nextEmoji.classList.add('visible');
 }
 
-function normalizeName(input) {
-    return input?.trim().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s/g, '').toLowerCase();
-}
 
 //CHECAGEM DO FILME
 async function checkMovie(input) {
     const dailyMovie = JSON.parse(await getDailyMovie());
     ///REMOVENDO ACENTOS
-    const inputToCheck = normalizeName(input);
+    const inputToCheck = input.trim().normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s/g, '');
 
-    const movieFound = dailyMovie.acceptableNames.find(acceptableName => inputToCheck === acceptableName.toLowerCase())
+    const movieFound = dailyMovie.acceptableNames.find(acceptableName => inputToCheck.toLowerCase() === acceptableName.toLowerCase())
     return !!movieFound;
-}
-
-//VERIFICAR SE O FILME EXISTE NO BANCO DE DADOS
-async function checkMovieInDatabase(input) {
-    const inputToCheck = normalizeName(input);
-    const movieFound = moviesDatabase.map((element) => {
-        const inputFound = element.acceptableNames.find(acceptableName => inputToCheck === acceptableName.toLowerCase());
-        return !!inputFound;
-    });
-    return movieFound;
 }
 
 //TOAST
@@ -377,19 +349,28 @@ function validToast(order, isValid) {
         else if (order === 5)
             toast.innerText = "POR POUCO!"
         toast.classList.add('toastC');
-
-        setTimeout(function () {
-            toast.classList.remove('toastW');
-            toast.classList.remove('toastC');
-            party.confetti(answerModal);
-            checkModal(order);
-        }, 3500);
     }
     else {
         toast.innerText = "FILME INVÁLIDO"
         toast.classList.add('toastW');
     }
+
     setTimeout(function () {
         toast.classList.add('closeToast');
     }, 3000);
+
+    setTimeout(function () {
+        toast.classList.remove('toastW');
+        toast.classList.remove('toastC');
+        party.confetti(answerModal);
+        checkModal(order);
+    }, 3500);
+
+}
+
+//teste de pegar json
+
+//SORTEANDO NÚMERO ALEATÓRIO
+function sortNumber(max) {
+    return Math.floor(Math.random() * max)
 }
