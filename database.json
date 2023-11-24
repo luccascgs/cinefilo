@@ -1160,7 +1160,7 @@
     {
         "id": 6,
         "name": "Star Trek",
-        "acceptableNames": ["startrek","jornadanasestrelas"],
+        "acceptableNames": ["startrek","jornadanasestrelas","startreck"],
         "emoji": ["⭐", "🚀", "🌌", "🖖", "🛰️"]
     },
     {
@@ -1221,7 +1221,7 @@
         "id": 5,
         "name": "Até Que a Sorte Nos Separe",
         "acceptableNames": ["ateqasortenossepare","atequeasortenossepare"],
-        "emoji": ["💸", "📉", "🎰", "👫", "🏡"]
+        "emoji": ["💸", "📉", "🎰", "👫", "💔"]
     },
     {
         "id": 5,
