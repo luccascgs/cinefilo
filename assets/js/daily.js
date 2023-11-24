@@ -252,6 +252,7 @@ async function selectNext(order) {
     if (isMovieCorrect) {
         storeStats(order);
         localStorage.setItem('complete', '1');
+        currentInput.blur();
         const guess = order;
         copyButton.addEventListener('click', function () {
             copyToClipboard(true, guess);
