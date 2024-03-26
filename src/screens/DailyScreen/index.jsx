@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Overlay from "../../components/Overlay";
 import GameInput from "../../components/GameInput";
 import { Container, Emojis, Title } from "./style";
-import InfoModal from "../../components/InfoModal";
-import HelpModal from "../../components/HelpModal";
 
 export default function DailyScreen() {
   const [height, setHeight] = useState(window.innerHeight - 50);
@@ -22,9 +19,6 @@ export default function DailyScreen() {
 
   return (
     <Container style={{ height: height }}>
-      <InfoModal />
-      <HelpModal />
-      <Overlay />
       <Title>DIÁRIO</Title>
       <Emojis>
         <span>👀</span>

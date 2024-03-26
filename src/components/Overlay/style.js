@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const OverlayContainer = styled.section`
+export const OverlayContainer = styled.button`
   z-index: 999;
   position: fixed;
   content: " ";
