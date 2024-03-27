@@ -4,6 +4,12 @@ import { Container, Emojis, Title } from "./style";
 
 export default function DailyScreen() {
   const [height, setHeight] = useState(window.innerHeight - 50);
+  const [currentMovie] = useState({
+    id: 6,
+    name: "Matrix",
+    acceptableNames: ["TheMatrix", "Matrix", "OMatrix"],
+    emoji: ["💻", "🧠", "💊", "🕶️", "🐇"],
+  });
 
   useEffect(() => {
     const handleResize = () => {
@@ -21,17 +27,17 @@ export default function DailyScreen() {
     <Container style={{ height: height }}>
       <Title>DIÁRIO</Title>
       <Emojis>
-        <span>👀</span>
-        <span>👀</span>
-        <span>👀</span>
-        <span>👀</span>
-        <span>👀</span>
+        <span>{currentMovie.emoji[0]}</span>
+        <span>{currentMovie.emoji[1]}</span>
+        <span>{currentMovie.emoji[2]}</span>
+        <span>{currentMovie.emoji[3]}</span>
+        <span>{currentMovie.emoji[4]}</span>
       </Emojis>
-      <GameInput />
-      <GameInput />
-      <GameInput />
-      <GameInput />
-      <GameInput />
+      <GameInput id={1} type={1} />
+      <GameInput id={2} type={2} />
+      <GameInput id={3} type={2} />
+      <GameInput id={4} type={2} />
+      <GameInput id={5} type={2} />
     </Container>
   );
 }

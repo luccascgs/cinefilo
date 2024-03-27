@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const OverlayContainer = styled.button`
-  z-index: 999;
+  z-index: 9999;
   position: fixed;
-  content: " ";
+  content: "";
   background-color: black;
   opacity: 0.7;
   top: 0;
