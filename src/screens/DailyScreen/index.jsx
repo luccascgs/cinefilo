@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import GameInput from "../../components/GameInput";
 import { Container, Emojis, Title } from "./style";
 
@@ -10,6 +10,10 @@ export default function DailyScreen() {
     acceptableNames: ["TheMatrix", "Matrix", "OMatrix"],
     emoji: ["💻", "🧠", "💊", "🕶️", "🐇"],
   });
+
+  const handleSubmit = (value) => {
+    console.log(value);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -33,11 +37,11 @@ export default function DailyScreen() {
         <span>{currentMovie.emoji[3]}</span>
         <span>{currentMovie.emoji[4]}</span>
       </Emojis>
-      <GameInput id={1} type={1} />
-      <GameInput id={2} type={2} />
-      <GameInput id={3} type={2} />
-      <GameInput id={4} type={2} />
-      <GameInput id={5} type={2} />
+      <GameInput id={1} type={1} onSubmit={handleSubmit} />
+      <GameInput id={2} type={2} onSubmit={handleSubmit} />
+      <GameInput id={3} type={2} onSubmit={handleSubmit} />
+      <GameInput id={4} type={2} onSubmit={handleSubmit} />
+      <GameInput id={5} type={2} onSubmit={handleSubmit} />
     </Container>
   );
 }

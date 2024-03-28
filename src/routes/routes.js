@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Body from "../layout/Body";
 import DailyScreen from "../screens/DailyScreen";
-import GeneresScreen from "../screens/Generes";
+import GenresScreen from "../screens/Genres";
 
 export default function RouterRoot() {
   return (
@@ -9,7 +9,7 @@ export default function RouterRoot() {
       <Routes>
         <Route element={<Body />} path="/">
           <Route element={<DailyScreen />} path="/" />
-          <Route element={<GeneresScreen />} path="/generos" />
+          <Route element={<GenresScreen />} path="/generos" />
         </Route>
       </Routes>
     </BrowserRouter>

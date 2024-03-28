@@ -9,7 +9,7 @@ export default function Header() {
         <Link to="/">
           <Calendar />
         </Link>
-        <Link to="/">
+        <Link to="/generos">
           <Tag />
         </Link>
       </div>
