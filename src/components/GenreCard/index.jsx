@@ -5,8 +5,8 @@ export function GenreCard(props) {
   return (
     <Card color1={props.color1} color2={props.color2}>
       <Link to={props.link}>
-        {props.icon}
-        <footer>{props.name}</footer>
+        {/* {props.icon} */}
+        <footer>{props.title}</footer>
       </Link>
     </Card>
   );

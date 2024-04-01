@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { colors } from "../../variables";
 
+const resolveVisibility = (visibility) => {
+  if (visibility === true) return "visible";
+  if (visibility === false) return "hidden";
+};
+
 export const Container = styled.main`
   width: 500px;
   margin: auto;
@@ -37,4 +42,8 @@ export const Emojis = styled.div`
   border-radius: 10px;
   border: solid ${colors.black} 2px;
   background-color: ${colors.white};
+`;
+
+export const Emoji = styled.span`
+  visibility: ${(props) => resolveVisibility(props.visibility)};
 `;

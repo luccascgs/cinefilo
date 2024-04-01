@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "./style";
+import { Container, SwiperContainer } from "./style";
+import { GenreCard } from "../../components/GenreCard";
+import { Pagination } from "swiper/modules";
 import { register } from "swiper/element/bundle";
+import { GeneralIcon, HorrorIcon } from "../../assets/svg/genres";
 register();
 
 export default function GenresScreen() {
   const [height, setHeight] = useState(window.innerHeight - 50);
-
   useEffect(() => {
     const handleResize = () => {
       setHeight(window.innerHeight - 50);
@@ -20,11 +22,30 @@ export default function GenresScreen() {
 
   return (
     <Container style={{ height: height }}>
-      <swiper-container>
-        <swiper-slide>Slide 1</swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-      </swiper-container>
+      <SwiperContainer
+        slidesPerView={1.3}
+        spaceBetween={32}
+        centeredSlides={true}
+        rewind={true}
+        breackpoints={{
+          600: {
+            slidesPerView: 4.3,
+          },
+        }}
+        mousewheel-invert={false}
+        keyboard={{
+          enabled: true,
+          onlyInViewport: false,
+        }}
+        grabCursor={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+      >
+        <GenreCard title="GERAL" link="/" icon={GeneralIcon} />
+        <GenreCard title="TERROR" link="/" icon={HorrorIcon} />
+      </SwiperContainer>
     </Container>
   );
 }

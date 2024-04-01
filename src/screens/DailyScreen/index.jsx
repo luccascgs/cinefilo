@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import GameInput from "../../components/GameInput";
-import { Container, Emojis, Title } from "./style";
+import { Container, Emojis, Title, Emoji } from "./style";
+import { checkMovie } from "../../helper/movieHelper";
 
 export default function DailyScreen() {
   const [height, setHeight] = useState(window.innerHeight - 50);
@@ -12,7 +13,9 @@ export default function DailyScreen() {
   });
 
   const handleSubmit = (value) => {
-    console.log(value);
+    if (value) {
+      console.log(checkMovie(value, currentMovie));
+    }
   };
 
   useEffect(() => {
@@ -31,17 +34,20 @@ export default function DailyScreen() {
     <Container style={{ height: height }}>
       <Title>DIÁRIO</Title>
       <Emojis>
-        <span>{currentMovie.emoji[0]}</span>
-        <span>{currentMovie.emoji[1]}</span>
-        <span>{currentMovie.emoji[2]}</span>
-        <span>{currentMovie.emoji[3]}</span>
-        <span>{currentMovie.emoji[4]}</span>
+        {currentMovie.emoji.map((emoji, index) => (
+          <Emoji key={index} id={index} visibility="false">
+            {emoji}
+          </Emoji>
+        ))}
       </Emojis>
-      <GameInput id={1} type={1} onSubmit={handleSubmit} />
-      <GameInput id={2} type={2} onSubmit={handleSubmit} />
-      <GameInput id={3} type={2} onSubmit={handleSubmit} />
-      <GameInput id={4} type={2} onSubmit={handleSubmit} />
-      <GameInput id={5} type={2} onSubmit={handleSubmit} />
+      {[...Array(5)].map((_, index) => (
+        <GameInput
+          key={index}
+          id={index + 1}
+          type={2}
+          onSubmit={handleSubmit}
+        />
+      ))}
     </Container>
   );
 }
