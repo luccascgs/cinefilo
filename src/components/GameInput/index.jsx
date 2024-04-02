@@ -1,15 +1,25 @@
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { GuessInput } from "./style";
 import { Check, Edit2, MessageCircle, X } from "react-feather";
 
 export default function GameInput(props) {
   const [inputValue, setInputValue] = useState("");
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (props.type === 1 && props.index === props.currentGuess) {
+      inputRef.current.focus();
+    }
+  }, [props.type, props.currentGuess, props.index]);
+
   function handleChange(event) {
     setInputValue(event.target.value);
   }
+
   function handleSubmit(event) {
     event.preventDefault();
     if (props.onSubmit) {
+      inputRef.current.blur();
       props.onSubmit(inputValue);
     }
   }
@@ -18,9 +28,13 @@ export default function GameInput(props) {
     if (props.type === 1) return `Digite um título`;
     else return `${props.id}º Palpite`;
   }
+
   function setReadOnly() {
-    if (props.type === 1) return false;
-    else return true;
+    if (props.type === 1) {
+      return false;
+    } else {
+      return true;
+    }
   }
 
   return (
@@ -30,11 +44,13 @@ export default function GameInput(props) {
       {props.type === 3 && <X />}
       {props.type === 4 && <Check />}
       <input
+        ref={inputRef}
         type="text"
         placeholder={currentText()}
         readOnly={setReadOnly()}
         value={inputValue}
         onChange={handleChange}
+        autoFocus={props.type === 1 && props.index === props.currentGuess}
       />
     </GuessInput>
   );

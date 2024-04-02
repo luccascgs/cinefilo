@@ -11,12 +11,26 @@ export default function DailyScreen() {
     acceptableNames: ["TheMatrix", "Matrix", "OMatrix"],
     emoji: ["💻", "🧠", "💊", "🕶️", "🐇"],
   });
+  const [currentGuess, setCurrentGuess] = useState(0);
+  const [inputStates, setInputStates] = useState(Array(5).fill(2));
 
-  const handleSubmit = (value) => {
+  function setVisibility(index) {
+    return currentGuess >= index ? 1 : 0;
+  }
+
+  function handleSubmit(value, index) {
     if (value) {
-      console.log(checkMovie(value, currentMovie));
+      const newInputStates = [...inputStates];
+      if (checkMovie(value, currentMovie)) {
+        newInputStates[index] = 4;
+        setCurrentGuess(6);
+      } else {
+        newInputStates[index] = 3;
+        setCurrentGuess(currentGuess + 1);
+      }
+      setInputStates(newInputStates);
     }
-  };
+  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -35,7 +49,7 @@ export default function DailyScreen() {
       <Title>DIÁRIO</Title>
       <Emojis>
         {currentMovie.emoji.map((emoji, index) => (
-          <Emoji key={index} id={index} visibility="false">
+          <Emoji key={index} id={index} visibility={setVisibility(index)}>
             {emoji}
           </Emoji>
         ))}
@@ -44,8 +58,10 @@ export default function DailyScreen() {
         <GameInput
           key={index}
           id={index + 1}
-          type={2}
-          onSubmit={handleSubmit}
+          type={index === currentGuess ? 1 : inputStates[index]}
+          onSubmit={(value) => handleSubmit(value, index)}
+          currentGuess={currentGuess}
+          index={index}
         />
       ))}
     </Container>

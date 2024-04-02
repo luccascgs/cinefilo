@@ -5,11 +5,10 @@ export function GeneralIcon() {
       width="24"
       height="24"
       stroke="currentColor"
-      stroke-width="1"
+      strokeWidth="1"
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="css-i6dzq1"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <circle cx="12" cy="12" r="10"></circle>
       <line x1="2" y1="12" x2="22" y2="12"></line>

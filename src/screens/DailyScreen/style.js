@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { colors } from "../../variables";
 
 const resolveVisibility = (visibility) => {
-  if (visibility === true) return "visible";
-  if (visibility === false) return "hidden";
+  if (visibility === 1) return "visible";
+  if (visibility === 0) return "hidden";
 };
 
 export const Container = styled.main`

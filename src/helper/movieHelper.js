@@ -4,8 +4,7 @@ export function checkMovie(input, movie) {
   const inputToCheck = formatText(input);
 
   const movieFound = movie.acceptableNames.find(
-    (acceptableName) =>
-      inputToCheck.toLowerCase() === acceptableName.toLowerCase()
+    (acceptableName) => inputToCheck === acceptableName.toLowerCase()
   );
   return !!movieFound;
 }
