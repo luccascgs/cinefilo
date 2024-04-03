@@ -19,6 +19,7 @@ register();
 export default function GenresScreen() {
   const [height, setHeight] = useState(window.innerHeight - 50);
   useEffect(() => {
+    document.title = "Cinéfilo: Gêneros";
     const handleResize = () => {
       setHeight(window.innerHeight - 50);
     };

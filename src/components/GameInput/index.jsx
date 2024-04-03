@@ -48,7 +48,7 @@ export default function GameInput(props) {
         type="text"
         placeholder={currentText()}
         readOnly={setReadOnly()}
-        value={inputValue}
+        value={props.value && props.type === 4 ? props.value : inputValue}
         onChange={handleChange}
         autoFocus={props.type === 1 && props.index === props.currentGuess}
       />

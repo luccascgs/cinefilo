@@ -1,10 +1,12 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { colors } from "../../variables";
 
-const resolveVisibility = (visibility) => {
-  if (visibility === 1) return "visible";
-  if (visibility === 0) return "hidden";
-};
+const visibilityAnim = keyframes`
+  100% {  
+    visibility: visible;
+    transform: translateY(0);
+  }
+`;
 
 export const Container = styled.main`
   width: 500px;
@@ -45,5 +47,9 @@ export const Emojis = styled.div`
 `;
 
 export const Emoji = styled.span`
-  visibility: ${(props) => resolveVisibility(props.visibility)};
+  visibility: hidden;
+  transform: translateY(100%);
+  animation-duration: 0.5s;
+  animation-name: ${(props) => (props.visibility === 1 ? visibilityAnim : "")};
+  animation-fill-mode: forwards;
 `;

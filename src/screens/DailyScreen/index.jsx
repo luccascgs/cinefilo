@@ -6,16 +6,17 @@ import { checkMovie } from "../../helper/movieHelper";
 export default function DailyScreen() {
   const [height, setHeight] = useState(window.innerHeight - 50);
   const [currentMovie] = useState({
-    id: 6,
     name: "Matrix",
     acceptableNames: ["TheMatrix", "Matrix", "OMatrix"],
-    emoji: ["💻", "🧠", "💊", "🕶️", "🐇"],
+    emojis: ["💻", "🧠", "💊", "🕶️", "🐇"],
   });
   const [currentGuess, setCurrentGuess] = useState(0);
+  const [currentEmoji, setCurrentEmoji] = useState(0);
+  const [movieName, setMovieName] = useState(null);
   const [inputStates, setInputStates] = useState(Array(5).fill(2));
 
-  function setVisibility(index) {
-    return currentGuess >= index ? 1 : 0;
+  function setEmojiVisibility(index) {
+    return currentEmoji >= index ? 1 : 0;
   }
 
   function handleSubmit(value, index) {
@@ -23,16 +24,20 @@ export default function DailyScreen() {
       const newInputStates = [...inputStates];
       if (checkMovie(value, currentMovie)) {
         newInputStates[index] = 4;
-        setCurrentGuess(6);
+        setCurrentEmoji(5);
+        setCurrentGuess(5);
+        setMovieName(currentMovie.name);
       } else {
         newInputStates[index] = 3;
         setCurrentGuess(currentGuess + 1);
+        setCurrentEmoji(currentEmoji + 1);
       }
       setInputStates(newInputStates);
     }
   }
-
   useEffect(() => {
+    document.title = "Cinéfilo";
+
     const handleResize = () => {
       setHeight(window.innerHeight - 50);
     };
@@ -48,8 +53,8 @@ export default function DailyScreen() {
     <Container style={{ height: height }}>
       <Title>DIÁRIO</Title>
       <Emojis>
-        {currentMovie.emoji.map((emoji, index) => (
-          <Emoji key={index} id={index} visibility={setVisibility(index)}>
+        {currentMovie.emojis.map((emoji, index) => (
+          <Emoji key={index} id={index} visibility={setEmojiVisibility(index)}>
             {emoji}
           </Emoji>
         ))}
@@ -62,6 +67,7 @@ export default function DailyScreen() {
           onSubmit={(value) => handleSubmit(value, index)}
           currentGuess={currentGuess}
           index={index}
+          value={movieName}
         />
       ))}
     </Container>
