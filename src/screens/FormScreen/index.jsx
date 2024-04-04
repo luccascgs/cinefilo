@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Container, FormRow, Emojis } from "./style";
+import { Container, FormRow, Emojis, NamesContainer } from "./style";
 import { splitEmojis } from "../../helper/emojiHelper";
 import { getAccessToken } from "../../helper/storageHelper";
 import { api } from "../../lib/api";
@@ -110,9 +110,11 @@ export default function FormScreen() {
     <Container style={{ height: height }}>
       <FormRow>
         <input
+          className="title"
+          type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Nome"
+          placeholder="Digite o nome"
         />
         <select value={genre} onChange={(e) => setGenre(e.target.value)}>
           <option value="4">Ação</option>
@@ -127,35 +129,42 @@ export default function FormScreen() {
       </FormRow>
       <FormRow>
         <Emojis
+          className="title"
           value={emojis}
           onChange={(e) => setEmojis(e.target.value)}
-          placeholder="Emojis"
+          placeholder="Digite os emojis"
         />
       </FormRow>
-      {acceptableNames.map((acceptableName) => (
-        <FormRow key={acceptableName.id}>
-          <div>
-            <input
-              value={acceptableName.name}
-              onChange={(e) => handleChangeAcceptableName(e, acceptableName.id)}
-              placeholder="Nomes permitido"
-            />
-            <button
-              type="button"
-              onClick={() => handleRemoveAcceptableName(acceptableName.id)}
-            >
-              <X />
-            </button>
-          </div>
-        </FormRow>
-      ))}
+      <NamesContainer>
+        {acceptableNames.map((acceptableName) => (
+          <FormRow key={acceptableName.id}>
+            <div>
+              <input
+                title={1}
+                value={acceptableName.name}
+                onChange={(e) =>
+                  handleChangeAcceptableName(e, acceptableName.id)
+                }
+                placeholder="Digite um permitido"
+                onSubmit={handleAddAcceptableName}
+              />
+              <button
+                type="button"
+                onClick={() => handleRemoveAcceptableName(acceptableName.id)}
+              >
+                <X />
+              </button>
+            </div>
+          </FormRow>
+        ))}
+      </NamesContainer>
       <FormRow>
-        <button type="button" onClick={handleAddAcceptableName}>
-          Adicionar Nome
+        <button className="add" type="button" onClick={handleAddAcceptableName}>
+          Adicionar nome permitido
         </button>
       </FormRow>
       <FormRow>
-        <button type="button" onClick={handleSubmit}>
+        <button className="send" type="button" onClick={handleSubmit}>
           Enviar
         </button>
       </FormRow>
