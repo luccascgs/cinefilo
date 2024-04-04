@@ -53,3 +53,9 @@ export const Emoji = styled.span`
   animation-name: ${(props) => (props.visibility === 1 ? visibilityAnim : "")};
   animation-fill-mode: forwards;
 `;
+
+export const Loading = styled.span`
+  color: ${colors.white};
+  font-weight: 700;
+  text-align: center;
+`;

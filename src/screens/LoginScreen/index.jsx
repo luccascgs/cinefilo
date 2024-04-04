@@ -38,10 +38,9 @@ export default function LoginScreen() {
 
   return (
     <Container style={{ height: height }}>
-      <h1>Login</h1>
-      <h2>Email</h2>
+      <h2>Email:</h2>
       <input value={email} onChange={(e) => setEmail(e.target.value)} />
-      <h2>Senha</h2>
+      <h2>Senha:</h2>
       <input
         value={password}
         onChange={(e) => setPassword(e.target.value)}

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import GameInput from "../../components/GameInput";
-import { Container, Emojis, Title, Emoji } from "./style";
+import { Container, Emojis, Title, Emoji, Loading } from "./style";
 import { checkMovie } from "../../helper/movieHelper";
 import { api } from "../../lib/api";
 
@@ -61,7 +61,7 @@ export default function DailyScreen() {
     <Container style={{ height: height }}>
       <Title>DIÁRIO</Title>
       {isLoading ? (
-        <span>Carregando...</span>
+        <Loading>Carregando...</Loading>
       ) : (
         <>
           <Emojis>
