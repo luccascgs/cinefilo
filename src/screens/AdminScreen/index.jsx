@@ -51,20 +51,16 @@ export default function AdminScreen() {
     event.preventDefault();
   }
 
+  const handleResize = useCallback(() => {
+    setHeight(window.innerHeight - 50);
+  }, []);
+
   useEffect(() => {
     loadMovies();
     document.title = "Cinéfilo: Admin";
 
-    const handleResize = () => {
-      setHeight(window.innerHeight - 50);
-    };
-
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [loadMovies]);
+  }, [loadMovies, handleResize]);
 
   return (
     <Container style={{ height: height }}>

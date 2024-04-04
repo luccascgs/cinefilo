@@ -6,6 +6,7 @@ import AdminScreen from "../screens/AdminScreen";
 import FormScreen from "../screens/FormScreen";
 import LoginScreen from "../screens/LoginScreen";
 import AdminBody from "../layout/AdminBody";
+import GeneralScreen from "../screens/GeneralScreen";
 
 export default function RouterRoot() {
   return (
@@ -13,6 +14,7 @@ export default function RouterRoot() {
       <Routes>
         <Route element={<Body />} path="/">
           <Route element={<DailyScreen />} path="/" />
+          <Route element={<GeneralScreen />} path="/geral" />
           <Route element={<LoginScreen />} path="/login" />
           <Route element={<GenresScreen />} path="/generos" />
         </Route>

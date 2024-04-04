@@ -4,7 +4,7 @@ import { Container, Emojis, Title, Emoji, Loading } from "./style";
 import { checkMovie } from "../../helper/movieHelper";
 import { api } from "../../lib/api";
 
-export default function DailyScreen() {
+export default function GeneralScreen() {
   const [height, setHeight] = useState(window.innerHeight - 50);
   const [currentMovie, setCurrentMovie] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -15,8 +15,9 @@ export default function DailyScreen() {
 
   const loadCurrentMovie = useCallback(async () => {
     setIsLoading(true);
-    const response = await api.get("/movies/daily");
+    const response = await api.get("/movies/genres");
     setCurrentMovie(response.data);
+    console.log(response.data);
     setIsLoading(false);
   }, []);
 
@@ -48,7 +49,7 @@ export default function DailyScreen() {
   useEffect(() => {
     loadCurrentMovie();
 
-    document.title = "Cinéfilo";
+    document.title = "Cinéfilo: Geral";
 
     window.addEventListener("resize", handleResize);
   }, [loadCurrentMovie, handleResize]);

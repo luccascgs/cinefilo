@@ -91,20 +91,16 @@ export default function FormScreen() {
     setAcceptableNames(updatedAcceptableNames);
   }
 
+  const handleResize = useCallback(() => {
+    setHeight(window.innerHeight - 50);
+  }, []);
+
   useEffect(() => {
     loadMovie();
     document.title = "Cinéfilo: Formulário";
 
-    const handleResize = () => {
-      setHeight(window.innerHeight - 50);
-    };
-
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [loadMovie]);
+  }, [loadMovie, handleResize]);
 
   return (
     <Container style={{ height: height }}>
