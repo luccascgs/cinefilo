@@ -1,19 +1,24 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import GameInput from "../../components/GameInput";
 import { Container, Emojis, Title, Emoji } from "./style";
 import { checkMovie } from "../../helper/movieHelper";
+import { api } from "../../lib/api";
 
 export default function DailyScreen() {
   const [height, setHeight] = useState(window.innerHeight - 50);
-  const [currentMovie] = useState({
-    name: "Matrix",
-    acceptableNames: ["TheMatrix", "Matrix", "OMatrix"],
-    emojis: ["💻", "🧠", "💊", "🕶️", "🐇"],
-  });
+  const [currentMovie, setCurrentMovie] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
   const [currentGuess, setCurrentGuess] = useState(0);
   const [currentEmoji, setCurrentEmoji] = useState(0);
   const [movieName, setMovieName] = useState(null);
   const [inputStates, setInputStates] = useState(Array(5).fill(2));
+
+  const loadCurrentMovie = useCallback(async () => {
+    setIsLoading(true);
+    const response = await api.get("/movies/daily");
+    setCurrentMovie(response.data);
+    setIsLoading(false);
+  }, []);
 
   function setEmojiVisibility(index) {
     return currentEmoji >= index ? 1 : 0;
@@ -35,7 +40,10 @@ export default function DailyScreen() {
       setInputStates(newInputStates);
     }
   }
+
   useEffect(() => {
+    loadCurrentMovie();
+
     document.title = "Cinéfilo";
 
     const handleResize = () => {
@@ -47,29 +55,39 @@ export default function DailyScreen() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [loadCurrentMovie]);
 
   return (
     <Container style={{ height: height }}>
       <Title>DIÁRIO</Title>
-      <Emojis>
-        {currentMovie.emojis.map((emoji, index) => (
-          <Emoji key={index} id={index} visibility={setEmojiVisibility(index)}>
-            {emoji}
-          </Emoji>
-        ))}
-      </Emojis>
-      {[...Array(5)].map((_, index) => (
-        <GameInput
-          key={index}
-          id={index + 1}
-          type={index === currentGuess ? 1 : inputStates[index]}
-          onSubmit={(value) => handleSubmit(value, index)}
-          currentGuess={currentGuess}
-          index={index}
-          value={movieName}
-        />
-      ))}
+      {isLoading ? (
+        <span>Carregando...</span>
+      ) : (
+        <>
+          <Emojis>
+            {currentMovie.emojis.map((emoji, index) => (
+              <Emoji
+                key={index}
+                id={index}
+                visibility={setEmojiVisibility(index)}
+              >
+                {emoji}
+              </Emoji>
+            ))}
+          </Emojis>
+          {[...Array(5)].map((_, index) => (
+            <GameInput
+              key={index}
+              id={index + 1}
+              type={index === currentGuess ? 1 : inputStates[index]}
+              onSubmit={(value) => handleSubmit(value, index)}
+              currentGuess={currentGuess}
+              index={index}
+              value={movieName}
+            />
+          ))}
+        </>
+      )}
     </Container>
   );
 }

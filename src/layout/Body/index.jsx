@@ -5,7 +5,6 @@ import { Div } from "./style";
 export default function Body() {
   return (
     <Div>
-      {/* <Overlay onClick={toggleModal} /> */}
       <Header />
       <Outlet />
     </Div>
