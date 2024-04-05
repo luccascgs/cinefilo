@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { Edit, Search, X } from "react-feather";
 import { Link } from "react-router-dom";
+import debounce from "lodash.debounce";
 import {
   Container,
   Table,
@@ -16,11 +17,14 @@ import { getAccessToken } from "../../helper/storageHelper";
 export default function AdminScreen() {
   const [height, setHeight] = useState(window.innerHeight - 50);
   const [movies, setMovies] = useState([]);
+  const [filteredMovies, setFilteredMovies] = useState([]);
+  const [filter, setFilter] = useState("");
   const accessToken = getAccessToken();
 
   const loadMovies = useCallback(async () => {
     const response = await api.get("/movies");
     setMovies(response.data);
+    setFilteredMovies(response.data);
   }, []);
 
   const handleDelete = useCallback(
@@ -47,29 +51,46 @@ export default function AdminScreen() {
     [handleDelete]
   );
 
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
-
   const handleResize = useCallback(() => {
     setHeight(window.innerHeight - 50);
   }, []);
 
+  const search = useMemo(
+    () =>
+      debounce(() => {
+        const filtered = movies.filter((item) =>
+          item.name.toLowerCase().includes(filter.toLowerCase())
+        );
+        setFilteredMovies(filtered);
+      }, 500),
+    [filter, movies]
+  );
+
+  const handleSearch = useCallback(() => {
+    search();
+  }, [search]);
+
   useEffect(() => {
     loadMovies();
+    handleSearch();
+
     document.title = "Cinéfilo: Admin";
 
     window.addEventListener("resize", handleResize);
-  }, [loadMovies, handleResize]);
+  }, [loadMovies, handleResize, handleSearch]);
 
   return (
     <Container style={{ height: height }}>
-      <QuerryForm onSubmit={handleSubmit}>
-        <QuerryInput placeholder="Digite o nome de um filme" />
+      <QuerryForm>
+        <QuerryInput
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+          placeholder="Digite o nome de um filme"
+        />
         <Search />
       </QuerryForm>
       <Table>
-        {movies?.map((movie, index) => (
+        {filteredMovies?.map((movie, index) => (
           <Row key={index}>
             <span>{movie.name}</span>
             <div>

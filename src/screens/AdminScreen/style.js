@@ -64,7 +64,7 @@ export const QuerryInput = styled.input`
   height: 45px;
 `;
 
-export const QuerryForm = styled.form`
+export const QuerryForm = styled.div`
   padding: 0 1rem;
   margin-bottom: 1rem;
 

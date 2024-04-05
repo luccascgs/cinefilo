@@ -17,7 +17,6 @@ export default function GeneralScreen() {
     setIsLoading(true);
     const response = await api.get("/movies/genres");
     setCurrentMovie(response.data);
-    console.log(response.data);
     setIsLoading(false);
   }, []);
 
@@ -62,7 +61,7 @@ export default function GeneralScreen() {
       ) : (
         <>
           <Emojis>
-            {currentMovie.emojis.map((emoji, index) => (
+            {currentMovie?.emojis.map((emoji, index) => (
               <Emoji
                 key={index}
                 id={index}

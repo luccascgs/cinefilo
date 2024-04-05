@@ -12,7 +12,7 @@ export default function AdminBody() {
     if (!accessToken) {
       return navigate("/login");
     }
-  }, [accessToken]);
+  }, [accessToken, navigate]);
 
   return (
     <Div>

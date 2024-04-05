@@ -35,7 +35,7 @@ export default function GenresScreen() {
 
   const handleResize = useCallback(() => {
     setHeight(window.innerHeight - 50);
-    setWidth(window.width);
+    setWidth(window.innerWidth);
   }, []);
 
   useEffect(() => {
