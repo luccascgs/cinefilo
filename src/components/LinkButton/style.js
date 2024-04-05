@@ -9,10 +9,10 @@ export const Button = styled(Link)`
   padding: 0.1rem 0.5rem;
 
   border-radius: 10px;
-  border: ${colors.black} 2px solid;
+  border: ${colors.green} 2px solid;
 
-  background-color: ${colors.white};
-  color: ${colors.black};
+  background-color: ${colors.lightGreen};
+  color: ${colors.green};
 
   text-decoration: none;
 `;

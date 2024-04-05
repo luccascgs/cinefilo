@@ -45,15 +45,16 @@ export const FormRow = styled.div`
     background-color: ${colors.white};
   }
   .send {
-    color: ${colors.blue};
-    border: ${colors.blue} 2px solid;
-    background-color: ${colors.lightBlue};
+    color: ${colors.white};
+    border: ${colors.green} 2px solid;
+    background-color: ${colors.green};
   }
 
   .add {
     color: ${colors.green};
     border: ${colors.green} 2px solid;
     background-color: ${colors.lightGreen};
+    margin-bottom: 1.5rem;
   }
 
   .title {
@@ -125,5 +126,5 @@ export const NamesContainer = styled.article`
 
   max-height: 250px;
   overflow: auto;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 `;

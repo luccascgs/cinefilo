@@ -4,8 +4,8 @@ import { splitEmojis } from "../../helper/emojiHelper";
 import { getAccessToken } from "../../helper/storageHelper";
 import { api } from "../../lib/api";
 import { useNavigate, useParams } from "react-router-dom";
-import { LinkButton } from "../../components/LinkButton";
-import { X } from "react-feather";
+import { LinkIcon } from "../../components/LinkIcon";
+import { ArrowLeft, X } from "react-feather";
 
 export default function FormScreen() {
   const navigate = useNavigate();
@@ -108,6 +108,7 @@ export default function FormScreen() {
 
   return (
     <Container style={{ height: height }}>
+      <LinkIcon icon={ArrowLeft} to={"/admin"} />
       <FormRow>
         <input
           className="title"
@@ -168,7 +169,6 @@ export default function FormScreen() {
           Enviar
         </button>
       </FormRow>
-      <LinkButton to="/admin">Voltar</LinkButton>
     </Container>
   );
 }
