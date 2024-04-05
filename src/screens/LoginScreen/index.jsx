@@ -22,19 +22,15 @@ export default function LoginScreen() {
     navigate("/admin");
   }, [navigate, email, password]);
 
+  const handleResize = useCallback(() => {
+    setHeight(window.innerHeight - 50);
+  }, []);
+
   useEffect(() => {
     document.title = "Cinéfilo: Admin";
 
-    const handleResize = () => {
-      setHeight(window.innerHeight - 50);
-    };
-
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  }, [handleResize]);
 
   return (
     <Container style={{ height: height }}>

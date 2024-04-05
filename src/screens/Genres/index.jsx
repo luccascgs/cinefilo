@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Container, SwiperContainer } from "./style";
 import { GenreCard } from "../../components/GenreCard";
-import { Pagination } from "swiper/modules";
+import { Pagination, Mousewheel } from "swiper/modules";
 import { register } from "swiper/element/bundle";
 import {
   ActionIcon,
@@ -18,37 +18,50 @@ register();
 
 export default function GenresScreen() {
   const [height, setHeight] = useState(window.innerHeight - 50);
+  const [width, setWidth] = useState(window.innerWidth);
+  const [slidesPerView, setSlidesPerView] = useState(4.3);
+
+  const handleSlidesPerView = useCallback(() => {
+    if (width < 800) {
+      setSlidesPerView(1.3);
+    } else if (width < 1100) {
+      setSlidesPerView(2.3);
+    } else if (width < 1300) {
+      setSlidesPerView(3.3);
+    } else {
+      setSlidesPerView(4.3);
+    }
+  }, [width]);
+
+  const handleResize = useCallback(() => {
+    setHeight(window.innerHeight - 50);
+    setWidth(window.width);
+  }, []);
+
   useEffect(() => {
+    handleSlidesPerView();
+
     document.title = "Cinéfilo: Gêneros";
-    const handleResize = () => {
-      setHeight(window.innerHeight - 50);
-    };
 
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  }, [handleSlidesPerView, handleResize]);
 
   return (
     <Container style={{ height: height }}>
       <SwiperContainer
-        slides-per-view="1.3"
+        slides-per-view={slidesPerView}
         space-between={32}
         centered-slides={true}
         rewind={true}
-        mousewheel-force-to-axis={true}
+        mousewheel={true}
         keyboard="true"
         grab-cursor={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
+        pagination={true}
+        modules={[Mousewheel, Pagination]}
       >
         <GenreCard
           title="Geral"
-          link="/"
+          link="/geral"
           icon={GeneralIcon}
           color1="rgb(168, 255, 55)"
           color2="rgb(79, 121, 24)"
