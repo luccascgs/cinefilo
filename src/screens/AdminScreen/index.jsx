@@ -62,7 +62,7 @@ export default function AdminScreen() {
           item.name.toLowerCase().includes(filter.toLowerCase())
         );
         setFilteredMovies(filtered);
-      }, 500),
+      }, 100),
     [filter, movies]
   );
 
@@ -72,12 +72,18 @@ export default function AdminScreen() {
 
   useEffect(() => {
     loadMovies();
-    handleSearch();
 
     document.title = "Cinéfilo: Admin";
+  }, [loadMovies]);
 
+  useEffect(() => {
+    handleSearch();
     window.addEventListener("resize", handleResize);
-  }, [loadMovies, handleResize, handleSearch]);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [handleResize, handleSearch]);
 
   return (
     <Container style={{ height: height }}>

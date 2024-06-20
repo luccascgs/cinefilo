@@ -3,6 +3,8 @@ import GameInput from "../../components/GameInput";
 import { Container, Emojis, Title, Emoji, Loading } from "./style";
 import { checkMovie } from "../../helper/movieHelper";
 import { api } from "../../lib/api";
+import { loadAllEmojis } from "../../helper/emojiHelper";
+import { getTries, setTries } from "../../helper/storageHelper";
 
 export default function DailyScreen() {
   const [height, setHeight] = useState(window.innerHeight - 50);
@@ -11,6 +13,7 @@ export default function DailyScreen() {
   const [currentGuess, setCurrentGuess] = useState(0);
   const [currentEmoji, setCurrentEmoji] = useState(0);
   const [movieName, setMovieName] = useState(null);
+  const [moviesNames, setMoviesNames] = useState(Array(5).fill(""));
   const [inputStates, setInputStates] = useState(Array(5).fill(2));
 
   const loadCurrentMovie = useCallback(async () => {
@@ -20,6 +23,17 @@ export default function DailyScreen() {
     setIsLoading(false);
   }, []);
 
+  const loadMoviesNames = useCallback(() => {
+    const tries = getTries();
+    const updatedMoviesNames = [];
+
+    for (let i = 0; i < 5; i++) {
+      updatedMoviesNames[i] = tries[i] ?? "";
+    }
+
+    setMoviesNames(updatedMoviesNames);
+  }, []);
+
   function setEmojiVisibility(index) {
     return currentEmoji >= index ? 1 : 0;
   }
@@ -27,9 +41,12 @@ export default function DailyScreen() {
   function handleSubmit(value, index) {
     if (value) {
       const newInputStates = [...inputStates];
+      setTries(value);
       if (checkMovie(value, currentMovie)) {
         newInputStates[index] = 4;
-        setCurrentEmoji(5);
+
+        loadAllEmojis(currentEmoji, setCurrentEmoji);
+
         setCurrentGuess(5);
         setMovieName(currentMovie.name);
       } else {
@@ -47,11 +64,16 @@ export default function DailyScreen() {
 
   useEffect(() => {
     loadCurrentMovie();
+    loadMoviesNames();
+  }, [loadCurrentMovie, loadMoviesNames]);
 
+  console.log(moviesNames);
+
+  useEffect(() => {
     document.title = "Cinéfilo";
 
     window.addEventListener("resize", handleResize);
-  }, [loadCurrentMovie, handleResize]);
+  }, [handleResize]);
 
   return (
     <Container style={{ height: height }}>
@@ -71,7 +93,7 @@ export default function DailyScreen() {
               </Emoji>
             ))}
           </Emojis>
-          {[...Array(5)].map((_, index) => (
+          {moviesNames?.map((name, index) => (
             <GameInput
               key={index}
               id={index + 1}
@@ -79,7 +101,7 @@ export default function DailyScreen() {
               onSubmit={(value) => handleSubmit(value, index)}
               currentGuess={currentGuess}
               index={index}
-              value={movieName}
+              value={movieName ?? name}
             />
           ))}
         </>

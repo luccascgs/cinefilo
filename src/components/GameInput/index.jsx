@@ -12,10 +12,6 @@ export default function GameInput(props) {
     }
   }, [props.type, props.currentGuess, props.index]);
 
-  function handleChange(event) {
-    setInputValue(event.target.value);
-  }
-
   function handleSubmit(event) {
     event.preventDefault();
     if (props.onSubmit) {
@@ -49,7 +45,7 @@ export default function GameInput(props) {
         placeholder={currentText()}
         readOnly={setReadOnly()}
         value={props.value && props.type === 4 ? props.value : inputValue}
-        onChange={handleChange}
+        onChange={(e) => setInputValue(e.target.value)}
         autoFocus={props.type === 1 && props.index === props.currentGuess}
       />
     </GuessInput>

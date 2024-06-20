@@ -20,4 +20,10 @@ export const NavBar = styled.nav`
     text-decoration: none;
     font-weight: 900;
   }
+
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    color: currentColor;
+  }
 `;

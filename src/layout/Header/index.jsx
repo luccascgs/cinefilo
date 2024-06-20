@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { NavBar } from "./style";
 import { Calendar, HelpCircle, Info, Tag } from "react-feather";
 
-export default function Header() {
+export default function Header(props) {
   return (
     <NavBar>
       <div>
@@ -15,8 +15,12 @@ export default function Header() {
       </div>
       <Link to="/">CINÉFILO</Link>
       <div>
-        <HelpCircle />
-        <Info />
+        <button onClick={props.helpClick}>
+          <HelpCircle />
+        </button>
+        <button onClick={props.infoClick}>
+          <Info />
+        </button>
       </div>
     </NavBar>
   );

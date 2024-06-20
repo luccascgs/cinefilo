@@ -1,11 +1,12 @@
-import React, { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Container, FormRow, Emojis, NamesContainer } from "./style";
+import { ArrowLeft, X } from "react-feather";
 import { splitEmojis } from "../../helper/emojiHelper";
 import { getAccessToken } from "../../helper/storageHelper";
 import { api } from "../../lib/api";
 import { useNavigate, useParams } from "react-router-dom";
 import { LinkIcon } from "../../components/LinkIcon";
-import { ArrowLeft, X } from "react-feather";
+import { formatText } from "../../helper/inputHelper";
 
 export default function FormScreen() {
   const navigate = useNavigate();
@@ -65,11 +66,11 @@ export default function FormScreen() {
     const index = acceptableNames.findIndex((item) => item.id === id);
     const updatedAcceptableNames = [...acceptableNames];
 
-    updatedAcceptableNames[index].name = event.target.value;
+    updatedAcceptableNames[index].name = formatText(event.target.value);
     setAcceptableNames(updatedAcceptableNames);
   }
 
-  function handleAddAcceptableName(id) {
+  function handleAddAcceptableName() {
     const newAcceptableNames = [
       ...acceptableNames,
       { id: acceptableNames.length, name: "" },
@@ -112,6 +113,7 @@ export default function FormScreen() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Digite o nome"
+          required={true}
         />
         <select value={genre} onChange={(e) => setGenre(e.target.value)}>
           <option value="4">Ação</option>
@@ -130,6 +132,7 @@ export default function FormScreen() {
           value={emojis}
           onChange={(e) => setEmojis(e.target.value)}
           placeholder="Digite os emojis"
+          required={true}
         />
       </FormRow>
       <NamesContainer>
@@ -137,13 +140,12 @@ export default function FormScreen() {
           <FormRow key={acceptableName.id}>
             <div>
               <input
-                title={1}
                 value={acceptableName.name}
                 onChange={(e) =>
                   handleChangeAcceptableName(e, acceptableName.id)
                 }
                 placeholder="Digite um permitido"
-                onSubmit={handleAddAcceptableName}
+                required={true}
               />
               <button
                 type="button"

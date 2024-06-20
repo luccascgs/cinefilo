@@ -1,13 +1,17 @@
 import { useState, useEffect, useCallback } from "react";
 import GameInput from "../../components/GameInput";
+import InfoModal from "../../components/InfoModal";
 import { Container, Emojis, Title, Emoji, Loading } from "./style";
 import { checkMovie } from "../../helper/movieHelper";
+import { loadAllEmojis, randomizeEmojis } from "../../helper/emojiHelper";
 import { api } from "../../lib/api";
 
 export default function GeneralScreen() {
   const [height, setHeight] = useState(window.innerHeight - 50);
   const [currentMovie, setCurrentMovie] = useState({});
+  const [emojiOrder, setEmojiOrder] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [currentGuess, setCurrentGuess] = useState(0);
   const [currentEmoji, setCurrentEmoji] = useState(0);
   const [movieName, setMovieName] = useState(null);
@@ -29,7 +33,12 @@ export default function GeneralScreen() {
       const newInputStates = [...inputStates];
       if (checkMovie(value, currentMovie)) {
         newInputStates[index] = 4;
-        setCurrentEmoji(5);
+
+        loadAllEmojis(currentEmoji, setCurrentEmoji);
+        setTimeout(() => {
+          window.location.reload();
+        }, 2300);
+
         setCurrentGuess(5);
         setMovieName(currentMovie.name);
       } else {
@@ -46,28 +55,35 @@ export default function GeneralScreen() {
   }, []);
 
   useEffect(() => {
-    loadCurrentMovie();
+    setEmojiOrder(randomizeEmojis(loadCurrentMovie()));
+  }, [loadCurrentMovie]);
 
+  useEffect(() => {
     document.title = "Cinéfilo: Geral";
 
     window.addEventListener("resize", handleResize);
-  }, [loadCurrentMovie, handleResize]);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [handleResize]);
 
   return (
     <Container style={{ height: height }}>
-      <Title>DIÁRIO</Title>
+      {isOpen && <InfoModal setIsOpen={setIsOpen} />}
+      <Title>GERAL</Title>
       {isLoading ? (
         <Loading>Carregando...</Loading>
       ) : (
         <>
           <Emojis>
-            {currentMovie?.emojis.map((emoji, index) => (
+            {currentMovie?.emojis.map((_, index) => (
               <Emoji
                 key={index}
                 id={index}
                 visibility={setEmojiVisibility(index)}
               >
-                {emoji}
+                {currentMovie.emojis[emojiOrder[index]]}
               </Emoji>
             ))}
           </Emojis>
